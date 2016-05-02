@@ -1,0 +1,14 @@
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll.config
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.pdb

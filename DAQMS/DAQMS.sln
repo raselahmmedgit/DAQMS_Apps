@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Core", "DAQMS.Core\DAQMS.Core.csproj", "{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Data", "DAQMS.Data\DAQMS.Data.csproj", "{C7669D27-3223-4821-8B1C-9EDE31A5A805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Domain", "DAQMS.Domain\DAQMS.Domain.csproj", "{D68133B0-0830-4974-BF09-99A0A002B5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.DomainViewModel", "DAQMS.DomainViewModel\DAQMS.DomainViewModel.csproj", "{D477E80B-3FF4-4AD7-BEFF-B65C96CF8325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Service", "DAQMS.Service\DAQMS.Service.csproj", "{B6A29F31-FE4E-46D3-BD1F-98D7BC3D5DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Web", "DAQMS.Web\DAQMS.Web.csproj", "{059F339A-B278-43FB-8CDC-C36081DD93DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Web.Tests", "DAQMS.Web.Tests\DAQMS.Web.Tests.csproj", "{6A7B5A0F-FC68-404F-91EC-CF080796C72A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7669D27-3223-4821-8B1C-9EDE31A5A805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7669D27-3223-4821-8B1C-9EDE31A5A805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7669D27-3223-4821-8B1C-9EDE31A5A805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7669D27-3223-4821-8B1C-9EDE31A5A805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68133B0-0830-4974-BF09-99A0A002B5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68133B0-0830-4974-BF09-99A0A002B5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68133B0-0830-4974-BF09-99A0A002B5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68133B0-0830-4974-BF09-99A0A002B5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D477E80B-3FF4-4AD7-BEFF-B65C96CF8325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D477E80B-3FF4-4AD7-BEFF-B65C96CF8325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D477E80B-3FF4-4AD7-BEFF-B65C96CF8325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D477E80B-3FF4-4AD7-BEFF-B65C96CF8325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A29F31-FE4E-46D3-BD1F-98D7BC3D5DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A29F31-FE4E-46D3-BD1F-98D7BC3D5DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A29F31-FE4E-46D3-BD1F-98D7BC3D5DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A29F31-FE4E-46D3-BD1F-98D7BC3D5DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059F339A-B278-43FB-8CDC-C36081DD93DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059F339A-B278-43FB-8CDC-C36081DD93DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059F339A-B278-43FB-8CDC-C36081DD93DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059F339A-B278-43FB-8CDC-C36081DD93DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

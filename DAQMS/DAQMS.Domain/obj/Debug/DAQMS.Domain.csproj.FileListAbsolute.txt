@@ -1,0 +1,12 @@
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb

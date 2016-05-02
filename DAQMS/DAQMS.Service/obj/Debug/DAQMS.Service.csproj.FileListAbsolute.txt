@@ -1,0 +1,15 @@
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Data.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\EntityFramework.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Data.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.pdb
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\EntityFramework.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.xml
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
+D:\RaselAhmmed\Project\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
