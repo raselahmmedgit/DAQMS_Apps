@@ -12,3 +12,17 @@ D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.xml
 D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.dll
 D:\RaselAhmmed\Project\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll.config
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.pdb

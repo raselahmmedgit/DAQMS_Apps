@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
 using System.Threading;
-using System.Web;
 
-namespace DAQMS.Web
+namespace DAQMS.Core
 {
     public static class ResourceHelper
     {
@@ -16,12 +15,18 @@ namespace DAQMS.Web
         public static string Edit = GetValue("Edit");
         public static string Remove = GetValue("Remove");
 
+        public static string UnhandelledError = GetValue("UnhandelledError");
+        public static string NotFound = GetValue("NotFound");
+
+        public static string CommonError = GetValue("CommonError");
+        public static string NullError = GetValue("NullError");
+
         #region Get Resource Value
 
         private static ResourceManager _appResourceManager = null;
         private static ResourceManager AppResourceManager
         {
-            get { return _appResourceManager ?? (_appResourceManager = new ResourceManager(typeof(Resources.Resource))); }
+            get { return _appResourceManager ?? (_appResourceManager = new ResourceManager(typeof(DAQMS.Core.Resource))); }
         }
         public static string GetValue(string keyName)
         {
@@ -50,6 +55,6 @@ namespace DAQMS.Web
         }
 
         #endregion
-        
+
     }
 }

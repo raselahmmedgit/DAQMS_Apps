@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using DAQMS.Domain.Models;
 
 namespace DAQMS.DomainViewModel
 {
-    public class UserViewModel
+    [NotMapped]
+    public class UserViewModel : User
     {
+        public string UserPhotoPath { get; set; }
+
+        public string FullName { get; set; }
     }
 }

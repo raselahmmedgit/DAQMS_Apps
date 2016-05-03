@@ -10,3 +10,15 @@ D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xm
 D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
 D:\RaselAhmmed\Project\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb

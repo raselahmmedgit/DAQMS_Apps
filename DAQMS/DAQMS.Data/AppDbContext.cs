@@ -5,11 +5,16 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAQMS.Domain.Models;
 
 namespace DAQMS.Data
 {
     public class AppDbContext : DbContext
     {
+        public DbSet<Role> Role { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<UserRole> UserRole { get; set; }
+
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

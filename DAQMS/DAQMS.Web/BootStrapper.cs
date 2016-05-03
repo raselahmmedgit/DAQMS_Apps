@@ -6,6 +6,7 @@ using System.Reflection;
 using Autofac;
 using Autofac.Integration.Mvc;
 using DAQMS.Data;
+using DAQMS.Service;
 
 namespace DAQMS.Web
 {
@@ -57,8 +58,8 @@ namespace DAQMS.Web
                 builder.RegisterGeneric(typeof(Repository<>)).InstancePerLifetimeScope();
 
                 // Register service
-                builder.RegisterAssemblyTypes(typeof(UserRepository).Assembly)
-                .Where(t => t.Name.EndsWith("Repository"))
+                builder.RegisterAssemblyTypes(typeof(UserService).Assembly)
+                .Where(t => t.Name.EndsWith("Service"))
                 .AsImplementedInterfaces().InstancePerDependency();
 
                 var container = builder.Build();
