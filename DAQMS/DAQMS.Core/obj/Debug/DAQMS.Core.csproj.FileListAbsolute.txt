@@ -8,3 +8,4 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csprojResolveAssemblyReference.cache

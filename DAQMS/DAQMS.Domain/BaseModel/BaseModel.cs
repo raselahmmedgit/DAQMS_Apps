@@ -17,15 +17,6 @@ namespace DAQMS.Domain
             this.DeletedDate = DateTime.Now;
             this.IsDelete = false;
 
-            var httpContext = HttpContext.Current;
-            var httpContextBase = new HttpContextWrapper(httpContext);
-            string areaName = httpContextBase.Request.RequestContext.RouteData.DataTokens.ContainsKey("area") ? httpContextBase.Request.RequestContext.RouteData.DataTokens["area"].ToString() : "";
-            string controllerName = httpContextBase.Request.RequestContext.RouteData.Values["controller"].ToString();
-            string actionName = httpContextBase.Request.RequestContext.RouteData.Values["action"].ToString();
-
-            this.AreaName = areaName;
-            this.ControllerName = controllerName;
-            this.ActionName = actionName;
         }
 
         //public int Id { get; set; }
@@ -43,46 +34,6 @@ namespace DAQMS.Domain
 
         #region NotMapped
 
-        public Boolean IsAdd()
-        {
-            bool isAdd;
-
-            if (this.ActionName == "Add")
-            {
-                isAdd = true;
-            }
-            else
-            {
-                isAdd = false;
-            }
-
-            return isAdd;
-
-        }
-
-        public Boolean IsEdit()
-        {
-            bool isEdit;
-
-            if (this.ActionName == "Edit")
-            {
-                isEdit = true;
-            }
-            else
-            {
-                isEdit = false;
-            }
-
-            return isEdit;
-
-        }
-
-        [NotMapped]
-        public String AreaName { get; set; }
-        [NotMapped]
-        public String ControllerName { get; set; }
-        [NotMapped]
-        public String ActionName { get; set; }
         [NotMapped]
         public virtual String ActionLink { get; set; }
         [NotMapped]
@@ -91,6 +42,10 @@ namespace DAQMS.Domain
         public virtual Boolean HasUpdate { get; set; }
         [NotMapped]
         public virtual Boolean HasDelete { get; set; }
+        [NotMapped]
+        public virtual String MessageType { get; set; }
+        [NotMapped]
+        public virtual String Message { get; set; }
 
         #endregion
 
@@ -105,15 +60,6 @@ namespace DAQMS.Domain
             this.DeletedDate = DateTime.Now;
             this.IsDelete = false;
 
-            var httpContext = HttpContext.Current;
-            var httpContextBase = new HttpContextWrapper(httpContext);
-            string areaName = httpContextBase.Request.RequestContext.RouteData.DataTokens.ContainsKey("area") ? httpContextBase.Request.RequestContext.RouteData.DataTokens["area"].ToString() : "";
-            string controllerName = httpContextBase.Request.RequestContext.RouteData.Values["controller"].ToString();
-            string actionName = httpContextBase.Request.RequestContext.RouteData.Values["action"].ToString();
-
-            this.AreaName = areaName;
-            this.ControllerName = controllerName;
-            this.ActionName = actionName;
         }
 
         //public int Id { get; set; }
@@ -134,46 +80,6 @@ namespace DAQMS.Domain
 
         #region NotMapped
 
-        public Boolean IsAdd()
-        {
-            bool isAdd;
-
-            if (this.ActionName == "Add")
-            {
-                isAdd = true;
-            }
-            else
-            {
-                isAdd = false;
-            }
-
-            return isAdd;
-
-        }
-
-        public Boolean IsEdit()
-        {
-            bool isEdit;
-
-            if (this.ActionName == "Edit")
-            {
-                isEdit = true;
-            }
-            else
-            {
-                isEdit = false;
-            }
-
-            return isEdit;
-
-        }
-
-        [NotMapped]
-        public String AreaName { get; set; }
-        [NotMapped]
-        public String ControllerName { get; set; }
-        [NotMapped]
-        public String ActionName { get; set; }
         [NotMapped]
         public virtual String ActionLink { get; set; }
         [NotMapped]

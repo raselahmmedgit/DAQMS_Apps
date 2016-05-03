@@ -28,3 +28,5 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapp
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.pdb
