@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAQMS.Data;
-using DAQMS.Domain.Extension;
+using Dapper;
 using DAQMS.Domain.Models;
-using DAQMS.DomainViewModel;
-using DAQMS.Core;
+using System.Configuration;
 
 namespace DAQMS.Service
 {
@@ -16,245 +13,76 @@ namespace DAQMS.Service
     public class UserService : IUserService
     {
         #region Global Variable Declaration
-
-        //private readonly Repository<User> _userRepository;
-        private readonly RepositoryBase<User> _userRepository;
-        private readonly IUnitOfWork _iUnitOfWork;
-
+        //private string strCon = String.Format("Server=localhost;Port=5432;User Id=postgres;Password=sa123456;Database=test_db;");
+        private IDbConnection _db = new SqlConnection(ConfigurationManager.ConnectionStrings["AppDbContext"].ConnectionString);
+        //private IDbConnection _db = new SqlConnection(String.Format("Server=localhost;Port=5432;User Id=postgres;Password=sa123456;Database=test_db;"));
         #endregion
 
-        #region Constructor
+        #region Actions
 
-        public UserService(Repository<User> userRepository, IUnitOfWork iUnitOfWork)
+        public List<User> GetAll()
         {
-            this._userRepository = userRepository;
-            this._iUnitOfWork = iUnitOfWork;
+            return this._db.Query<User>("SELECT * FROM user").ToList();
         }
 
-        #endregion
-
-        #region Get Method
-
-        public IQueryable<UserViewModel> GetAll()
+        public User Find(int id)
         {
-            var userViewModels = new List<UserViewModel>();
-            try
-            {
-
-                List<User> users = _userRepository.GetAll();
-
-                foreach (User user in users)
-                {
-                    var userViewModel = user.ConvertModelToViewModel<User, UserViewModel>();
-                    userViewModels.Add(userViewModel);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return userViewModels.AsQueryable();
+            return this._db.Query<User>("SELECT * FROM user WHERE user_id = @user_id", new { id }).SingleOrDefault();
         }
 
-        public UserViewModel GetById(long id)
+        public User Add(User user)
         {
-            var userViewModel = new UserViewModel();
+            var sqlQuery = "INSERT INTO user (user_name, user_emailaddress) VALUES(@user_name, @user_emailaddress); " + "SELECT CAST(SCOPE_IDENTITY() as int)";
+            var userId = this._db.Query<int>(sqlQuery, user).Single();
+            return user;
+        }
 
-            try
-            {
-                User user = _userRepository.GetById(id);
-                userViewModel = user.ConvertModelToViewModel<User, UserViewModel>();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        public User Update(User user)
+        {
+            var sqlQuery =
+                "UPDATE user " +
+                "SET user_name = @user_name, " +
+                "    user_emailaddress  = @user_emailaddress, " +
+                "WHERE user_id = @user_id";
+            this._db.Execute(sqlQuery, user);
+            return user;
+        }
 
-            return userViewModel;
+        public void Remove(int id)
+        {
+            var sqlQuery =
+                "DELETE FROM user " +
+                "WHERE user_id = @user_id";
+            this._db.Execute(sqlQuery);
+        }
+
+        public User GetById(int id)
+        {
+            using (var multipleResults = this._db.QueryMultiple("GetUserByID", new { Id = id }, commandType: CommandType.StoredProcedure))
+            {
+                var user = multipleResults.Read<User>().SingleOrDefault();
+
+                return user;
+            }
         }
 
         #endregion
-
-        #region Create Method
-
-        public int CreateOrUpdate(UserViewModel userViewModel)
-        {
-            int isSave = 0;
-            try
-            {
-                if (userViewModel != null)
-                {
-                    //add
-                    if (userViewModel.UserId == default(int))
-                    {
-                        Create(userViewModel);
-                    }
-                    else //edit
-                    {
-                        Update(userViewModel);
-                    }
-                }
-                else
-                {
-                    throw new ArgumentNullException("UserViewModel", ResourceHelper.NullError);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return isSave;
-        }
-        public int Create(UserViewModel userViewModel)
-        {
-            int isSave = 0;
-            try
-            {
-                if (userViewModel != null)
-                {
-                    User user = userViewModel.ConvertViewModelToModel<UserViewModel, User>();
-                    _userRepository.Insert(user);
-                    isSave = Save();
-                }
-                else
-                {
-                    throw new ArgumentNullException("UserViewModel", ResourceHelper.NullError);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return isSave;
-        }
-
-        #endregion
-
-        #region Update Method
-
-        public int Update(UserViewModel userViewModel)
-        {
-            int isSave = 0;
-            try
-            {
-                if (userViewModel != null)
-                {
-                    User user = userViewModel.ConvertViewModelToModel<UserViewModel, User>();
-                    _userRepository.Update(user);
-                    isSave = Save();
-                }
-                else
-                {
-                    throw new ArgumentNullException("UserViewModel", ResourceHelper.NullError);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return isSave;
-        }
-
-        #endregion
-
-        #region Delete Method
-
-        public int Delete(UserViewModel userViewModel)
-        {
-            int isSave = 0;
-            try
-            {
-                if (userViewModel != null)
-                {
-                    var viewModel = GetById(userViewModel.UserId);
-                    User user = viewModel.ConvertViewModelToModel<UserViewModel, User>();
-                    _userRepository.Delete(user);
-                    isSave = Save();
-                }
-                else
-                {
-                    throw new ArgumentNullException("UserViewModel", ResourceHelper.NullError);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return isSave;
-        }
-
-        public int Delete(long id)
-        {
-            int isSave = 0;
-            try
-            {
-                var userViewModel = GetById(id);
-                if (userViewModel != null)
-                {
-                    User user = userViewModel.ConvertViewModelToModel<UserViewModel, User>();
-                    _userRepository.Delete(user);
-                    isSave = Save();
-                }
-                else
-                {
-                    throw new ArgumentNullException("UserViewModel", ResourceHelper.NullError);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return isSave;
-        }
-
-        public int Delete(List<UserViewModel> userViewModels)
-        {
-            int isSave = 0;
-            try
-            {
-                foreach (var userViewModel in userViewModels)
-                {
-                    UserViewModel viewModel = GetById(userViewModel.UserId);
-                    Delete(viewModel);
-                }
-
-
-                isSave = Save();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return isSave;
-        }
-
-        #endregion
-
-        #region Save By Commit
-
-        public int Save()
-        {
-            return _iUnitOfWork.Commit();
-        }
-
-        #endregion
-
     }
 
     #endregion
-
+    
     #region Interface : User
 
-    public interface IUserService : IGeneric<UserViewModel>
+    public interface IUserService
     {
-        int Delete(List<UserViewModel> userViewModels);
+        List<User> GetAll();
+        User Find(int id);
+        User Add(User user);
+        User Update(User user);
+        void Remove(int id);
+        User GetById(int id);
     }
 
     #endregion
+
 }

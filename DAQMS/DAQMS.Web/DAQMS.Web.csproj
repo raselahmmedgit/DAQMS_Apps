@@ -1993,10 +1993,6 @@
       <Project>{d4949bad-cb24-46e3-b5de-fdbd2704b5be}</Project>
       <Name>DAQMS.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAQMS.Data\DAQMS.Data.csproj">
-      <Project>{c7669d27-3223-4821-8b1c-9ede31a5a805}</Project>
-      <Name>DAQMS.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAQMS.DomainViewModel\DAQMS.DomainViewModel.csproj">
       <Project>{d477e80b-3ff4-4ad7-beff-b65c96cf8325}</Project>
       <Name>DAQMS.DomainViewModel</Name>

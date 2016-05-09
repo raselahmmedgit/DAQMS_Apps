@@ -1,5 +1,4 @@
 D:\RaselAhmmed\Project\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
@@ -8,7 +7,6 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Autofac.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Autofac.Integration.Mvc.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Autofac.Integration.WebApi.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Data.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
@@ -42,8 +40,8 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPage
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\WebGrease.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Dapper.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Data.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
@@ -78,5 +76,8 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Sec
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Dapper.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Dapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb

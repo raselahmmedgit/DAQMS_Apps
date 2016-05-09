@@ -30,7 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IGeneric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>
@@ -47,10 +50,6 @@
     <ProjectReference Include="..\DAQMS.Core\DAQMS.Core.csproj">
       <Project>{d4949bad-cb24-46e3-b5de-fdbd2704b5be}</Project>
       <Name>DAQMS.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAQMS.Data\DAQMS.Data.csproj">
-      <Project>{c7669d27-3223-4821-8b1c-9ede31a5a805}</Project>
-      <Name>DAQMS.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAQMS.DomainViewModel\DAQMS.DomainViewModel.csproj">
       <Project>{d477e80b-3ff4-4ad7-beff-b65c96cf8325}</Project>
@@ -60,6 +59,9 @@
       <Project>{d68133b0-0830-4974-bf09-99a0a002b5dc}</Project>
       <Name>DAQMS.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
