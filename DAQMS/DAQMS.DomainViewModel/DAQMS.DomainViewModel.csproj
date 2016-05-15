@@ -48,6 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UM\LoginHistoryViewModel.cs" />
+    <Compile Include="UM\MenuGroupViewModel.cs" />
+    <Compile Include="UM\MenuViewModel.cs" />
+    <Compile Include="UM\RoleMenuViewModel.cs" />
     <Compile Include="UM\RoleViewModel.cs" />
     <Compile Include="UM\UserRoleViewModel.cs" />
     <Compile Include="UM\UserViewModel.cs" />

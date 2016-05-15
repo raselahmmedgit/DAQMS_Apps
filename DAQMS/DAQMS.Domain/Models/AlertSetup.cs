@@ -73,7 +73,7 @@ namespace DAQMS.Domain.Models
         [Required]
         [MaxLength(50)]
         [DataMember, DataColumn(true)]
-        public String AlertType { get; set; }
+        public String AlertTypeName { get; set; }
     }
 
     [Table("AlertSetupTemp", Schema = "App")]

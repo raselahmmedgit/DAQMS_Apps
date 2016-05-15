@@ -6,11 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DAQMS.DomainViewModel
 {
-    public class RoleViewModel : Role
+    public class LoginHisoryViewModel : LoginHisory
     {
-        [Display(Name = "Module Name")]
+        [Display(Name = "Menu Group")]
         [DataMember, DataColumn(true)]
-        public string ModuleName { get; set; }
+        public string LoginID { get; set; }
 
     }
 }
