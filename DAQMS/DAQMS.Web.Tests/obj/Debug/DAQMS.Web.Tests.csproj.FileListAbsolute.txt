@@ -86,7 +86,9 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DA
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Domain.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DAL.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\AutoMapper.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Npgsql.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Web.pdb
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Newtonsoft.Json.xml
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Helpers.xml
@@ -110,11 +112,9 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DA
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Domain.pdb
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.xml
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DAL.pdb
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\AutoMapper.xml
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Npgsql.xml
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DAL.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Npgsql.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DAL.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Npgsql.xml

@@ -24,7 +24,7 @@ namespace DAQMS.Web.Controllers
             // save model
             UserViewModel userViewModel = new UserViewModel();
 
-            userViewModel.UserId = 0;
+            userViewModel.Id = 0;
             userViewModel.LoginID= "obaidul123";
             userViewModel.UserName = "Obaidul Haque";
             userViewModel.UserPass = "Password";
@@ -39,11 +39,11 @@ namespace DAQMS.Web.Controllers
             
             int save=  userService.InsertData(userViewModel);
 
-            userViewModel.UserId = 2;
+            userViewModel.Id = 2;
             int update = userService.UpdateData(userViewModel);
 
-            userViewModel.UserId = 3;
-            int delete = userService.DeleteData(userViewModel.UserId);
+            userViewModel.Id = 3;
+            int delete = userService.DeleteData(userViewModel.Id);
 
             #endregion test SP
             

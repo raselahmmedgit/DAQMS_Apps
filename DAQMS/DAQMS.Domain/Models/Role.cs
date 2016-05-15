@@ -17,7 +17,7 @@ namespace DAQMS.Domain.Models
         [Required]
         [Display(AutoGenerateField = false)]
         [DataMember, DataColumn(true)]
-        public Int32 RoleId { get; set; }
+        public Int32 Id { get; set; }
 
         [Display(Name = "Role Name")]
         [Required]

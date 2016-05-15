@@ -17,7 +17,7 @@ namespace DAQMS.Domain.Models
         [Required]
         [Display(AutoGenerateField = false)]
         [DataMember, DataColumn(true)]
-        public Int32 UserId { get; set; }
+        public Int32 Id { get; set; }
 
         [Required(ErrorMessage = "Login ID is required")]
         [Display(Name = "Login ID")]

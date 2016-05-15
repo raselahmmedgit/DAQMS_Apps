@@ -71,7 +71,7 @@ namespace DAQMS.Service
         public override int DeleteData(int Id)
         {
             UserViewModel item = new UserViewModel();
-            item.UserId = Id;
+            item.Id = Id;
             return UserDAL.GetInstance().Save(item, "D");
         }
 

@@ -41,7 +41,7 @@ namespace DAQMS.DAL
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
-                command.Parameters[0].Value = item.UserId;
+                command.Parameters[0].Value = item.Id;
 
                 command.Parameters.Add(new NpgsqlParameter("p_login_id", NpgsqlDbType.Varchar));
                 command.Parameters[1].Value = item.LoginID;
@@ -250,12 +250,12 @@ namespace DAQMS.DAL
         }
         public override List<UserViewModel> GetObjList(UserViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.UserId, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, startRowIndex, maxRow);
         }
 
         public override UserViewModel GetObjList(UserViewModel item)
         {
-            return GetObjList(item.UserId, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, 0, 1).FirstOrDefault();
         }
     }
 }
