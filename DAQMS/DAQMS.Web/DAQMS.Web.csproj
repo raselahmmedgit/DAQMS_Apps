@@ -52,6 +52,12 @@
       <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Mono.Security.3.2.3.0\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.0.7\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -1992,6 +1998,10 @@
     <ProjectReference Include="..\DAQMS.Core\DAQMS.Core.csproj">
       <Project>{d4949bad-cb24-46e3-b5de-fdbd2704b5be}</Project>
       <Name>DAQMS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAQMS.DAL\DAQMS.DAL.csproj">
+      <Project>{d91b5698-69fb-45ad-a843-c7899b3b86fd}</Project>
+      <Name>DAQMS.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAQMS.DomainViewModel\DAQMS.DomainViewModel.csproj">
       <Project>{d477e80b-3ff4-4ad7-beff-b65c96cf8325}</Project>

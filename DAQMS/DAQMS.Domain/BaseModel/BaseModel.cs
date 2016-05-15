@@ -2,35 +2,40 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace DAQMS.Domain
+namespace DAQMS.Domain.Models
 {
     public class BaseModel
     {
         public BaseModel()
         {
-            this.CreatedDate = DateTime.Now;
-            this.UpdatedDate = DateTime.Now;
+            this.InsertTimestamp = DateTime.Now;
+            this.UpdateTimestamp = DateTime.Now;
             this.DeletedDate = DateTime.Now;
             this.IsDelete = false;
 
         }
 
         //public int Id { get; set; }
+         [DataMember, DataColumn(true)]
+        public string InsertUser { get; set; }
+         [DataMember, DataColumn(true)]
+        public DateTime InsertTimestamp { get; set; }
 
-        public Int32 CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
-
-        public Int32 UpdatedBy { get; set; }
-        public DateTime UpdatedDate { get; set; }
+         [DataMember, DataColumn(true)]
+        public string UpdateUser { get; set; }
+         [DataMember, DataColumn(true)]
+        public DateTime UpdateTimestamp { get; set; }
 
         public Boolean IsDelete { get; set; }
 
-        public Int32 DeletedBy { get; set; }
+        public string DeletedBy { get; set; }
         public DateTime DeletedDate { get; set; }
+        public string LoginUserID { get; set; }
 
         #region NotMapped
 

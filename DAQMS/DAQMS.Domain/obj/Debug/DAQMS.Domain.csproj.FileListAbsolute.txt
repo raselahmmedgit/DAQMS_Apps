@@ -21,3 +21,15 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFra
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.xml
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.xml
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache

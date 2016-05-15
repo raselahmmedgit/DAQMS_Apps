@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Core", "DAQMS.Core\DAQMS.Core.csproj", "{D4949BAD-CB24-46E3-B5DE-FDBD2704B5BE}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Web", "DAQMS.Web\DAQMS.Web.csproj", "{059F339A-B278-43FB-8CDC-C36081DD93DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.Web.Tests", "DAQMS.Web.Tests\DAQMS.Web.Tests.csproj", "{6A7B5A0F-FC68-404F-91EC-CF080796C72A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAQMS.DAL", "DAQMS.DAL\DAQMS.DAL.csproj", "{D91B5698-69FB-45AD-A843-C7899B3B86FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A7B5A0F-FC68-404F-91EC-CF080796C72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91B5698-69FB-45AD-A843-C7899B3B86FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91B5698-69FB-45AD-A843-C7899B3B86FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91B5698-69FB-45AD-A843-C7899B3B86FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91B5698-69FB-45AD-A843-C7899B3B86FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

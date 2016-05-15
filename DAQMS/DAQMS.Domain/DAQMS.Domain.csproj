@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +53,10 @@
   <ItemGroup>
     <Compile Include="BaseModel\BaseModel.cs" />
     <Compile Include="BaseModel\BaseViewModel.cs" />
+    <Compile Include="BaseModel\DataColumn.cs" />
+    <Compile Include="BaseModel\EntityBase.cs" />
+    <Compile Include="BaseModel\MapperBase.cs" />
+    <Compile Include="BaseModel\ModelMapperBase.cs" />
     <Compile Include="Extension\ModelExtension.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
