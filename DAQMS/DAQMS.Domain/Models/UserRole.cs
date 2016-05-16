@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DAQMS.Domain.Models
 {
     [Table("UserRole", Schema = "App")]
-    public class UserRole : BaseNotMapModel
+    public class UserRole : BaseModel
     {
         [Key]
         [Required]

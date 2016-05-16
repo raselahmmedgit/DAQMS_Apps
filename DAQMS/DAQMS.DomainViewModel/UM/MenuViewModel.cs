@@ -3,11 +3,19 @@ using DAQMS.Domain.Models;
 using System.Runtime.Serialization;
 using DAQMS.Domain;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace DAQMS.DomainViewModel
 {
     public class MenuViewModel : Menu
     {
+        public MenuViewModel()
+        {
+            this.ModuleList = new List<SelectListItem>();
+            this.MenuGroupList = new List<SelectListItem>();
+        }
+
         [Display(Name = "Module Name")]
         [DataMember, DataColumn(true)]
         public string ModuleName { get; set; }
@@ -23,7 +31,11 @@ namespace DAQMS.DomainViewModel
        [Display(Name = "Parent Menu Caption")]
        [DataMember, DataColumn(true)]
        public string ParentMenuCaption { get; set; }
-        
+
+
+       public IList<SelectListItem> ModuleList { get; set; }
+
+       public IList<SelectListItem> MenuGroupList { get; set; }
        
     }
 }
