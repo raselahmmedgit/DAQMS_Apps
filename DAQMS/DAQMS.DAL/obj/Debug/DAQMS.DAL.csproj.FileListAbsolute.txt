@@ -11,3 +11,5 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMapp
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml

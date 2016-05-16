@@ -12,14 +12,14 @@ using DAQMS.DomainViewModel;
 
 namespace DAQMS.DAL
 {
-    public class UserRoleDAL : DataAccessBase<UserRoleViewModel>
+    public class MenuDAL : DataAccessBase<MenuViewModel>
     {
-        public static UserRoleDAL GetInstance()
+        public static MenuDAL GetInstance()
         {
-            return new UserRoleDAL();
+            return new MenuDAL();
         }
 
-        public override System.Int32 Save(UserRoleViewModel item, string Mood)
+        public override System.Int32 Save(MenuViewModel item, string Mood)
         {
             int id = 0;
 
@@ -33,25 +33,41 @@ namespace DAQMS.DAL
 
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
-              
+
+   
                 // Define a command to call show_cities() procedure
-                NpgsqlCommand command = new NpgsqlCommand("save_user_role", conn);
+                NpgsqlCommand command = new NpgsqlCommand("save_menu", conn);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
                 command.Parameters[0].Value = item.Id;
 
-                command.Parameters.Add(new NpgsqlParameter("p_role_id", NpgsqlDbType.Integer));
-                command.Parameters[1].Value = item.RoleId;
+                command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
+                command.Parameters[1].Value = item.ModuleId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_userid", NpgsqlDbType.Integer));
-                command.Parameters[2].Value = item.UserId;
+                command.Parameters.Add(new NpgsqlParameter("p_menu_group_id", NpgsqlDbType.Integer));
+                command.Parameters[2].Value = item.MenuGroupId;
+
+                command.Parameters.Add(new NpgsqlParameter("p_menu_name", NpgsqlDbType.Varchar));
+                command.Parameters[3].Value = item.MenuName;
+
+                command.Parameters.Add(new NpgsqlParameter("p_menu_caption", NpgsqlDbType.Varchar));
+                command.Parameters[4].Value = item.MenuCaption;
+
+                command.Parameters.Add(new NpgsqlParameter("p_parent_menu_id", NpgsqlDbType.Integer));
+                command.Parameters[5].Value = item.ParentMenuId;
+
+                command.Parameters.Add(new NpgsqlParameter("p_serial_no", NpgsqlDbType.Integer));
+                command.Parameters[6].Value = item.SerialNo;
+
+                command.Parameters.Add(new NpgsqlParameter("p_page_url", NpgsqlDbType.Varchar));
+                command.Parameters[7].Value = item.PageUrl;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[3].Value = item.LoginUserID;
+                command.Parameters[8].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[4].Value = Mood;
+                command.Parameters[9].Value = Mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -111,13 +127,14 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<UserRoleViewModel> GetObjList(int Id, int UserId, string LoginUserID, int startRowIndex, int maximumRows)
+        public List<MenuViewModel> GetObjList(int Id, int ModuleId, int MenuGroupid, int ParentMenuId,
+            string LoginUserID, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
             NpgsqlConnection conn = null;
 
-            List<UserRoleViewModel> results = null;
+            List<MenuViewModel> results = null;
 
             try
             {
@@ -127,24 +144,26 @@ namespace DAQMS.DAL
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
 
-                //get_user_role(p_id integer, p_userid integer, 
-                //p_user_id character varying, p_index integer, p_maximumrows integer, ref refcursor)
-
                 // Define a command to call procedure
-                NpgsqlCommand command = new NpgsqlCommand("get_user_role", conn);
+                NpgsqlCommand command = new NpgsqlCommand("get_menu", conn);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
                 command.Parameters[0].Value = Id;
-                command.Parameters.Add(new NpgsqlParameter("p_userid", NpgsqlDbType.Integer));
-                command.Parameters[1].Value = UserId;
+                command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
+                command.Parameters[1].Value = ModuleId;
+
+                command.Parameters.Add(new NpgsqlParameter("p_menu_group_id", NpgsqlDbType.Integer));
+                command.Parameters[2].Value = MenuGroupid;
+                command.Parameters.Add(new NpgsqlParameter("p_parent_menu_id", NpgsqlDbType.Integer));
+                command.Parameters[3].Value = ParentMenuId;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[2].Value = LoginUserID;
+                command.Parameters[4].Value = LoginUserID;
                 command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
-                command.Parameters[3].Value = startRowIndex;
+                command.Parameters[5].Value = startRowIndex;
                 command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
-                command.Parameters[4].Value = maximumRows;
+                command.Parameters[6].Value = maximumRows;
 
                 // reset parameter by default value
                 #region param reset
@@ -174,7 +193,7 @@ namespace DAQMS.DAL
                 #endregion  param reset
 
                 command.Parameters.Add(new NpgsqlParameter("ref", NpgsqlDbType.Refcursor));
-                command.Parameters[5].Value = "ref";
+                command.Parameters[7].Value = "ref";
 
                 command.ExecuteNonQuery();
                 command.CommandText = "fetch all in \"ref\"";
@@ -189,10 +208,10 @@ namespace DAQMS.DAL
                 }
 
                 // Fetch rows 
-                results = new List<UserRoleViewModel>();
+                results = new List<MenuViewModel>();
                 foreach (DataRow dr in dsResult.Tables[0].Rows)
                 {
-                    UserRoleViewModel obj = new UserRoleViewModel();
+                    MenuViewModel obj = new MenuViewModel();
                     ModelMapperBase.GetInstance().MapItem(obj, dr);
                     results.Add(obj);
                 }
@@ -208,18 +227,18 @@ namespace DAQMS.DAL
             return results;
         }
 
-        public override UserRoleViewModel GetObjById(int Id)
+        public override MenuViewModel GetObjById(int Id)
         {
-            return GetObjList(Id, 0, "", 1, 1).FirstOrDefault();
+            return GetObjList(Id, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
-        public override List<UserRoleViewModel> GetObjList(UserRoleViewModel item, int startRowIndex, int maxRow)
+        public override List<MenuViewModel> GetObjList(MenuViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.UserId, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id, item.ModuleId,item.MenuGroupId, Convert.ToInt32(item.ParentMenuId), item.LoginUserID, startRowIndex, maxRow);
         }
 
-        public override UserRoleViewModel GetObjList(UserRoleViewModel item)
+        public override MenuViewModel GetObjList(MenuViewModel item)
         {
-            return GetObjList(item.Id, item.UserId, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.ModuleId, item.MenuGroupId, Convert.ToInt32(item.ParentMenuId), item.LoginUserID, 0, 1).FirstOrDefault();
         }
     }
 }

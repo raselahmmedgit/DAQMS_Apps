@@ -139,7 +139,7 @@ namespace DAQMS.DAL
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
                 command.Parameters[0].Value = Id;
-                command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Varchar));
+                command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
                 command.Parameters[1].Value = ModuleId;
                 command.Parameters.Add(new NpgsqlParameter("p_group_name", NpgsqlDbType.Varchar));
                 command.Parameters[2].Value = GroupName;

@@ -12,14 +12,14 @@ using DAQMS.DomainViewModel;
 
 namespace DAQMS.DAL
 {
-    public class UserRoleDAL : DataAccessBase<UserRoleViewModel>
+    public class RoleMenuDAL : DataAccessBase<RoleMenuViewModel>
     {
-        public static UserRoleDAL GetInstance()
+        public static RoleMenuDAL GetInstance()
         {
-            return new UserRoleDAL();
+            return new RoleMenuDAL();
         }
 
-        public override System.Int32 Save(UserRoleViewModel item, string Mood)
+        public override System.Int32 Save(RoleMenuViewModel item, string Mood)
         {
             int id = 0;
 
@@ -33,9 +33,9 @@ namespace DAQMS.DAL
 
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
-              
+
                 // Define a command to call show_cities() procedure
-                NpgsqlCommand command = new NpgsqlCommand("save_user_role", conn);
+                NpgsqlCommand command = new NpgsqlCommand("save_role_menu", conn);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
@@ -44,14 +44,26 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_role_id", NpgsqlDbType.Integer));
                 command.Parameters[1].Value = item.RoleId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_userid", NpgsqlDbType.Integer));
-                command.Parameters[2].Value = item.UserId;
+                command.Parameters.Add(new NpgsqlParameter("p_menu_id", NpgsqlDbType.Integer));
+                command.Parameters[2].Value = item.MenuId;
+
+                command.Parameters.Add(new NpgsqlParameter("p_optadd", NpgsqlDbType.Bit));
+                command.Parameters[3].Value = item.OptAdd;
+
+                command.Parameters.Add(new NpgsqlParameter("p_optupdate", NpgsqlDbType.Bit));
+                command.Parameters[4].Value = item.OptUpdate;
+
+                command.Parameters.Add(new NpgsqlParameter("p_optdelete", NpgsqlDbType.Bit));
+                command.Parameters[5].Value = item.OptDelete;
+
+                command.Parameters.Add(new NpgsqlParameter("p_optview", NpgsqlDbType.Bit));
+                command.Parameters[6].Value = item.OptView;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[3].Value = item.LoginUserID;
+                command.Parameters[7].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[4].Value = Mood;
+                command.Parameters[8].Value = Mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -111,13 +123,14 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<UserRoleViewModel> GetObjList(int Id, int UserId, string LoginUserID, int startRowIndex, int maximumRows)
+        public List<RoleMenuViewModel> GetObjList(int Id,int MenuId, int ModuleId, int RoleId,
+            string LoginUserID, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
             NpgsqlConnection conn = null;
 
-            List<UserRoleViewModel> results = null;
+            List<RoleMenuViewModel> results = null;
 
             try
             {
@@ -127,24 +140,25 @@ namespace DAQMS.DAL
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
 
-                //get_user_role(p_id integer, p_userid integer, 
-                //p_user_id character varying, p_index integer, p_maximumrows integer, ref refcursor)
-
                 // Define a command to call procedure
-                NpgsqlCommand command = new NpgsqlCommand("get_user_role", conn);
+                NpgsqlCommand command = new NpgsqlCommand("get_role_menu", conn);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
                 command.Parameters[0].Value = Id;
-                command.Parameters.Add(new NpgsqlParameter("p_userid", NpgsqlDbType.Integer));
-                command.Parameters[1].Value = UserId;
+                command.Parameters.Add(new NpgsqlParameter("p_menu_id", NpgsqlDbType.Integer));
+                command.Parameters[1].Value = MenuId;
+                command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
+                command.Parameters[2].Value = ModuleId;
+                command.Parameters.Add(new NpgsqlParameter("p_role_id", NpgsqlDbType.Integer));
+                command.Parameters[3].Value = RoleId;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[2].Value = LoginUserID;
+                command.Parameters[4].Value = LoginUserID;
                 command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
-                command.Parameters[3].Value = startRowIndex;
+                command.Parameters[5].Value = startRowIndex;
                 command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
-                command.Parameters[4].Value = maximumRows;
+                command.Parameters[6].Value = maximumRows;
 
                 // reset parameter by default value
                 #region param reset
@@ -174,7 +188,7 @@ namespace DAQMS.DAL
                 #endregion  param reset
 
                 command.Parameters.Add(new NpgsqlParameter("ref", NpgsqlDbType.Refcursor));
-                command.Parameters[5].Value = "ref";
+                command.Parameters[7].Value = "ref";
 
                 command.ExecuteNonQuery();
                 command.CommandText = "fetch all in \"ref\"";
@@ -189,10 +203,10 @@ namespace DAQMS.DAL
                 }
 
                 // Fetch rows 
-                results = new List<UserRoleViewModel>();
+                results = new List<RoleMenuViewModel>();
                 foreach (DataRow dr in dsResult.Tables[0].Rows)
                 {
-                    UserRoleViewModel obj = new UserRoleViewModel();
+                    RoleMenuViewModel obj = new RoleMenuViewModel();
                     ModelMapperBase.GetInstance().MapItem(obj, dr);
                     results.Add(obj);
                 }
@@ -208,18 +222,18 @@ namespace DAQMS.DAL
             return results;
         }
 
-        public override UserRoleViewModel GetObjById(int Id)
+        public override RoleMenuViewModel GetObjById(int Id)
         {
-            return GetObjList(Id, 0, "", 1, 1).FirstOrDefault();
+            return GetObjList(Id, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
-        public override List<UserRoleViewModel> GetObjList(UserRoleViewModel item, int startRowIndex, int maxRow)
+        public override List<RoleMenuViewModel> GetObjList(RoleMenuViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.UserId, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id,item.MenuId, item.ModuleId ,item.RoleId, item.LoginUserID, startRowIndex, maxRow);
         }
 
-        public override UserRoleViewModel GetObjList(UserRoleViewModel item)
+        public override RoleMenuViewModel GetObjList(RoleMenuViewModel item)
         {
-            return GetObjList(item.Id, item.UserId, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.MenuId, item.ModuleId, item.RoleId, item.LoginUserID, 0, 1).FirstOrDefault();
         }
     }
 }

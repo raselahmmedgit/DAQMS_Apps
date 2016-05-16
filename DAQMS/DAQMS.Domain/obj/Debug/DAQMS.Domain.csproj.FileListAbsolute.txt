@@ -32,3 +32,4 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\Entit
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache

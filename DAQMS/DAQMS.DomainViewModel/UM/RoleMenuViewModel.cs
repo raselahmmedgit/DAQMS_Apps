@@ -17,13 +17,17 @@ namespace DAQMS.DomainViewModel
         [DataMember, DataColumn(true)]
         public string MenuName { get; set; }
 
-        [Display(Name = "Menu Name")]
+        [Display(Name = "Menu Caption")]
         [DataMember, DataColumn(true)]
         public string MenuCaption { get; set; }
 
         [Display(Name = "Role Name")]
         [DataMember, DataColumn(true)]
         public string RoleName { get; set; }
+
+        [Display(Name = "Module Name")]
+        [DataMember, DataColumn(true)]
+        public int ModuleId { get; set; }
 
     }
 }
