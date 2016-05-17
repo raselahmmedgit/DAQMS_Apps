@@ -227,11 +227,7 @@ namespace DAQMS.DAL
                     UserViewModel obj = new UserViewModel();
                     ModelMapperBase.GetInstance().MapItem(obj, dr);
                     results.Add(obj);
-
                 }
-
-                
-
             }
             catch (Exception ex)
             {

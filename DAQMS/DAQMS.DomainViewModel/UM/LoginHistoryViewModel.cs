@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DAQMS.DomainViewModel
 {
-    public class LoginHisoryViewModel : LoginHisory
+    public class LoginHistoryViewModel : LoginHisory
     {
         [Display(Name = "Menu Group")]
         [DataMember, DataColumn(true)]

@@ -29,25 +29,3 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapp
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.xml
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.xml
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.xml
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.dll
-D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.xml

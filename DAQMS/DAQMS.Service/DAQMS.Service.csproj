@@ -45,7 +45,13 @@
   <ItemGroup>
     <Compile Include="Base\BusinessBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserService.cs" />
+    <Compile Include="UM\LoginHistoryService.cs" />
+    <Compile Include="UM\MenuGroupService.cs" />
+    <Compile Include="UM\MenuService.cs" />
+    <Compile Include="UM\RoleMenuService.cs" />
+    <Compile Include="UM\RoleService.cs" />
+    <Compile Include="UM\UserRoleService.cs" />
+    <Compile Include="UM\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAQMS.Core\DAQMS.Core.csproj">
@@ -67,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAQ\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
