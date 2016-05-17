@@ -51,10 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAQ\ContactViewModel.cs" />
+    <Compile Include="DAQ\DeviceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAQ\CompanyViewModel.cs" />
     <Compile Include="UM\LoginHistoryViewModel.cs" />
     <Compile Include="UM\MenuGroupViewModel.cs" />
     <Compile Include="UM\MenuViewModel.cs" />
+    <Compile Include="DAQ\ProjectViewModel.cs" />
     <Compile Include="UM\RoleMenuViewModel.cs" />
     <Compile Include="UM\RoleViewModel.cs" />
     <Compile Include="UM\UserRoleViewModel.cs" />
@@ -70,9 +74,7 @@
       <Name>DAQMS.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAQ\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
