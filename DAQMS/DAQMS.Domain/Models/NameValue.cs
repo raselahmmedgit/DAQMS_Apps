@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAQMS.Domain.Models
 {
-    [Table("Module", Schema = "App")]
-    public class Module : BaseModel
+    public class NameValue : BaseModel
     {
         [Key]
         [Required]
@@ -18,11 +17,10 @@ namespace DAQMS.Domain.Models
         [DataMember, DataColumn(true)]
         public Int32 Id { get; set; }
 
-        [Display(Name = "Module Name")]
+        [Display(Name = "Name")]
         [MaxLength(50)]
         [Required]
         [DataMember, DataColumn(true)]
-        public string ModuleName { get; set; }
- 
+        public string Name { get; set; }
     }
 }

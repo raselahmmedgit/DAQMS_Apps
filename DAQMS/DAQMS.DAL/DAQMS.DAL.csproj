@@ -50,6 +50,11 @@
     <Compile Include="Base\EventLogMgr.cs" />
     <Compile Include="Base\IPrimaryBase.cs" />
     <Compile Include="Base\SharedEnum.cs" />
+    <Compile Include="DAQ\CommonDAL.cs" />
+    <Compile Include="DAQ\CompanyDAL.cs" />
+    <Compile Include="DAQ\ContactDAL.cs" />
+    <Compile Include="DAQ\DeviceDAL.cs" />
+    <Compile Include="DAQ\ProjectDAL.cs" />
     <Compile Include="DBHelper\AppSettings.cs" />
     <Compile Include="DBHelper\CustomParameter.cs" />
     <Compile Include="DBHelper\CustomParameterList.cs" />
@@ -68,9 +73,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAQ\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAQMS.DomainViewModel\DAQMS.DomainViewModel.csproj">
       <Project>{d477e80b-3ff4-4ad7-beff-b65c96cf8325}</Project>

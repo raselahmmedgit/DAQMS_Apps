@@ -10,7 +10,6 @@ namespace DAQMS.Web.Controllers
 {
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
             #region test SP

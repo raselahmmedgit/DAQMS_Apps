@@ -67,6 +67,7 @@
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuGroup.cs" />
     <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\NameValue.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Relay.cs" />
     <Compile Include="Models\Role.cs" />

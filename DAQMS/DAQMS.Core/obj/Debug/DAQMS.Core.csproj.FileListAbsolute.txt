@@ -8,3 +8,10 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.pdb
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csprojResolveAssemblyReference.cache
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.Resource.resources
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
+D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
