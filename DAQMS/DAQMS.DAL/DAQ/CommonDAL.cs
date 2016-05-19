@@ -20,7 +20,7 @@ namespace DAQMS.DAL.DAQ
            return new CommonDAL();
        }
 
-       public List<NameValue> GetObjList(string classType, int Id, string Name, string LoginUserID, int startRowIndex, int maximumRows)
+       public List<NameValue> GetObjList(string classType, int id, string name, string loginUserID, int startRowIndex, int maximumRows)
        {
            DataSet dsResult = new DataSet();
            DataTable dt = new DataTable();
@@ -44,14 +44,14 @@ namespace DAQMS.DAL.DAQ
                    sql = "SELECT * FROM (SELECT id, alert_type as name  FROM alert_type) abc WHERE 0=0";
                }
 
-               if (Id>0)
+               if (id>0)
                {
-                   sql += " AND id=" + Id;
+                   sql += " AND id=" + id;
                }
 
-               if (!(System.String.IsNullOrEmpty(Name)))
+               if (!(System.String.IsNullOrEmpty(name)))
                {
-                   sql += " AND name='" + Name +"'";
+                   sql += " AND name='" + name +"'";
                }
 
                // Define a command to call procedure

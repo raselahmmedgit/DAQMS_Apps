@@ -21,3 +21,8 @@ C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csprojResolveAssemblyReference.cache

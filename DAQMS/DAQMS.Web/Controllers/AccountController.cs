@@ -6,16 +6,35 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using DAQMS.Core;
+using DAQMS.Domain.Models;
+using DAQMS.Service;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DAQMS.Web.Models;
+using DAQMS.DomainViewModel;
 
 namespace DAQMS.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        #region Global Variable Declaration
+
+        #endregion
+
+        #region Constructor
+
+        public AccountController()
+        {
+        }
+
+        #endregion
+
+        #region Action
+
+
         public ActionResult LogIn()
         {
             return View();
@@ -29,27 +48,56 @@ namespace DAQMS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                UserService userService = new UserService();
+                //User user = userService.GetLogInUser(model);
+                User user = new User();
+
+                if (user != null)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                    if (IsValidateUser(model.UserName, model.Password, user))
                     {
-                        return Redirect(returnUrl);
+                        SessionHelper.CurrentSession.Content.LoggedInUser = user;
+
+                        if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                            && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                        {
+                            return Redirect(returnUrl);
+                        }
+                        else
+                        {
+                            return RedirectToAction("Index", "Home");
+                        }
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        ModelState.AddModelError("", "The user name or password provided is incorrect.");
                     }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    ModelState.AddModelError("", "The user not register, please register first.");
                 }
+
+                
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        private bool IsValidateUser(string userName, string password, User user)
+        {
+            string strPassword = string.Empty;
+
+            if (user.UserName == userName && password == strPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         //
@@ -57,8 +105,9 @@ namespace DAQMS.Web.Controllers
 
         public ActionResult LogOut()
         {
-            FormsAuthentication.SignOut();
-
+            Session.RemoveAll();
+            SessionHelper.CurrentSession.Remove("LoggedInUser");
+            SessionHelper.CurrentSession.Clear();
             return RedirectToAction("Index", "Home");
         }
 
@@ -79,29 +128,18 @@ namespace DAQMS.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                // Attempt to register the user
-                MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, null, null, true, null, out createStatus);
-
-                if (createStatus == MembershipCreateStatus.Success)
+                try
                 {
-                    //OSNB.Models.User user = _db.Users.Find(model.UserName);
-                    //OSNB.Models.Role role = _db.Roles.Find("User");
-                    //user.Roles = new List<Role> { role };
+                    UserViewModel userViewModel = new UserViewModel();
 
-                    //_db.Entry(user).State = EntityState.Modified;
+                    UserService userService = new UserService();
+                    userService.InsertData(userViewModel);
 
-                    //OSNB.Models.Member member = new OSNB.Models.Member { FirstName = model.UserName, LastName = null, SurName = model.UserName, DateOfBirth = null, Address = null, PhoneNumber = null, MobileNumber = model.ContactNo, ThumbImageUrl = null, SmallImageUrl = null, UserName = model.UserName, MemberBloodGroupId = model.MemberBloodGroupId, MemberDistrictId = model.MemberDistrictId, MemberHospitalId = model.MemberHospitalId, MemberZoneId = model.MemberZoneId };
-
-                    //_db.Members.Add(member);
-                    //_db.SaveChanges();
-
-                    FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
-                else
+                catch (Exception ex)
                 {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
+                    ModelState.AddModelError("", ex.Message.ToString());
                 }
             }
 
@@ -202,5 +240,8 @@ namespace DAQMS.Web.Controllers
             }
         }
         #endregion
+
+        #endregion
+
     }
 }

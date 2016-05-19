@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using DAQMS.Core.Utility;
 using DAQMS.Core;
+using DAQMS.Domain.Models;
 
 namespace DAQMS.Web
 {
@@ -29,113 +30,20 @@ namespace DAQMS.Web
 
         #region Action
 
-        //public User CurrentLoggedInUser
-        //{
-        //    get
-        //    {
-        //        User user = WebHelper.CurrentSession.Content.LoggedInUser;
-        //        if (user == null)
-        //        {
-        //            int userId = 0;
-        //            string emailAddress = string.Empty;
-        //            if (HttpContext.User != null && HttpContext.User.Identity != null && HttpContext.User.Identity.IsAuthenticated)
-        //            {
-        //                var identity = (ClaimsIdentity)User.Identity;
-        //                IEnumerable<Claim> claims = identity.Claims;
-        //                foreach (Claim claim in claims)
-        //                {
-        //                    if (claim.Type.Contains("identity/claims/sid"))
-        //                    {
-        //                        userId = claim.Value.ToInteger(true);
-        //                        break;
-        //                    }
-        //                    else if (claim.Type.Contains("identity/claims/emailaddress"))
-        //                    {
-        //                        emailAddress = claim.Value;
-        //                    }
-        //                }
-        //            }
-        //            if (userId > 0 || emailAddress.IsNotNullOrEmpty())
-        //            {
-        //                if (userRepository == null)
-        //                {
-        //                    userRepository = DependencyResolver.Current.GetService(typeof(IUserRepository)) as IUserRepository;
-        //                }
-        //                if (userId > 0)
-        //                {
-        //                    user = userRepository.Find(userId);
-        //                }
-        //                else if (emailAddress.IsNotNullOrEmpty())
-        //                {
-        //                    user = userRepository.Find(emailAddress);
-        //                }
-        //                WebHelper.CurrentSession.Content.LoggedInUser = user;
-        //            }
-        //            if (user == null)
-        //            {
-        //                user = new User();
-        //            }
-        //        }
-        //        return user;
-        //    }
-        //}
-
-        private static readonly string[] _validFileExtension = new string[] { ".png", ".jpg", ".jpeg", ".gif", ".txt", ".doc", ".docx", ".pdf", ".xls", ".xlsx", ".csv", ".wmv", ".ppt", ".pptx", ".rar", ".zip" };
-
-        [HttpPost]
-        public ActionResult UploadFile()
+        public User CurrentLoggedInUser
         {
-            try
+            get
             {
-                HttpFileCollectionBase files = Request.Files;
-                if (files != null && files.Count > 0)
+                User user = SessionHelper.CurrentSession.Content.LoggedInUser;
+                if (user != null)
                 {
-                    // Some browsers send file names with full path. This needs to be stripped.
-
-                    var extension = Path.GetExtension(files[0].FileName);
-                    if (_validFileExtension.Contains(extension))
-                    {
-                        var fileName = Path.GetFileName(files[0].FileName);
-                        var physicalPath = Path.Combine(Server.MapPath(AppConstant.Paths.TemporaryFileUploadPath), fileName);
-                        Session.Add(files.AllKeys[0] + "FileName", fileName);
-
-                        // The files are not actually saved in this demo
-                        files[0].SaveAs(physicalPath);
-                        return Content("");
-                    }
-                    else
-                    {
-                        Response.StatusCode = 400;
-                        return Json("Unsuccessful", JsonRequestBehavior.DenyGet);
-                    }
+                    return user;
+                }
+                else
+                {
+                    return null;
                 }
             }
-            catch (Exception ex)
-            {
-                ExceptionHelper.Manage(ex, true);
-            }
-            return null;
-            // Return an empty string to signify success
-        }
-
-        public ActionResult RemoveFile(string[] fileNames)
-        {
-            // The parameter of the Remove action must be called "fileNames"
-            foreach (var fullName in fileNames)
-            {
-                var fileName = Path.GetFileName(fullName);
-                var physicalPath = Path.Combine(Server.MapPath(AppConstant.Paths.TemporaryFileUploadPath), fileName);
-
-                // TODO: Verify user permissions
-                if (System.IO.File.Exists(physicalPath))
-                {
-                    // The files are not actually removed in this demo
-                    System.IO.File.Delete(physicalPath);
-                    Session.Remove(fileName + "FileName");
-                }
-            }
-            // Return an empty string to signify success
-            return Content("");
         }
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
@@ -170,31 +78,31 @@ namespace DAQMS.Web
                 HttpSessionStateBase httpSessionStateBase = filterContext.HttpContext.Session;
                 if (httpSessionStateBase != null)
                 {
-                    //var userSession = httpSessionStateBase["User"];
-                    //if (((userSession == null) && (!httpSessionStateBase.IsNewSession)) || (httpSessionStateBase.IsNewSession))
-                    //{
-                    //    httpSessionStateBase.RemoveAll();
-                    //    httpSessionStateBase.Clear();
-                    //    httpSessionStateBase.Abandon();
-                    //    if (filterContext.HttpContext.Request.IsAjaxRequest())
-                    //    {
-                    //        filterContext.HttpContext.Response.StatusCode = 403;
-                    //        filterContext.Result = new JsonResult
-                    //        {
-                    //            Data = new
-                    //            {
-                    //                // put whatever data you want which will be sent
-                    //                // to the client
-                    //                message = "Sorry, you are not logged user."
-                    //            },
-                    //            JsonRequestBehavior = JsonRequestBehavior.AllowGet
-                    //        };
-                    //    }
-                    //    else
-                    //    {
-                    //        filterContext.Result = new RedirectResult("~/Home/Index");
-                    //    }
-                    //}
+                    var userSession = httpSessionStateBase["User"];
+                    if (((userSession == null) && (!httpSessionStateBase.IsNewSession)) || (httpSessionStateBase.IsNewSession))
+                    {
+                        httpSessionStateBase.RemoveAll();
+                        httpSessionStateBase.Clear();
+                        httpSessionStateBase.Abandon();
+                        if (filterContext.HttpContext.Request.IsAjaxRequest())
+                        {
+                            filterContext.HttpContext.Response.StatusCode = 403;
+                            filterContext.Result = new JsonResult
+                            {
+                                Data = new
+                                {
+                                    // put whatever data you want which will be sent
+                                    // to the client
+                                    message = "Sorry, you are not logged user."
+                                },
+                                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+                            };
+                        }
+                        else
+                        {
+                            filterContext.Result = new RedirectResult("~/Home/Index");
+                        }
+                    }
                     if (!CheckIfUserIsAuthenticated(filterContext))
                     {
                         if (filterContext.HttpContext.Request.IsAjaxRequest())

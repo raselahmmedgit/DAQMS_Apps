@@ -109,6 +109,21 @@ namespace DAQMS.Web
 
         #region Application Info
 
+        public static IHtmlString RenderApplicationLogo(this HtmlHelper htmlHelper)
+        {
+
+            var strContent = string.Empty;
+            StringBuilder stringBuilder = new StringBuilder();
+            string headerUrl = string.Empty;
+            string headerText = string.Empty;
+
+            stringBuilder.Append(@"<a href='" + headerUrl + "' class='logo'>");
+            stringBuilder.Append(headerText);
+            stringBuilder.Append(@"</a>");
+
+            return MvcHtmlString.Create(strContent);
+        }
+
         public static IHtmlString RenderApplicationTitle(this HtmlHelper htmlHelper)
         {
             var strContent = string.Empty;

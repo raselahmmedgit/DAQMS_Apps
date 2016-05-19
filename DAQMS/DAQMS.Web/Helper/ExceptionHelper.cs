@@ -39,7 +39,9 @@ namespace DAQMS.Web
             {
                 LoggerHelper.ErrorLog(ex);
             }
-
+            ErrorViewModel errorViewModel = new ErrorViewModel();
+            errorViewModel.ErrorMessage = ex.Message;
+            SessionHelper.CurrentSession.Set("Error", errorViewModel);
             return message;
         }
 

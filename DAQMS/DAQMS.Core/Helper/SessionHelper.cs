@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using DAQMS.Domain.Models;
 
 namespace DAQMS.Core
 {
@@ -214,6 +215,17 @@ namespace DAQMS.Core
                     }
                 }
 
+                public static User LoggedInUser
+                {
+                    get
+                    {
+                        return (User)Get("LoggedInUser");
+                    }
+                    set
+                    {
+                        Set("LoggedInUser", value);
+                    }
+                }
 
                 public static string SuccessMessage
                 {

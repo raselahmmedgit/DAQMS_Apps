@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DAQMS.Core;
 using DAQMS.Service;
 using DAQMS.DomainViewModel;
 
 namespace DAQMS.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
@@ -51,7 +52,9 @@ namespace DAQMS.Web.Controllers
 
         public ActionResult Error()
         {
-            return View();
+            ErrorViewModel errorViewModel = (ErrorViewModel)SessionHelper.CurrentSession.Get("Error");
+            SessionHelper.CurrentSession.Remove("Error");
+            return View(errorViewModel);
         }
     }
 }

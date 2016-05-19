@@ -198,6 +198,7 @@
     <Compile Include="Helper\LinqFilteringHelper.cs" />
     <Compile Include="Helper\LinqSortingHelper.cs" />
     <Compile Include="Helper\LoggerHelper.cs" />
+    <Compile Include="Helper\UserAuthorize.cs" />
     <Compile Include="Helper\VCardResultHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -1173,21 +1174,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Theme\plugins\ckeditor\CHANGES.md" />
@@ -1226,7 +1212,6 @@
     <Content Include="Theme\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_AppMessagePartial.cshtml" />
     <Content Include="Views\Shared\_AppNotificationPartial.cshtml" />
-    <Content Include="Views\Shared\_AppTaskPartial.cshtml" />
     <Content Include="Views\Shared\_BreadcrumbPartial.cshtml" />
     <Content Include="Views\Shared\_Error.cshtml" />
     <Content Include="Views\Shared\_ErrorPopup.cshtml" />
@@ -1235,6 +1220,14 @@
     <Content Include="Views\Shared\_ThemePartial.cshtml" />
     <Content Include="Views\Shared\_UserNavbarPartial.cshtml" />
     <Content Include="Views\Shared\_UserSidebarPartial.cshtml" />
+    <Content Include="Views\Shared\AccessDenied.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
