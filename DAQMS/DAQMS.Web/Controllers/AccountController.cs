@@ -17,7 +17,7 @@ using DAQMS.DomainViewModel;
 
 namespace DAQMS.Web.Controllers
 {
-    [Authorize]
+    
     public class AccountController : Controller
     {
         #region Global Variable Declaration
@@ -102,7 +102,7 @@ namespace DAQMS.Web.Controllers
 
         //
         // GET: /Account/LogOut
-
+        [UserAuthorize]
         public ActionResult LogOut()
         {
             Session.RemoveAll();
@@ -150,7 +150,7 @@ namespace DAQMS.Web.Controllers
         //
         // GET: /Account/ChangePassword
 
-        [Authorize]
+        [UserAuthorize]
         public ActionResult ChangePassword()
         {
             return View();
@@ -159,7 +159,7 @@ namespace DAQMS.Web.Controllers
         //
         // POST: /Account/ChangePassword
 
-        [Authorize]
+        [UserAuthorize]
         [HttpPost]
         public ActionResult ChangePassword(ResetPasswordViewModel model)
         {

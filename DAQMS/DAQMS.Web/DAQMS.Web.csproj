@@ -1162,7 +1162,9 @@
     <Content Include="Theme\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Theme\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Theme\plugins\timepicker\bootstrap-timepicker.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1223,7 +1225,7 @@
     <Content Include="Views\Shared\AccessDenied.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />

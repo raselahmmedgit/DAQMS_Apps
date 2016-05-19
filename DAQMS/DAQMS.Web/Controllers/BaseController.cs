@@ -13,7 +13,7 @@ using DAQMS.Domain.Models;
 
 namespace DAQMS.Web
 {
-    [Authorize]
+    //[UserAuthorize]
     public class BaseController : Controller
     {
         #region Global Variable Declaration
