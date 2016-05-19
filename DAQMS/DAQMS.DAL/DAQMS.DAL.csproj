@@ -54,7 +54,6 @@
     <Compile Include="DAQ\CompanyDAL.cs" />
     <Compile Include="DAQ\ContactDAL.cs" />
     <Compile Include="DAQ\DeviceDAL.cs" />
-    <Compile Include="DAQ\ProjectDAL.cs" />
     <Compile Include="DBHelper\AppSettings.cs" />
     <Compile Include="DBHelper\CustomParameter.cs" />
     <Compile Include="DBHelper\CustomParameterList.cs" />

@@ -15,3 +15,9 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.C
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.Resource.resources
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb

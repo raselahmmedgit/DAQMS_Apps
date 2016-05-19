@@ -42,3 +42,19 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\De
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll.config
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\System.Web.Mvc.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\DAQMS.Domain.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\System.Web.Mvc.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\bin\Debug\AutoMapper.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.csprojResolveAssemblyReference.cache
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DomainViewModel\obj\Debug\DAQMS.DomainViewModel.pdb
