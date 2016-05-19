@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using DAL.Models;
-using DAL.Base;
 using System.Linq;
-using DAQMS.Domain.Models;
+using DAQMS.DAL.Base;
+using DAQMS.DAL.Models;
 using NpgsqlTypes;
 using Npgsql;
 using DAQMS.Domain;
@@ -21,7 +20,7 @@ namespace DAQMS.DAL
             return new UserDAL();
         }
 
-        public override System.Int32 Save(UserViewModel item, string Mood)
+        public override System.Int32 Save(UserViewModel item, string mood)
         {
             int id = 0;
 
@@ -77,7 +76,7 @@ namespace DAQMS.DAL
                 command.Parameters[11].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[12].Value = Mood;
+                command.Parameters[12].Value = mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -137,10 +136,9 @@ namespace DAQMS.DAL
             return id;
 
         }
-
-
-        public List<UserViewModel> GetObjList(int UserId, string LoginID, string UserName, string UserEmail, string ContactID,
-           string LoginUserID, int startRowIndex, int maximumRows)
+        
+        public List<UserViewModel> GetObjList(int userId, string loginId, string userName, string userEmail, string contactId,
+           string loginUserId, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
@@ -161,18 +159,18 @@ namespace DAQMS.DAL
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
-                command.Parameters[0].Value = UserId;
+                command.Parameters[0].Value = userId;
                 command.Parameters.Add(new NpgsqlParameter("p_login_id", NpgsqlDbType.Varchar));
-                command.Parameters[1].Value = LoginID;
+                command.Parameters[1].Value = loginId;
                 command.Parameters.Add(new NpgsqlParameter("p_user_name", NpgsqlDbType.Varchar));
-                command.Parameters[2].Value = UserName;
+                command.Parameters[2].Value = userName;
                 command.Parameters.Add(new NpgsqlParameter("p_user_email", NpgsqlDbType.Varchar));
-                command.Parameters[3].Value = UserEmail;
+                command.Parameters[3].Value = userEmail;
 
                 command.Parameters.Add(new NpgsqlParameter("p_strcontact_id", NpgsqlDbType.Varchar));
-                command.Parameters[4].Value = ContactID;
+                command.Parameters[4].Value = contactId;
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[5].Value = LoginUserID;
+                command.Parameters[5].Value = loginUserId;
                 command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
                 command.Parameters[6].Value = startRowIndex;
                 command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
@@ -240,10 +238,11 @@ namespace DAQMS.DAL
             return results;
         }
 
-        public override UserViewModel GetObjById(int Id)
+        public override UserViewModel GetObjById(int id)
         {
-            return GetObjList(Id, "", "", "", "", "", 1, 1).FirstOrDefault();
+            return GetObjList(id, "", "", "", "", "", 1, 1).FirstOrDefault();
         }
+        
         public override List<UserViewModel> GetObjList(UserViewModel item, int startRowIndex, int maxRow)
         {
             return GetObjList(item.Id, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, startRowIndex, maxRow);

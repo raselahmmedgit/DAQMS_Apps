@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using DAL.Models;
-using DAL.Base;
 using System.Linq;
-using DAQMS.Domain.Models;
+using DAQMS.DAL.Base;
+using DAQMS.DAL.Models;
 using NpgsqlTypes;
 using Npgsql;
 using DAQMS.Domain;
@@ -19,7 +18,7 @@ namespace DAQMS.DAL
             return new MenuDAL();
         }
 
-        public override System.Int32 Save(MenuViewModel item, string Mood)
+        public override System.Int32 Save(MenuViewModel item, string mood)
         {
             int id = 0;
 
@@ -67,7 +66,7 @@ namespace DAQMS.DAL
                 command.Parameters[8].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[9].Value = Mood;
+                command.Parameters[9].Value = mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -127,8 +126,8 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<MenuViewModel> GetObjList(int Id, int ModuleId, int MenuGroupid, int ParentMenuId,
-            string LoginUserID, int startRowIndex, int maximumRows)
+        public List<MenuViewModel> GetObjList(int id, int moduleId, int menuGroupid, int parentMenuId,
+            string loginUserId, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
@@ -149,17 +148,17 @@ namespace DAQMS.DAL
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
-                command.Parameters[0].Value = Id;
+                command.Parameters[0].Value = id;
                 command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
-                command.Parameters[1].Value = ModuleId;
+                command.Parameters[1].Value = moduleId;
 
                 command.Parameters.Add(new NpgsqlParameter("p_menu_group_id", NpgsqlDbType.Integer));
-                command.Parameters[2].Value = MenuGroupid;
+                command.Parameters[2].Value = menuGroupid;
                 command.Parameters.Add(new NpgsqlParameter("p_parent_menu_id", NpgsqlDbType.Integer));
-                command.Parameters[3].Value = ParentMenuId;
+                command.Parameters[3].Value = parentMenuId;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[4].Value = LoginUserID;
+                command.Parameters[4].Value = loginUserId;
                 command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
                 command.Parameters[5].Value = startRowIndex;
                 command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
@@ -227,10 +226,11 @@ namespace DAQMS.DAL
             return results;
         }
 
-        public override MenuViewModel GetObjById(int Id)
+        public override MenuViewModel GetObjById(int id)
         {
-            return GetObjList(Id, 0, 0, 0, "", 1, 1).FirstOrDefault();
+            return GetObjList(id, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
+        
         public override List<MenuViewModel> GetObjList(MenuViewModel item, int startRowIndex, int maxRow)
         {
             return GetObjList(item.Id, item.ModuleId,item.MenuGroupId, Convert.ToInt32(item.ParentMenuId), item.LoginUserID, startRowIndex, maxRow);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DAL.Base
+namespace DAQMS.DAL.Base
 {
    
         public enum DataLoadOption

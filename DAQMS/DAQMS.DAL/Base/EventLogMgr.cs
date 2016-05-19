@@ -1,7 +1,7 @@
 ﻿using System; 
 using System.Diagnostics;
 
-namespace DAL.Base
+namespace DAQMS.DAL.Base
 {
     ///<summary> 
     /// Calls used to write to the event log 
@@ -10,7 +10,7 @@ namespace DAL.Base
     public class EventLogMgr
     {
 
-        public const string LogName = "AproWebApplication";
+        public const string LogName = "DAQMSWebApplication";
         // will be parameterized 
 
         public EventLogMgr()

@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace DAL.Models
+namespace DAQMS.DAL.Models
 {
     public static class AppSettings
     {

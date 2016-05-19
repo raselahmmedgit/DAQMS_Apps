@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using DAL.Base;
+﻿using System.Collections.Generic;
+using DAQMS.DAL.Base;
 
 namespace DAQMS.Service
 {

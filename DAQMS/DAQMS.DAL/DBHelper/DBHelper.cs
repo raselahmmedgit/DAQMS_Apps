@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Text;
-using System.Xml;
 using System.Data;
-using System.Data.Odbc;
-using System.Data.OleDb;
-using System.Data.Common;
-using System.Collections;
-using System.Configuration;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using DAL.Base;
+using DAQMS.DAL.Base;
 using Npgsql;
 using NpgsqlTypes;
 
-namespace DAL.Models
+namespace DAQMS.DAL.Models
 {
     public class DBHelper : IPrimaryBase
     {

@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 
 
-namespace DAL.Base
+namespace DAQMS.DAL.Base
 {
     /// <summary> 
     /// class to handle exception 
@@ -12,19 +12,19 @@ namespace DAL.Base
     public class CaughtException :Exception 
     {
 
-        private string strMethodName;
-        private string strUserId;
-        private string strErrorMessage;
+        private string _methodName;
+        private string _userId;
+        private string _errorMessage;
         //private System.Web.UI.Page callingWebPage;
-        private string strAppName;
+        private string _appName;
 
         /// <summary> 
         ///Method name where the exception will happend 
         /// </summary> 
         public string MethodName
         {
-            get { return strMethodName; }
-            set { strMethodName = value; }
+            get { return _methodName; }
+            set { _methodName = value; }
         }
 
         /// <summary> 
@@ -32,8 +32,8 @@ namespace DAL.Base
         /// </summary> 
         public string UserId
         {
-            get { return strUserId; }
-            set { strUserId = value; }
+            get { return _userId; }
+            set { _userId = value; }
         }
 
         /// <summary> 
@@ -41,8 +41,8 @@ namespace DAL.Base
         /// </summary> 
         public string ErrorMessage
         {
-            get { return strErrorMessage; }
-            set { strErrorMessage = value; }
+            get { return _errorMessage; }
+            set { _errorMessage = value; }
         }
 
         public Int32 ErrorCode { set; get; }
@@ -62,15 +62,15 @@ namespace DAL.Base
         /// </summary> 
         public string AppName
         {
-            get { return strAppName; }
-            set { strAppName = value; }
+            get { return _appName; }
+            set { _appName = value; }
         }
 
         /// <summary> 
         /// enum to set where the exception message will be store either flat file or log 
         /// </summary> 
         /// <remarks></remarks> 
-        public enum writeLogOption
+        public enum WriteLogOption
         {
             LogToEventViewer = 1,
             LogToFileDefaultPath = 2,
@@ -121,22 +121,22 @@ namespace DAL.Base
 
         }
 
-        public void log(writeLogOption lOption,string strPath)
+        public void Log(WriteLogOption lOption,string strPath)
         {
 
             string strErrorMsg = null;            
             switch (lOption)
             {
-                case writeLogOption.LogToEventViewer:
-                    strErrorMsg = this.getErrorMessage();
+                case WriteLogOption.LogToEventViewer:
+                    strErrorMsg = this.GetErrorMessage();
                     WriteToEventViewer(strErrorMsg);
                     return;
-                case writeLogOption.LogToFileDefaultPath:
-                    strErrorMsg = this.getErrorMessage();
+                case WriteLogOption.LogToFileDefaultPath:
+                    strErrorMsg = this.GetErrorMessage();
                     WriteToLog(strErrorMsg);
                     break;
-                case writeLogOption.LoagToFileUserDefinePath:
-                    strErrorMsg = this.getErrorMessage();
+                case WriteLogOption.LoagToFileUserDefinePath:
+                    strErrorMsg = this.GetErrorMessage();
                     WriteToLog(strErrorMsg, strPath);
                     return;
                 default:
@@ -145,7 +145,7 @@ namespace DAL.Base
 
         }
 
-        private string getErrorMessage()
+        private string GetErrorMessage()
         {
 
             try
@@ -165,8 +165,7 @@ namespace DAL.Base
             }
 
         }
-
-
+        
         private void WriteToLog(string strMessage, string strPath)
         {
             try
@@ -194,6 +193,7 @@ namespace DAL.Base
             {
             }
         }
+        
         private void WriteToEventViewer(string strMessage)
         {
 

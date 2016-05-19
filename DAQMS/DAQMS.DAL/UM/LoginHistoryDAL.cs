@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using DAL.Models;
-using DAL.Base;
 using System.Linq;
-using DAQMS.Domain.Models;
+using DAQMS.DAL.Base;
+using DAQMS.DAL.Models;
 using NpgsqlTypes;
 using Npgsql;
-using DAQMS.Domain;
 using DAQMS.DomainViewModel;
 
 namespace DAQMS.DAL
@@ -19,7 +17,7 @@ namespace DAQMS.DAL
             return new LoginHistoryDAL();
         }
 
-        public override System.Int32 Save(LoginHistoryViewModel item, string Mood)
+        public override System.Int32 Save(LoginHistoryViewModel item, string mood)
         {
             int id = 0;
 
@@ -48,7 +46,7 @@ namespace DAQMS.DAL
                 command.Parameters[2].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[3].Value = Mood;
+                command.Parameters[3].Value = mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -108,7 +106,7 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<LoginHistoryViewModel> GetObjList(int Id, string LoginUserID, int startRowIndex, int maximumRows)
+        public List<LoginHistoryViewModel> GetObjList(int id, string loginUserId, int startRowIndex, int maximumRows)
         {
 
             List<LoginHistoryViewModel> results = null;
@@ -116,10 +114,11 @@ namespace DAQMS.DAL
             return results;
         }
 
-        public override LoginHistoryViewModel GetObjById(int Id)
+        public override LoginHistoryViewModel GetObjById(int id)
         {
-            return GetObjList(Id, "", 1, 1).FirstOrDefault();
+            return GetObjList(id, "", 1, 1).FirstOrDefault();
         }
+        
         public override List<LoginHistoryViewModel> GetObjList(LoginHistoryViewModel item, int startRowIndex, int maxRow)
         {
             return GetObjList(item.Id, item.LoginUserID, startRowIndex, maxRow);

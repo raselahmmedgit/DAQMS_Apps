@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using DAL.Models;
-using DAL.Base;
-using System.Linq;
+using DAQMS.DAL.Models;
 using DAQMS.Domain.Models;
-using NpgsqlTypes;
 using Npgsql;
 using DAQMS.Domain;
-using DAQMS.DomainViewModel;
 
 
 namespace DAQMS.DAL.DAQ

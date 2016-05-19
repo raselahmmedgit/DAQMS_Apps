@@ -1,13 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using Dapper;
-using System.Configuration;
 using System;
 using DAQMS.DAL;
-using DAL.Base;
-using DAQMS.Domain.Models;
+using DAQMS.DAL.Base;
 using DAQMS.DomainViewModel;
 
 namespace DAQMS.Service

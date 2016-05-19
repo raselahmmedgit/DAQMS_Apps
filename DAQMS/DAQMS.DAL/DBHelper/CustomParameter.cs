@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NpgsqlTypes;
 
-namespace DAL.Models
+namespace DAQMS.DAL.Models
 {
    public class CustomParameter
    {

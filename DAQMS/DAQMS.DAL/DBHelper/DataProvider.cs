@@ -10,12 +10,11 @@ using System.Data.OleDb;
 using Npgsql;
 using NpgsqlTypes;
 
-//using MySql.Data.MySqlClient;
-namespace DAL.Models
+namespace DAQMS.DAL.Models
 {
     public class DataProvider
     {
-        #region constants and class varibles
+        #region Constants And Class Varibles
         private const string SQLSERVER = "sqlserver";
         private const string ORACLE = "Oracle";
         private const string ODBC = "Odbc";
@@ -112,7 +111,7 @@ namespace DAL.Models
 
         #endregion
 
-        #region Get parameter Instacne
+        #region Get Parameter Instacne
 
         public static IDataParameter[] GetParametersInstances(int parmaterCount)
         {

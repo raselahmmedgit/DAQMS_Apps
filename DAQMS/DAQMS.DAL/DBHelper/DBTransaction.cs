@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data.SqlClient;
-using DAL.Models;
-using System.Data;
+using DAQMS.DAL.Models;
 
-namespace DAL
+namespace DAQMS.DAL
 {
     public class DBTransaction : IDisposable
     {
@@ -16,23 +12,21 @@ namespace DAL
         //-----
         //--- for SQL Server
         internal SqlTransaction CurrentTransaction = null;
-        private SqlConnection conn = null;
+        
+        private SqlConnection _conn = null;
 
         public SqlConnection Connection
         {
-            get { return conn; }
+            get { return _conn; }
         }
-        //--------
-
-
+        
         public void Begin()
         {
-            conn = DataProvider.GetConnectionInstance() as SqlConnection;// only for sql server
-            conn.Open();
-            CurrentTransaction = conn.BeginTransaction();
+            _conn = DataProvider.GetConnectionInstance() as SqlConnection;// only for sql server
+            _conn.Open();
+            CurrentTransaction = _conn.BeginTransaction();
         }
-
-
+        
         public void Commit()
         {
             CurrentTransaction.Commit();
@@ -47,11 +41,10 @@ namespace DAL
         public void Dispose()
         {
             CurrentTransaction.Dispose();
-            conn.Dispose();
+            _conn.Dispose();
 
         }
-
-
+        
         #region IDisposable Members
 
         void IDisposable.Dispose()
