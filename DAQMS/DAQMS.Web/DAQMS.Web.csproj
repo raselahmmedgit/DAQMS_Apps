@@ -177,6 +177,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\UM\Controllers\MenuController.cs" />
+    <Compile Include="Areas\UM\UMAreaRegistration.cs" />
     <Compile Include="Attribute\CustomDateBinder.cs" />
     <Compile Include="Attribute\CustomValidator.cs" />
     <Compile Include="BootStrapper.cs" />
@@ -268,6 +270,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Areas\UM\Views\web.config" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\App\App.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -364,6 +367,8 @@
     <Content Include="Theme\css\skins\_all-skins.css" />
     <Content Include="Theme\css\skins\_all-skins.min.css" />
     <Content Include="Theme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Theme\img\ajax-loader.gif" />
+    <Content Include="Theme\img\avatar.png" />
     <Content Include="Theme\js\app.js" />
     <Content Include="Theme\js\app.min.js" />
     <Content Include="Theme\plugins\bootstrap-slider\bootstrap-slider.js" />
@@ -1234,7 +1239,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Theme\img\" />
+    <Folder Include="Areas\UM\Models\" />
+    <Folder Include="Areas\UM\Views\Menu\" />
+    <Folder Include="Areas\UM\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

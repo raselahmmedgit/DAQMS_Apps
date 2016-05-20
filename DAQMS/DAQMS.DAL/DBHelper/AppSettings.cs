@@ -16,7 +16,8 @@ namespace DAQMS.DAL.Models
         {
             get
             {
-                return "Server=127.0.0.1;Port=5432;Database=Enovative;User Id=postgres;Password=sa1234;CommandTimeout=20";
+                //return "Server=127.0.0.1;Port=5432;Database=Enovative;User Id=postgres;Password=sa1234;CommandTimeout=20";
+                return "Server=localhost;Port=5432;Database=Enovative;User Id=postgres;Password=sa1234;CommandTimeout=20";
 
                // return ConfigurationManager.AppSettings["AppDbContext"];
                 // ConfigurationSettings.AppSettings["AppDbContext"].ToString();

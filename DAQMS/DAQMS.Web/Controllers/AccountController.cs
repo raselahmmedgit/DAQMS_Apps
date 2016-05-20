@@ -17,8 +17,8 @@ using DAQMS.DomainViewModel;
 
 namespace DAQMS.Web.Controllers
 {
-    
-    public class AccountController : Controller
+
+    public class AccountController : BaseController
     {
         #region Global Variable Declaration
 
@@ -55,25 +55,48 @@ namespace DAQMS.Web.Controllers
                 {
                     if (IsValidateUser(model.UserName, model.Password, user))
                     {
-                        
-                        SetUserClaimsIdentity(user);
-
-                        LoginHistoryService loginHistoryService = new LoginHistoryService();
-                        LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
-                        loginHistoryViewModel.UserId = user.Id;
-                        loginHistoryViewModel.LoginTimestamp = DateTime.Now;
-                        loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
-                        loginHistoryService.InsertData(loginHistoryViewModel);
-
-                        if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                            && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                        if (IsActiveUser(user))
                         {
-                            return Redirect(returnUrl);
+                            if (IsLockedUser(user))
+                            {
+                                SetUserClaimsIdentity(user);
+
+                                LoginHistoryService loginHistoryService = new LoginHistoryService();
+                                LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
+                                loginHistoryViewModel.UserId = user.Id;
+                                loginHistoryViewModel.LoginTimestamp = DateTime.Now;
+                                loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
+                                loginHistoryService.InsertData(loginHistoryViewModel);
+
+                                if (user.IsChangePassword)
+                                {
+                                    return RedirectToAction("ChangePassword", "Account"); 
+                                }
+                                else
+                                {
+                                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                                     && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                                    {
+                                        return Redirect(returnUrl);
+                                    }
+                                    else
+                                    {
+                                        return RedirectToAction("Index", "Home");
+                                    } 
+                                }
+                                
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("", "The user is locked.");
+                            }
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Home");
+                            ModelState.AddModelError("", "The user is inactive.");
                         }
+
+
                     }
                     else
                     {
@@ -85,7 +108,7 @@ namespace DAQMS.Web.Controllers
                     ModelState.AddModelError("", "The user not register, please register first.");
                 }
 
-                
+
             }
 
             // If we got this far, something failed, redisplay form
@@ -105,6 +128,34 @@ namespace DAQMS.Web.Controllers
 
         }
 
+        private bool IsActiveUser(User user)
+        {
+            if (user.IsActive == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        private bool IsLockedUser(User user)
+        {
+
+            if (user.IsLocked == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+         
         private void SetUserClaimsIdentity(User user)
         {
             SessionHelper.CurrentSession.Content.LoggedInUser = user;
@@ -211,6 +262,7 @@ namespace DAQMS.Web.Controllers
                 bool changePasswordSucceeded;
                 try
                 {
+                    SetIsChangePassword();
                     changePasswordSucceeded = true;
                 }
                 catch (Exception)
@@ -231,6 +283,22 @@ namespace DAQMS.Web.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
+        private void SetIsChangePassword()
+        {
+            User user = SessionHelper.CurrentSession.Content.LoggedInUser;
+            if (user != null)
+            {
+                UserService userService = new UserService();
+                UserViewModel userViewModel = new UserViewModel();
+
+                userViewModel.Id = user.Id;
+                userViewModel.IsChangePassword = false;
+                int update = userService.UpdateData(userViewModel);
+            }
+
+        }
+
 
         //
         // GET: /Account/ChangePasswordSuccess

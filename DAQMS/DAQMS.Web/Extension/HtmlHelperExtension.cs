@@ -6,7 +6,9 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using DAQMS.Core;
 using DAQMS.DomainViewModel;
+using DAQMS.Domain.Models;
 
 namespace DAQMS.Web
 {
@@ -114,34 +116,37 @@ namespace DAQMS.Web
 
             var strContent = string.Empty;
             StringBuilder stringBuilder = new StringBuilder();
-            string headerUrl = string.Empty;
-            string headerText = string.Empty;
+            string headerUrl = "#";
+            string headerText = "DAQMS";
 
             stringBuilder.Append(@"<a href='" + headerUrl + "' class='logo'>");
             stringBuilder.Append(headerText);
             stringBuilder.Append(@"</a>");
+
+            strContent = stringBuilder.ToString();
 
             return MvcHtmlString.Create(strContent);
         }
 
         public static IHtmlString RenderApplicationTitle(this HtmlHelper htmlHelper)
         {
-            var strContent = string.Empty;
+            var strContent = "DAQMS";
 
             return MvcHtmlString.Create(strContent);
         }
 
         public static IHtmlString RenderApplicationHeader(this HtmlHelper htmlHelper)
         {
-            
             var strContent = string.Empty;
             StringBuilder stringBuilder = new StringBuilder();
-            string headerUrl = string.Empty;
-            string headerText = string.Empty;
+            string headerUrl = "/Home";
+            string headerText = "DAQMS";
 
             stringBuilder.Append(@"<a href='" + headerUrl + "' class='logo'>");
             stringBuilder.Append(headerText);
             stringBuilder.Append(@"</a>");
+
+            strContent = stringBuilder.ToString();
 
             return MvcHtmlString.Create(strContent);
         }
@@ -164,21 +169,21 @@ namespace DAQMS.Web
 
         public static IHtmlString RenderApplicationMetaAuthor(this HtmlHelper htmlHelper)
         {
-            var strContent = string.Empty;
+            var strContent = "DAQMS";
 
             return MvcHtmlString.Create(strContent);
         }
 
         public static IHtmlString RenderApplicationMetaKeywords(this HtmlHelper htmlHelper)
         {
-            var strContent = string.Empty;
+            var strContent = "DAQMS";
 
             return MvcHtmlString.Create(strContent);
         }
 
         public static IHtmlString RenderApplicationMetaDescription(this HtmlHelper htmlHelper)
         {
-            var strContent = string.Empty;
+            var strContent = "DAQMS";
 
             return MvcHtmlString.Create(strContent);
         }
@@ -459,13 +464,13 @@ namespace DAQMS.Web
             var totalEmail = 5;
             var emailNotifyList = new List<EmailNotifyViewModel>
             {
-                new EmailNotifyViewModel() { EmailSubject = "Support Team", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Rasel", UserPhotoPath = "../../Theme/img/avatar3.png" } },
+                new EmailNotifyViewModel() { EmailSubject = "Support Team", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Rasel", UserPhotoPath = "../../Theme/img/avatar.png" } },
 
-                new EmailNotifyViewModel() { EmailSubject = "AdminLTE Design Team", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Sohel", UserPhotoPath = "../../Theme/img/avatar2.png" } },
+                new EmailNotifyViewModel() { EmailSubject = "AdminLTE Design Team", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Sohel", UserPhotoPath = "../../Theme/img/avatar.png" } },
 
                 new EmailNotifyViewModel() { EmailSubject = "Developers", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Shafin", UserPhotoPath = "../../Theme/img/avatar.png" } },
 
-                new EmailNotifyViewModel() { EmailSubject = "Sales Department", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Ahmmed", UserPhotoPath = "../../Theme/img/avatar2.png" } },
+                new EmailNotifyViewModel() { EmailSubject = "Sales Department", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Ahmmed", UserPhotoPath = "../../Theme/img/avatar.png" } },
 
                 new EmailNotifyViewModel() { EmailSubject = "Reviewers", EmailBody = "Why not buy a new awesome theme?", EmailDate = Convert.ToDateTime(DateTime.Now.ToShortDateString()), UserViewModel = new UserViewModel() { UserName = "Bappi", UserPhotoPath = "../../Theme/img/avatar.png" } },
 
@@ -581,56 +586,47 @@ namespace DAQMS.Web
         {
             var strContent = String.Empty;
 
-            var userViewModel = new UserViewModel() { UserName = "Rasel", FullName = "Rasel Ahmmed Bappi", UserPhotoPath = "../../Theme/img/avatar3.png" };
+            User user = SessionHelper.CurrentSession.Content.LoggedInUser;
+            if (user != null)
+            {
+                var userViewModel = new UserViewModel()
+                {
+                    UserName = user.UserName,
+                    FullName = user.UserName,
+                    UserPhotoPath = "../../Theme/img/avatar.png"
+                };
 
+                var userProfileLink = "";
+                var userProfileTxt = "Profile";
+                var roleTxt = "Role";
+                var userSignOutLink = "";
+                var userSignOutTxt = "Sign Out";
 
-            var userProfileLink = "";
-            var userProfileTxt = "Profile";
-            var followersLink = "";
-            var followersTxt = "Followers";
-            var salesLink = "";
-            var salesTxt = "Sales";
-            var friendsLink = "";
-            var friendsTxt = "Friends";
-            var userSignOutLink = "";
-            var userSignOutTxt = "Sign Out";
+                strContent += "<a href='" + userProfileLink + "' class='dropdown-toggle' data-toggle='dropdown'>";
+                strContent += "<i class='glyphicon glyphicon-user'></i><span>" + userViewModel.UserName + " <i class='caret'></i></span>";
+                strContent += "</a>";
+                strContent += "<ul class='dropdown-menu'>";
 
-            strContent += "<a href='" + userProfileLink + "' class='dropdown-toggle' data-toggle='dropdown'>";
-            strContent += "<i class='glyphicon glyphicon-user'></i><span>" + userViewModel.UserName + " <i class='caret'></i></span>";
-            strContent += "</a>";
-            strContent += "<ul class='dropdown-menu'>";
+                //User Info
+                strContent += "<li class='user-header bg-light-blue'>";
+                strContent += "<img src='" + userViewModel.UserPhotoPath + "' class='img-circle' alt='User Image' />";
 
-            //User Info
-            strContent += "<li class='user-header bg-light-blue'>";
-            strContent += "<img src='" + userViewModel.UserPhotoPath + "' class='img-circle' alt='User Image' />";
+                strContent += "<p>";
+                strContent += userViewModel.FullName + " - "+ roleTxt +" <small>Member since Nov. 2012</small>";
+                strContent += "</p>";                          
+                strContent += "</li>";
 
-            strContent += "<p>";
-            strContent += userViewModel.FullName + " - Web Developer <small>Member since Nov. 2012</small>";
-            strContent += "</p>";
-            strContent += "</li>";
+                strContent += "<li class='user-footer'>";
+                strContent += "<div class='pull-left'>";
+                strContent += "<a href='" + userProfileLink + "' class='btn btn-default btn-flat'>" + userProfileTxt + "</a>";
+                strContent += "</div>";
+                strContent += "<div class='pull-right'>";
+                strContent += "<a href='" + userSignOutLink + "' class='btn btn-default btn-flat'>" + userSignOutTxt + "</a>";
+                strContent += "</div>";
+                strContent += "</li>";
 
-            strContent += "<li class='user-body'>";
-            strContent += "<div class='col-xs-4 text-center'>";
-            strContent += "<a href='" + followersLink + "'>" + followersTxt + "</a>";
-            strContent += "</div>";
-            strContent += "<div class='col-xs-4 text-center'>";
-            strContent += "<a href='" + salesLink + "'>" + salesTxt + "</a>";
-            strContent += "</div>";
-            strContent += "<div class='col-xs-4 text-center'>";
-            strContent += "<a href='" + friendsLink + "'>" + friendsTxt + "</a>";
-            strContent += "</div>";
-            strContent += "</li>";
-
-            strContent += "<li class='user-footer'>";
-            strContent += "<div class='pull-left'>";
-            strContent += "<a href='" + userProfileLink + "' class='btn btn-default btn-flat'>" + userProfileTxt + "</a>";
-            strContent += "</div>";
-            strContent += "<div class='pull-right'>";
-            strContent += "<a href='" + userSignOutLink + "' class='btn btn-default btn-flat'>" + userSignOutTxt + "</a>";
-            strContent += "</div>";
-            strContent += "</li>";
-
-            strContent += "</ul>";
+                strContent += "</ul>";
+            }
 
             return MvcHtmlString.Create(strContent);
         }
@@ -643,21 +639,30 @@ namespace DAQMS.Web
         {
             var strContent = String.Empty;
 
-            var userViewModel = new UserViewModel() { UserName = "Rasel", FullName = "Rasel Ahmmed Bappi", UserPhotoPath = "../../Theme/img/avatar3.png" };
+            User user = SessionHelper.CurrentSession.Content.LoggedInUser;
+            if (user != null)
+            {
+                var userViewModel = new UserViewModel()
+                                    {
+                                        UserName = user.UserName,
+                                        FullName = user.UserName,
+                                        UserPhotoPath = "../../Theme/img/avatar.png"
+                                    };
 
-            var userProfileLink = "";
+                var userProfileLink = "";
 
-            strContent += "<div class='pull-left image'>";
-            strContent += "<img src='" + userViewModel.UserPhotoPath + "' class='img-circle' alt='" + userViewModel.UserName + "' />";
-            strContent += "</div>";
+                strContent += "<div class='pull-left image'>";
+                strContent += "<img src='" + userViewModel.UserPhotoPath + "' class='img-circle' alt='" +
+                              userViewModel.UserName + "' />";
+                strContent += "</div>";
 
-            strContent += "<div class='pull-left info'>";
-            strContent += "<p> Hello, ";
-            strContent += userViewModel.UserName;
-            strContent += "</p>";
-            strContent += "<a href='" + userProfileLink + "'><i class='fa fa-circle text-success'></i>Online</a>";
-            strContent += "</div>";
-
+                strContent += "<div class='pull-left info'>";
+                strContent += "<p> Hello, ";
+                strContent += userViewModel.UserName;
+                strContent += "</p>";
+                strContent += "<a href='" + userProfileLink + "'><i class='fa fa-circle text-success'></i>Online</a>";
+                strContent += "</div>";
+            }
 
             return MvcHtmlString.Create(strContent);
         }

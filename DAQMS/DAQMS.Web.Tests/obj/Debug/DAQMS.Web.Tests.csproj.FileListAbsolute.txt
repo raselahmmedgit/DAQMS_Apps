@@ -136,8 +136,8 @@ C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\log4net.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Core.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.dll
@@ -161,8 +161,8 @@ C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\log4net.xml
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.xml
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.pdb
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Core.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.xml

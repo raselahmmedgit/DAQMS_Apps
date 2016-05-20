@@ -1,49 +1,18 @@
 ﻿@*@Html.RenderSideMenu()*@
 <!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu">
-    <li>
+    <li class="active treeview">
         <a href="@Url.Action("Index", "Home")">
-            <i class="fa fa-dashboard"></i><span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
     </li>
-    <li>
-        <a href="@Url.Action("Index", "Company")">
-            <i class="fa fa-th"></i><span>Company</span>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-dashboard"></i> <span>User Management</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "Application")">
-            <i class="fa fa-th"></i><span>Application</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "Module")">
-            <i class="fa fa-th"></i><span>Module</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "Menu")">
-            <i class="fa fa-th"></i><span>Menu</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "Right")">
-            <i class="fa fa-th"></i><span>Right</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "Role")">
-            <i class="fa fa-th"></i><span>Role</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "UserGroup")">
-            <i class="fa fa-th"></i><span>User Group</span>
-        </a>
-    </li>
-    <li>
-        <a href="@Url.Action("Index", "User")">
-            <i class="fa fa-th"></i><span>User</span>
-        </a>
+        <ul class="treeview-menu">
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-circle-o"></i> User</a></li>
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-circle-o"></i> Role</a></li>
+        </ul>
     </li>
 </ul>

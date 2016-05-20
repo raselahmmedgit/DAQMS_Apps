@@ -86,7 +86,7 @@ var App = function () {
             }, true, false);
 
         });
-        
+
         return false;
     };
 
@@ -306,9 +306,18 @@ var App = function () {
         toastr['info'](msg, "Info !");
     };
 
+    var iCheck = function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    };
+
     var actionHandler = function () {
         modalHandler();
         deleteHandler();
+        iCheck();
     };
 
     var initializeApp = function () {
