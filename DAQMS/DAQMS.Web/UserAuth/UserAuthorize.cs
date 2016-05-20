@@ -24,7 +24,7 @@ namespace DAQMS.Web
                     User loggedInUser = SessionHelper.CurrentSession.Content.LoggedInUser;
                     if (loggedInUser == null)
                     {
-                        filterContext.Result = new RedirectResult("/LogIn");
+                        filterContext.Result = new RedirectResult("/Login");
                     }
                     if (loggedInUser != null)
                     {
@@ -32,7 +32,7 @@ namespace DAQMS.Web
                     }
                     else
                     {
-                        filterContext.Result = new RedirectResult("/LogIn");
+                        filterContext.Result = new RedirectResult("/Login");
                     }
                 }
                 base.OnAuthorization(filterContext);

@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Compiled source #
+###################
+*.dll
+*.suo
+
 # =========================
 # Operating System Files
 # =========================
@@ -46,7 +51,3 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Compiled source #
-###################
-*.dll
-*.suo

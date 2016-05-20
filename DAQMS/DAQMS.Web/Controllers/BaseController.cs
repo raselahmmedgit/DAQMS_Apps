@@ -48,30 +48,66 @@ namespace DAQMS.Web
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            #region Get Current Action, Controller, Area
-            string currentActionName = string.Empty;
-            string currentControllerName = string.Empty;
-            string currentAreaName = string.Empty;
-
-            object objCurrentControllerName;
+            object objCurrentControllerName = string.Empty;
             this.RouteData.Values.TryGetValue("controller", out objCurrentControllerName);
-
-            object objCurrentActionName;
+            object objCurrentActionName = string.Empty;
             this.RouteData.Values.TryGetValue("action", out objCurrentActionName);
+            string currentAreaName = string.Empty;
+            string currentControllerName = string.Empty;
+            string currentActionName = string.Empty;
 
             if (this.RouteData.DataTokens.ContainsKey("area"))
             {
                 currentAreaName = this.RouteData.DataTokens["area"].ToString();
             }
-            if (objCurrentActionName != null)
-            {
-                currentActionName = objCurrentActionName.ToString();
-            }
             if (objCurrentControllerName != null)
             {
                 currentControllerName = objCurrentControllerName.ToString();
             }
-            #endregion
+            if (objCurrentActionName != null)
+            {
+                currentActionName = objCurrentActionName.ToString();
+            }
+
+            if (!CheckIfUserIsAuthenticated(filterContext))
+            {
+                if (filterContext.HttpContext.Request.IsAjaxRequest())
+                {
+                    filterContext.HttpContext.Response.StatusCode = 403;
+                    filterContext.Result = new JsonResult
+                    {
+                        Data = new
+                        {
+                            // put whatever data you want which will be sent
+                            // to the client
+                            message = "Sorry, you are not logged user."
+                        },
+                        JsonRequestBehavior = JsonRequestBehavior.AllowGet
+                    };
+                }
+                else
+                {
+                    if (filterContext.HttpContext.Request.Url != null)
+                    {
+                        filterContext.Result = new RedirectResult("/Login");
+                    }
+                }
+            }
+            else
+            {
+
+                if (!CheckIfUserAccessRight(currentActionName, currentControllerName, currentAreaName))
+                {
+                    if (filterContext.HttpContext.Request.Url != null)
+                    {
+                        filterContext.Result = new RedirectResult("/Login");
+                    }
+                }
+                else
+                {
+                    base.OnActionExecuting(filterContext);
+                }
+            }
 
             base.OnActionExecuting(filterContext);
         }

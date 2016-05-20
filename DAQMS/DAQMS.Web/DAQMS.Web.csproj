@@ -200,7 +200,7 @@
     <Compile Include="Helper\LinqFilteringHelper.cs" />
     <Compile Include="Helper\LinqSortingHelper.cs" />
     <Compile Include="Helper\LoggerHelper.cs" />
-    <Compile Include="Helper\UserAuthorize.cs" />
+    <Compile Include="UserAuth\UserAuthorize.cs" />
     <Compile Include="Helper\VCardResultHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
