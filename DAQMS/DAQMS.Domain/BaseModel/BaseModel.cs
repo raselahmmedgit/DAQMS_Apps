@@ -17,24 +17,27 @@ namespace DAQMS.Domain.Models
             this.UpdateTimestamp = DateTime.Now;
             this.DeletedDate = DateTime.Now;
             this.IsDelete = false;
-
         }
 
         //public int Id { get; set; }
          [DataMember, DataColumn(true)]
         public string InsertUser { get; set; }
-         [DataMember, DataColumn(true)]
+        
+        [DataMember, DataColumn(true)]
         public DateTime InsertTimestamp { get; set; }
 
          [DataMember, DataColumn(true)]
         public string UpdateUser { get; set; }
+
          [DataMember, DataColumn(true)]
         public DateTime UpdateTimestamp { get; set; }
 
         public Boolean IsDelete { get; set; }
 
         public string DeletedBy { get; set; }
+        
         public DateTime DeletedDate { get; set; }
+
         public string LoginUserID { get; set; }
 
         #region NotMapped
@@ -48,9 +51,29 @@ namespace DAQMS.Domain.Models
         [NotMapped]
         public virtual Boolean HasDelete { get; set; }
         [NotMapped]
+        public virtual Boolean IsSuccess { get; set; }
+        [NotMapped]
         public virtual String MessageType { get; set; }
         [NotMapped]
         public virtual String Message { get; set; }
+
+        public void Created()
+        {
+            this.IsSuccess = true;
+            this.Message = "Saved successfully.";
+        }
+
+        public void Updated()
+        {
+            this.IsSuccess = true;
+            this.Message = "Updated successfully.";
+        }
+
+        public void Deleted()
+        {
+            this.IsSuccess = true;
+            this.Message = "Deleted successfully.";
+        }
 
         #endregion
 
@@ -93,7 +116,30 @@ namespace DAQMS.Domain.Models
         public virtual Boolean HasUpdate { get; set; }
         [NotMapped]
         public virtual Boolean HasDelete { get; set; }
+        [NotMapped]
+        public virtual Boolean IsSuccess { get; set; }
+        [NotMapped]
+        public virtual String MessageType { get; set; }
+        [NotMapped]
+        public virtual String Message { get; set; }
 
+        public void Created()
+        {
+            this.IsSuccess = true;
+            this.Message = "Saved successfully.";
+        }
+
+        public void Updated()
+        {
+            this.IsSuccess = true;
+            this.Message = "Updated successfully.";
+        }
+
+        public void Deleted()
+        {
+            this.IsSuccess = true;
+            this.Message = "Deleted successfully.";
+        }
         #endregion
 
     }

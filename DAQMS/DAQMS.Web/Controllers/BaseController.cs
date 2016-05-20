@@ -30,6 +30,8 @@ namespace DAQMS.Web
 
         #region Action
 
+        #region Action Execute Method
+
         public User CurrentLoggedInUser
         {
             get
@@ -177,6 +179,39 @@ namespace DAQMS.Web
 
             return base.BeginExecuteCore(callback, state);
         }
+
+        #endregion
+
+        #region Common Method
+
+        public string GetModelStateError()
+        {
+            string errorMessage = string.Empty;
+
+            foreach (var modelStateValue in ViewData.ModelState.Values)
+            {
+                foreach (var error in modelStateValue.Errors)
+                {
+                    errorMessage = error.ErrorMessage;
+                    break;
+                }
+                if (!String.IsNullOrEmpty(errorMessage))
+                {
+                    break;
+                }
+            }
+            return errorMessage;
+        }
+
+        public ErrorViewModel GetErrorViewModel(string errorType, string errorMessage)
+        {
+            ErrorViewModel errorViewModel = new ErrorViewModel();
+            errorViewModel.ErrorType = errorType;
+            errorViewModel.ErrorMessage = errorMessage;
+            return errorViewModel;
+        }
+
+        #endregion
 
         #endregion
     }

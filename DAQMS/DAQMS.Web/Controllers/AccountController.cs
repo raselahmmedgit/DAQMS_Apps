@@ -21,14 +21,12 @@ namespace DAQMS.Web.Controllers
     public class AccountController : BaseController
     {
         #region Global Variable Declaration
-
+        private readonly UserService _userService = new UserService();
+        private readonly LoginHistoryService _loginHistoryService = new LoginHistoryService();
+        private readonly RoleService _roleService = new RoleService();
         #endregion
 
         #region Constructor
-
-        public AccountController()
-        {
-        }
 
         #endregion
 
@@ -48,8 +46,8 @@ namespace DAQMS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                UserService userService = new UserService();
-                User user = userService.LoadByLoginId(model.UserName);
+                
+                User user = _userService.LoadByLoginId(model.UserName);
 
                 if (user != null)
                 {
@@ -60,13 +58,12 @@ namespace DAQMS.Web.Controllers
                             if (IsLockedUser(user))
                             {
                                 SetUserClaimsIdentity(user);
-
-                                LoginHistoryService loginHistoryService = new LoginHistoryService();
+                                
                                 LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
                                 loginHistoryViewModel.UserId = user.Id;
                                 loginHistoryViewModel.LoginTimestamp = DateTime.Now;
                                 loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
-                                loginHistoryService.InsertData(loginHistoryViewModel);
+                                _loginHistoryService.InsertData(loginHistoryViewModel);
 
                                 if (user.IsChangePassword)
                                 {
@@ -160,7 +157,7 @@ namespace DAQMS.Web.Controllers
         {
             SessionHelper.CurrentSession.Content.LoggedInUser = user;
 
-            RoleService roleService = new RoleService();
+            
 
             var ident = new ClaimsIdentity(
           new[] { 
@@ -188,12 +185,11 @@ namespace DAQMS.Web.Controllers
             User loggedInUser = SessionHelper.CurrentSession.Content.LoggedInUser;
             if (loggedInUser == null)
             {
-                LoginHistoryService loginHistoryService = new LoginHistoryService();
                 LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
                 loginHistoryViewModel.UserId = loggedInUser.Id;
                 loginHistoryViewModel.LoginTimestamp = DateTime.Now;
                 loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
-                loginHistoryService.InsertData(loginHistoryViewModel);
+                _loginHistoryService.InsertData(loginHistoryViewModel);
             }
 
             Session.RemoveAll();
@@ -289,12 +285,11 @@ namespace DAQMS.Web.Controllers
             User user = SessionHelper.CurrentSession.Content.LoggedInUser;
             if (user != null)
             {
-                UserService userService = new UserService();
                 UserViewModel userViewModel = new UserViewModel();
 
                 userViewModel.Id = user.Id;
                 userViewModel.IsChangePassword = false;
-                int update = userService.UpdateData(userViewModel);
+                int update = _userService.UpdateData(userViewModel);
             }
 
         }

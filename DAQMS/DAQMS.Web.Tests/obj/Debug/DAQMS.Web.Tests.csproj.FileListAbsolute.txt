@@ -135,11 +135,11 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Owin.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\log4net.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.WebHost.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.dll
@@ -160,11 +160,11 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Micros
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\log4net.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.DomainViewModel.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\DAQMS.Service.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\EntityFramework.xml
