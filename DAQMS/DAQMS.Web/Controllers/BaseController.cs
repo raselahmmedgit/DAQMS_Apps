@@ -73,81 +73,7 @@ namespace DAQMS.Web
             }
             #endregion
 
-            if (filterContext != null)
-            {
-                HttpSessionStateBase httpSessionStateBase = filterContext.HttpContext.Session;
-                if (httpSessionStateBase != null)
-                {
-                    var userSession = httpSessionStateBase["User"];
-                    if (((userSession == null) && (!httpSessionStateBase.IsNewSession)) || (httpSessionStateBase.IsNewSession))
-                    {
-                        httpSessionStateBase.RemoveAll();
-                        httpSessionStateBase.Clear();
-                        httpSessionStateBase.Abandon();
-                        if (filterContext.HttpContext.Request.IsAjaxRequest())
-                        {
-                            filterContext.HttpContext.Response.StatusCode = 403;
-                            filterContext.Result = new JsonResult
-                            {
-                                Data = new
-                                {
-                                    // put whatever data you want which will be sent
-                                    // to the client
-                                    message = "Sorry, you are not logged user."
-                                },
-                                JsonRequestBehavior = JsonRequestBehavior.AllowGet
-                            };
-                        }
-                        else
-                        {
-                            filterContext.Result = new RedirectResult("~/Home/Index");
-                        }
-                    }
-                    if (!CheckIfUserIsAuthenticated(filterContext))
-                    {
-                        if (filterContext.HttpContext.Request.IsAjaxRequest())
-                        {
-                            filterContext.HttpContext.Response.StatusCode = 403;
-                            filterContext.Result = new JsonResult
-                            {
-                                Data = new
-                                {
-                                    // put whatever data you want which will be sent
-                                    // to the client
-                                    message = "Sorry, you are not logged user."
-                                },
-                                JsonRequestBehavior = JsonRequestBehavior.AllowGet
-                            };
-                        }
-                        else
-                        {
-                            if (filterContext.HttpContext.Request.Url != null)
-                            {
-                                string redirectUrl = string.Format("?returnUrl={0}", filterContext.HttpContext.Request.Url.PathAndQuery);
-
-                                filterContext.HttpContext.Response.Redirect(FormsAuthentication.LoginUrl + redirectUrl, true);
-                            }
-                        }
-                    }
-                    else
-                    {
-
-                        if (!CheckIfUserAccessRight(currentActionName, currentControllerName, currentAreaName))
-                        {
-                            if (filterContext.HttpContext.Request.Url != null)
-                            {
-                                string redirectUrl = string.Format("?returnUrl={0}", filterContext.HttpContext.Request.Url.PathAndQuery);
-
-                                filterContext.HttpContext.Response.Redirect(FormsAuthentication.LoginUrl + redirectUrl, true);
-                            }
-                        }
-                        else
-                        {
-                            base.OnActionExecuting(filterContext);
-                        }
-                    }
-                }
-            }
+            base.OnActionExecuting(filterContext);
         }
 
         #region Check User Authenticated
@@ -214,32 +140,6 @@ namespace DAQMS.Web
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
             return base.BeginExecuteCore(callback, state);
-        }
-
-        public ActionResult ChangeLanguage(string langCode)
-        {
-            langCode = langCode;
-            if (langCode.Length == 2)
-            {
-                if (SiteConfigurationReader.ActiveLanguages.Contains(langCode))
-                {
-                    var cultureInfo = new CultureInfo(langCode);
-                    //routedata.Values["language"] = language;
-                    Thread.CurrentThread.CurrentCulture = cultureInfo;
-                    Thread.CurrentThread.CurrentUICulture = cultureInfo;
-                }
-                else
-                {
-                    var cultureInfo = new CultureInfo("en");
-                    Thread.CurrentThread.CurrentCulture = cultureInfo;
-                    Thread.CurrentThread.CurrentUICulture = cultureInfo;
-                }
-            }
-            HttpCookie appCultureCookie = new HttpCookie("app.culture");
-            appCultureCookie.Value = langCode;
-            appCultureCookie.Expires = DateTime.Now.AddYears(1);
-            Response.Cookies.Add(appCultureCookie);
-            return Redirect(Request.UrlReferrer.ToString());
         }
 
         #endregion

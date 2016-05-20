@@ -49,14 +49,21 @@ namespace DAQMS.Web.Controllers
             if (ModelState.IsValid)
             {
                 UserService userService = new UserService();
-                //User user = userService.GetLogInUser(model);
-                User user = new User();
+                User user = userService.LoadByLoginId(model.UserName);
 
                 if (user != null)
                 {
                     if (IsValidateUser(model.UserName, model.Password, user))
                     {
-                        SessionHelper.CurrentSession.Content.LoggedInUser = user;
+                        
+                        SetUserClaimsIdentity(user);
+
+                        LoginHistoryService loginHistoryService = new LoginHistoryService();
+                        LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
+                        loginHistoryViewModel.UserId = user.Id;
+                        loginHistoryViewModel.LoginTimestamp = DateTime.Now;
+                        loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
+                        loginHistoryService.InsertData(loginHistoryViewModel);
 
                         if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                             && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
@@ -87,9 +94,7 @@ namespace DAQMS.Web.Controllers
 
         private bool IsValidateUser(string userName, string password, User user)
         {
-            string strPassword = string.Empty;
-
-            if (user.UserName == userName && password == strPassword)
+            if (user.LoginID == userName && Password.verifyMd5Hash(user.UserPass, password))
             {
                 return true;
             }
@@ -100,14 +105,50 @@ namespace DAQMS.Web.Controllers
 
         }
 
+        private void SetUserClaimsIdentity(User user)
+        {
+            SessionHelper.CurrentSession.Content.LoggedInUser = user;
+
+            RoleService roleService = new RoleService();
+
+            var ident = new ClaimsIdentity(
+          new[] { 
+              // adding following 2 claim just for supporting default antiforgery provider
+              new Claim(ClaimTypes.NameIdentifier, user.UserName),
+              new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", "ASP.NET Identity", "http://www.w3.org/2001/XMLSchema#string"),
+
+              new Claim(ClaimTypes.Name,user.UserName),
+              
+              // optionally you could add roles if any
+              //new Claim(ClaimTypes.Role, "Admin")
+
+          },
+          DefaultAuthenticationTypes.ApplicationCookie);
+
+            HttpContext.GetOwinContext().Authentication.SignIn(
+               new AuthenticationProperties { IsPersistent = false }, ident);
+        }
+
         //
         // GET: /Account/LogOut
         [UserAuthorize]
         public ActionResult LogOut()
         {
+            User loggedInUser = SessionHelper.CurrentSession.Content.LoggedInUser;
+            if (loggedInUser == null)
+            {
+                LoginHistoryService loginHistoryService = new LoginHistoryService();
+                LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
+                loginHistoryViewModel.UserId = loggedInUser.Id;
+                loginHistoryViewModel.LoginTimestamp = DateTime.Now;
+                loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
+                loginHistoryService.InsertData(loginHistoryViewModel);
+            }
+
             Session.RemoveAll();
             SessionHelper.CurrentSession.Remove("LoggedInUser");
             SessionHelper.CurrentSession.Clear();
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -130,10 +171,9 @@ namespace DAQMS.Web.Controllers
             {
                 try
                 {
-                    UserViewModel userViewModel = new UserViewModel();
-
-                    UserService userService = new UserService();
-                    userService.InsertData(userViewModel);
+                    //UserViewModel userViewModel = new UserViewModel();
+                    //UserService userService = new UserService();
+                    //userService.InsertData(userViewModel);
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -171,8 +211,7 @@ namespace DAQMS.Web.Controllers
                 bool changePasswordSucceeded;
                 try
                 {
-                    MembershipUser currentUser = Membership.GetUser(User.Identity.Name, true /* userIsOnline */);
-                    changePasswordSucceeded = currentUser.ChangePassword(model.OldPassword, model.NewPassword);
+                    changePasswordSucceeded = true;
                 }
                 catch (Exception)
                 {

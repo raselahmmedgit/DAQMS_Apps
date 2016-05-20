@@ -1,0 +1,15 @@
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb

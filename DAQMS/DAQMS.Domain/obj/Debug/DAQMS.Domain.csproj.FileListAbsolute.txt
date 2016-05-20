@@ -22,17 +22,6 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\Entit
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.xml
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.xml
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
-C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
@@ -44,3 +33,15 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFra
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll.config
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\DAQMS.Domain.pdb
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\AutoMapper.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.csprojResolveAssemblyReference.cache
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.dll
+C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Domain\obj\Debug\DAQMS.Domain.pdb
