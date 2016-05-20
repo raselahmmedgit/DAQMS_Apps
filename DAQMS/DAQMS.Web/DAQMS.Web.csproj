@@ -214,6 +214,7 @@
     <Compile Include="ViewModels\VCardViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\UM\Scripts\Menu.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -269,6 +270,11 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="Areas\UM\Views\web.config" />
+    <Content Include="Areas\UM\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\UM\Views\Menu\_Create.cshtml" />
+    <Content Include="Areas\UM\Views\Menu\_Delete.cshtml" />
+    <Content Include="Areas\UM\Views\Menu\_Details.cshtml" />
+    <Content Include="Areas\UM\Views\Menu\_Edit.cshtml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\App\App.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1237,7 +1243,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\UM\Models\" />
-    <Folder Include="Areas\UM\Views\Menu\" />
     <Folder Include="Areas\UM\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
