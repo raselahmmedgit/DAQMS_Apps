@@ -20,6 +20,7 @@ namespace DAQMS.DAL
             return new UserDAL();
         }
 
+
         public override System.Int32 Save(UserViewModel item, string mood)
         {
             int id = 0;
@@ -140,7 +141,7 @@ namespace DAQMS.DAL
         public List<UserViewModel> GetObjList(int userId, string loginId, string userName, string userEmail, string contactId,
            string loginUserId, int startRowIndex, int maximumRows)
         {
-            DataSet dsResult = new DataSet();
+           
             DataTable dt = new DataTable();
             NpgsqlConnection conn = null;
 
@@ -187,6 +188,10 @@ namespace DAQMS.DAL
                         {
                             param.Value = "";
                         }
+                        if (param.NpgsqlDbType == NpgsqlDbType.Integer)
+                        {
+                            param.Value = 0;
+                        }
                         else if (param.NpgsqlDbType == NpgsqlDbType.Timestamp)
                         {
                             param.Value = DBNull.Value;
@@ -215,12 +220,12 @@ namespace DAQMS.DAL
 
                  using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(command))
                  {
-                     Adpt.Fill(dsResult);
+                     Adpt.Fill(dt);
                  }
 
                 // Fetch rows 
                  results = new List<UserViewModel>();
-                 foreach (DataRow dr in dsResult.Tables[0].Rows)
+                 foreach (DataRow dr in dt.Rows)
                 {
                     UserViewModel obj = new UserViewModel();
                     ModelMapperBase.GetInstance().MapItem(obj, dr);
@@ -250,7 +255,7 @@ namespace DAQMS.DAL
 
         public override UserViewModel GetObjList(UserViewModel item)
         {
-            return GetObjList(item.Id, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.LoginID, item.UserName, item.UserEmail, item.ContactID, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

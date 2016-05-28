@@ -238,7 +238,7 @@ namespace DAQMS.DAL
 
         public override MenuViewModel GetObjList(MenuViewModel item)
         {
-            return GetObjList(item.Id, item.ModuleId, item.MenuGroupId, Convert.ToInt32(item.ParentMenuId), item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.ModuleId, item.MenuGroupId, Convert.ToInt32(item.ParentMenuId), item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

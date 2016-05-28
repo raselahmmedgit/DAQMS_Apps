@@ -1,0 +1,19 @@
+@model  DAQMS.DomainViewModel.ModuleViewModel
+
+<div class="row-fluid form-horizontal">
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ModuleName, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ModuleName, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            
+        </div>
+    </div>
+    
+</div>

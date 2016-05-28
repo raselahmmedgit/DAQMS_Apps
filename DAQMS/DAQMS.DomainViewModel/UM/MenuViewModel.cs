@@ -10,6 +10,11 @@ namespace DAQMS.DomainViewModel
 {
     public class MenuViewModel : Menu
     {
+        public Menu Menu { set; get; }
+        public IList<Menu> MenuList { set; get; }
+        public SelectList MenuSelectList { set; get; }
+        public Menu SearchCraiteria { set; get; }
+
         public MenuViewModel()
         {
             this.ModuleList = new List<SelectListItem>();

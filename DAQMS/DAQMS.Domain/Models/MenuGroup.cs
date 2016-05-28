@@ -35,6 +35,12 @@ namespace DAQMS.Domain.Models
         [DataMember, DataColumn(true)]
         public Int32 SerialNo { get; set; }
 
+        [Display(Name = "IconClass")]
+        [Required]
+        [MaxLength(100)]
+        [DataMember, DataColumn(true)]
+        public String IconClass  { get; set; }
+        
 
     }
 }

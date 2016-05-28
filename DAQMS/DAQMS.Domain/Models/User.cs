@@ -45,29 +45,29 @@ namespace DAQMS.Domain.Models
 
         [Required(ErrorMessage = "Contact ID is required")]
         [Display(Name = "Contact ID")]
-        [MaxLength(10)]
+        [MaxLength(20)]
         [DataMember, DataColumn(true)]
         public String ContactID { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Is Admin User?")]
         [DataMember, DataColumn(true)]
-        public Boolean IsAdmin { get; set; }
+        public bool IsAdmin { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Is Active User?")]
         [DataMember, DataColumn(true)]
-        public Boolean IsActive { get; set; }
+        public bool IsActive { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Is Locked User?")]
         [DataMember, DataColumn(true)]
-        public Boolean IsLocked { get; set; }
+        public bool IsLocked { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "User must change password next login")]
         [DataMember, DataColumn(true)]
-        public Boolean IsChangePassword { get; set; }
+        public bool IsChangePassword { get; set; }
 
         [Display(Name = "Last Locked")]
         [MaxLength(10)]

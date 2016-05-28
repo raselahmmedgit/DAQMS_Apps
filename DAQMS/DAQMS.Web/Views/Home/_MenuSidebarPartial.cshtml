@@ -1,0 +1,80 @@
+﻿@using DAQMS.DomainViewModel
+@using Helper
+@using DAQMS.Web
+@model IEnumerable< DAQMS.DomainViewModel.UserRightViewModel>
+
+    @{
+        List<UserRightViewModel> list = new List<UserRightViewModel>();
+
+        foreach (UserRightViewModel item in Model)
+        {
+            list.Add(item);
+        }
+        <ul class="nav nav-list">
+            <li>
+                <a href="/Home/Index">
+                    <i class="icon-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            @ShowMenu(list)
+        </ul>
+    }
+
+    @helper ShowMenu(List<UserRightViewModel> list)
+{
+    var parentMenu = list.Where(e => e.ParentMenuId == -1).ToList();
+    foreach (var item in parentMenu)
+    {
+        var hasChild = list.Where(em => em.ParentMenuId == item.Id).ToList();
+        if (hasChild.Count == 0)
+        {
+            <li>
+                <a href="@Url.Content("~"+item.PageUrl)" class="dropdown-toggle">
+                    <i class="icon-desktop"></i>
+                    <span>@item.MenuCaption</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            @BuildMenu(hasChild, list, item.MenuCaption);
+        }
+    }
+}
+    @helper BuildMenu(List<UserRightViewModel> ChildList, List<UserRightViewModel> List, string Caption)
+{
+    <li>
+        <a href='#' class="dropdown-toggle">
+            <i class="icon-desktop"></i>
+            <span>@Caption</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+
+        <ul class="submenu">
+            @{
+                foreach (var m in ChildList)
+                {
+                    var mch = List.Where(e => e.ParentMenuId == m.Id).ToList();
+                    if (mch.Count > 0)
+                    {
+                        @BuildMenu(mch, List, m.MenuCaption);
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="@Url.Content("~"+m.PageUrl)">
+                                <i class="icon-double-angle-right"></i>
+                                @m.MenuCaption
+                            </a>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+    </li>
+}
+
+    <div id="sidebar-collapse">
+        <i class="icon-double-angle-left"></i>
+    </div>

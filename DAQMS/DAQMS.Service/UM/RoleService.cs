@@ -73,7 +73,7 @@ namespace DAQMS.Service
 
         public override List<RoleViewModel> GetByItem(RoleViewModel item)
         {
-            return RoleDAL.GetInstance().GetObjList(item, 0, 10000000);
+            return RoleDAL.GetInstance().GetObjList(item, 1, 10000000);
         }
 
         public override List<RoleViewModel> GetItemByPaging(RoleViewModel item, int startRowIndex, int maxRow)
@@ -89,7 +89,7 @@ namespace DAQMS.Service
         public override List<RoleViewModel> GetAll()
         {
             RoleDAL obj = new RoleDAL();
-            return obj.GetObjList(new RoleViewModel(), 0, 100000000);
+            return obj.GetObjList(new RoleViewModel(), 1, 100000000);
         }
 
         #endregion

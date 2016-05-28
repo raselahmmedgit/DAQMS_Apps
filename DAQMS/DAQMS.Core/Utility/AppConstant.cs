@@ -26,17 +26,5 @@ namespace DAQMS.Core.Utility
             public const string AllGender = "AllGender";
             public const string AllUserRole = "AllUserRole";
         }
-
-        public static class Messages
-        {
-            public const string UnhandelledError = "We are facing some problem while processing the current request. Please try again later.";
-            public const string UnknownError = "We are facing some problem while processing the current request. Please try again later.";
-            public const string NotFound = "Requested object not found.";
-            public const string LongDescription = "Could not insert long description.";
-            public const string IdNotProvided = "Id is not provided.";
-            public static string SaveSuccess = "Saved successfully.";
-            public static string UpdateSuccess = "Updated successfully.";
-            public static string DeleteSuccess = "Deleted successfully.";
-        }
     }
 }

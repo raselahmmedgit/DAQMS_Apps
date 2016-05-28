@@ -83,30 +83,5 @@ namespace DAQMS.Domain.Models
         public String TypeName { get; set; }
     }
 
-    [Table("ProjectContact", Schema = "App")]
-    public class ProjectContact : BaseModel
-    {
-        [Key]
-        [Required]
-        [Display(AutoGenerateField = false)]
-        [DataMember, DataColumn(true)]
-        public Int32 Id { get; set; }
-
-        [Display(Name = "Company Name")]
-        [Required]
-        [DataMember, DataColumn(true)]
-        public Int32 CompanyId { get; set; }
-
-        [Display(Name = "Project Name")]
-        [Required]
-        [DataMember, DataColumn(true)]
-        public Int32 ProjectId { get; set; }
-
-        [Display(Name = "Contact Name")]
-        [Required]
-        [DataMember, DataColumn(true)]
-        public Int32 ContactId { get; set; }
-    }
-
 }
 

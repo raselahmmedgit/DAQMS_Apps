@@ -27,7 +27,6 @@ namespace DAQMS.Domain.Models
 
         [Display(Name = "Module Name")]
         [Required]
-        [MaxLength(100)]
         [DataMember, DataColumn(true)]
         public Int32 ModuleId { get; set; }
 

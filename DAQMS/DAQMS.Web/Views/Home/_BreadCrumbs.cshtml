@@ -1,0 +1,38 @@
+﻿@using DAQMS.DomainViewModel
+@using Helper
+@using DAQMS.Web
+@model DAQMS.DomainViewModel.UserRightViewModel
+
+<ul class="breadcrumb">
+    <li>
+        <i class="icon-home"></i>
+        <a href="/Home/Index">Home</a>
+        @if (Model!= null)
+        {
+            <span class="divider">
+                <i class="icon-angle-right"></i>
+            </span>
+        }
+    </li>
+
+    <li class="active">
+        @if (Model != null)
+        {
+            @Html.Encode(Model.ParentMenuCaption.ToString())
+            <span class="divider">
+                <i class="icon-angle-right"></i>
+            </span>
+            @Html.Encode(Model.MenuCaption.ToString())
+        }
+
+    </li>
+</ul>
+
+<div id="nav-search">
+    <form class="form-search">
+        <span class="input-icon">
+            <input type="text" placeholder="Search ..." class="input-small search-query" id="nav-search-input" autocomplete="off" />
+            <i class="icon-search" id="nav-search-icon"></i>
+        </span>
+    </form>
+</div><!--#nav-search-->

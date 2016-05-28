@@ -14,12 +14,18 @@ namespace DAQMS.DomainViewModel
         {
             this.CompanyList = new List<SelectListItem>();
             this.ProjectList = new List<SelectListItem>();
-            this.ContactTypeList = new List<SelectListItem>(); 
+            this.ContactTypeList = new List<SelectListItem>();
+
+            this.ProjectContactList = new List<ProjectContactViewModel>();
         }
 
         [Display(Name = "Company Name")]
         [DataMember, DataColumn(true)]
         public string CompanyName { get; set; }
+
+        [Display(Name = "Project Name")]
+        [DataMember, DataColumn(true)]
+        public int ProjectId { get; set; }
 
         [Display(Name = "Project Name")]
         [DataMember, DataColumn(true)]
@@ -33,6 +39,7 @@ namespace DAQMS.DomainViewModel
         public IList<SelectListItem> ProjectList { get; set; }
         public IList<SelectListItem> ContactTypeList { get; set; }
 
+        public virtual IList<ProjectContactViewModel> ProjectContactList { get; set; }
     }
 }
 

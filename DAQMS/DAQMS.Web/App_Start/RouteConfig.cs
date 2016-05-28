@@ -14,31 +14,37 @@ namespace DAQMS.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "LoginRoute",
-                url: "Login",
-                defaults: new { controller = "Account", action = "LogIn" }
-            );
-            routes.MapRoute(
-                name: "LogoffRoute",
-                url: "Logout",
-                defaults: new { controller = "Account", action = "LogOut" }
-            );
-            routes.MapRoute(
-               name: "RegisterRoute",
-               url: "Register",
-               defaults: new { controller = "Account", action = "Register" }
-           );
-            routes.MapRoute(
-               name: "ForgetPasswordRoute",
-               url: "Forgetpassword",
-               defaults: new { controller = "User", action = "ForgetPassword" }
-           );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Account", action = "LogIn", id = UrlParameter.Optional }
             );
+
+           // routes.MapRoute(
+           //     name: "LoginRoute",
+           //     url: "Login",
+           //     defaults: new { controller = "Account", action = "LogIn" }
+           // );
+           // routes.MapRoute(
+           //     name: "LogoffRoute",
+           //     url: "Logout",
+           //     defaults: new { controller = "Account", action = "LogOut" }
+           // );
+           // routes.MapRoute(
+           //    name: "RegisterRoute",
+           //    url: "Register",
+           //    defaults: new { controller = "Account", action = "Register" }
+           //);
+           // routes.MapRoute(
+           //    name: "ForgetPasswordRoute",
+           //    url: "Forgetpassword",
+           //    defaults: new { controller = "User", action = "ForgetPassword" }
+           //);
+
+           // routes.MapRoute(
+           //     name: "Default",
+           //     url: "{controller}/{action}/{id}",
+           //     defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+           // );
         }
     }
 }

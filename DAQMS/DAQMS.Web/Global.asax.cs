@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using DAQMS.Core;
+using Filters;
 
 namespace DAQMS.Web
 {
@@ -16,6 +17,8 @@ namespace DAQMS.Web
     {
         protected void Application_Start()
         {
+           // RegisterGlobalFilters(GlobalFilters.Filters);
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -87,6 +90,11 @@ namespace DAQMS.Web
         protected void Application_End()
         {
             SessionHelper.CurrentSession.Clear();
+        }
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+            filters.Add(new AuthorizationFilterAttribute());
         }
     }
 }

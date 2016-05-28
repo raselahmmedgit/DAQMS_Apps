@@ -8,9 +8,14 @@ namespace DAQMS.DomainViewModel
 {
     public class LoginHistoryViewModel : LoginHisory
     {
-        [Display(Name = "Menu Group")]
+        [Display(Name = "Login ID")]
         [DataMember, DataColumn(true)]
         public string LoginID { get; set; }
 
+        [Display(Name = "User Name")]
+        [DataMember, DataColumn(true)]
+        public string UserName { get; set; }
+
+        public System.DateTime? LoginDate { get; set; }
     }
 }

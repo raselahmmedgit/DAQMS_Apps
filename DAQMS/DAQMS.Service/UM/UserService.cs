@@ -75,7 +75,7 @@ namespace DAQMS.Service
 
         public override List<UserViewModel> GetByItem(UserViewModel item)
         {
-            return UserDAL.GetInstance().GetObjList(item, 0, 10000000);
+            return UserDAL.GetInstance().GetObjList(item, 1, 10000000);
         }
 
         public override List<UserViewModel> GetItemByPaging(UserViewModel item, int startRowIndex, int maxRow)
@@ -99,7 +99,7 @@ namespace DAQMS.Service
         public override List<UserViewModel> GetAll()
         {
             UserDAL UserDal = new UserDAL();
-            return UserDal.GetObjList(new UserViewModel(), 0, 100000000);
+            return UserDal.GetObjList(new UserViewModel(), 1, 100000000);
         }
 
         #endregion

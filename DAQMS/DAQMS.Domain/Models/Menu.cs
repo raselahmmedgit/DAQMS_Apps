@@ -56,6 +56,7 @@ namespace DAQMS.Domain.Models
         [DataMember, DataColumn(true)]
         public String PageUrl { get; set; }
 
+       
 
     }
 }

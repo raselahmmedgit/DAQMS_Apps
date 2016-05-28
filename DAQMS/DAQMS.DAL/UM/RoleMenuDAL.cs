@@ -233,7 +233,7 @@ namespace DAQMS.DAL
 
         public override RoleMenuViewModel GetObjList(RoleMenuViewModel item)
         {
-            return GetObjList(item.Id, item.MenuId, item.ModuleId, item.RoleId, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.MenuId, item.ModuleId, item.RoleId, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

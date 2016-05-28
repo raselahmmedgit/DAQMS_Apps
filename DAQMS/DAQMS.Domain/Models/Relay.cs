@@ -27,7 +27,7 @@ namespace DAQMS.Domain.Models
         [Required]
         [MaxLength(100)]
         [DataMember, DataColumn(true)]
-        public String DesiredState { get; set; }
+        public int RelayStateId { get; set; }
 
         [Display(Name = "Status")]
         [Required]
@@ -38,6 +38,7 @@ namespace DAQMS.Domain.Models
         // 1= ON, 0=OFF
 
         [Display(Name = "Setup Time")]
+        [Required]
         [DataMember, DataColumn(true)]
         public DateTime SetupTime { get; set; }
 

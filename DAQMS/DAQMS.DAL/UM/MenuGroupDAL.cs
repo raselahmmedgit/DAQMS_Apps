@@ -49,11 +49,14 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_serial_no", NpgsqlDbType.Integer));
                 command.Parameters[3].Value = item.SerialNo;
 
+                command.Parameters.Add(new NpgsqlParameter("p_icon_class", NpgsqlDbType.Varchar));
+                command.Parameters[4].Value = item.IconClass;
+
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[4].Value = item.LoginUserID;
+                command.Parameters[5].Value = item.LoginUserID;
 
                 command.Parameters.Add(new NpgsqlParameter("p_mood", NpgsqlDbType.Varchar));
-                command.Parameters[5].Value = mood;
+                command.Parameters[6].Value = mood;
 
                 #region param reset
                 foreach (NpgsqlParameter param in command.Parameters)
@@ -224,7 +227,7 @@ namespace DAQMS.DAL
 
         public override MenuGroupViewModel GetObjList(MenuGroupViewModel item)
         {
-            return GetObjList(item.Id, item.ModuleId, item.GroupName, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.ModuleId, item.GroupName, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

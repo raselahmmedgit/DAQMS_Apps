@@ -1,0 +1,56 @@
+@model  DAQMS.DomainViewModel.CompanyViewModel
+@{
+    ViewBag.Title = "DAQ - Add Company";
+}
+@using (Html.BeginForm("Create", "Company", FormMethod.Post, new { @id = "frmSave" }))
+{
+    @Html.ValidationSummary(true)
+    @Html.Partial("_CreateOrEdit", Model)
+
+    <div class="row-fluid form-horizontal">
+        <div class="control-group">
+            <div class="controls">
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
+                <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success" onclick="return fnValidate()">
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div id="ErrorMessage">
+                </div>
+                <div id="lblMsg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //required for Unit Info
+        $("#frmSave").on('submit', function (e) {
+            e.preventDefault();
+           
+            $("#lblMsg").html(''); $("#ErrorMessage").html('');
+            var data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Create", "Company")',
+                data: data,
+                success: (function (result) {
+                    if (result == "True") {
+                       
+                        $("#lblMsg").html('Information has been saved successfully').css("color", "green");
+                        $("#lblMsg").show();
+                        $("#MyDialog").dialog('close');
+                    }
+                    else {
+                        $("#ErrorMessage").html(result).css("color", "red");
+                    }
+                })
+            })
+        });
+    });
+</script>

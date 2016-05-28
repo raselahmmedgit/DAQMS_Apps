@@ -27,13 +27,19 @@ namespace DAQMS.Domain.Models
         [MaxLength(10)]
         [Required]
         [DataMember, DataColumn(true)]
-        public string DevicetID { get; set; }
+        public string DeviceID { get; set; }
 
         [Display(Name = "Site Name")]
         [Required]
         [MaxLength(50)]
         [DataMember, DataColumn(true)]
         public String SiteName { get; set; }
+
+        [Display(Name = "Notes")]
+        [Required]
+        [MaxLength(100)]
+        [DataMember, DataColumn(true)]
+        public String Notes { get; set; }
 
         [Display(Name = "Farmeware Version")]
         [Required]

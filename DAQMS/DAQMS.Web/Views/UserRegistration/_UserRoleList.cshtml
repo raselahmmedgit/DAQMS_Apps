@@ -1,0 +1,26 @@
+﻿@model DAQMS.DomainViewModel.UserRoleViewModel
+@using Helper
+
+<tr class="dynamicRow">
+    @using (Html.BeginCollectionItem("UserRoleList"))
+    {
+        if (Model != null)
+        {
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.UserId)
+            @Html.HiddenFor(model => model.RoleId)
+        }
+        <td>
+            <label class="inline">
+                @Html.CheckBoxFor(model => model.IsAssignRole, new { @class = "checkBoxShow" })
+                <span class="lbl"></span>
+            </label>
+        </td>
+        <td>
+            @Html.Encode(Model.RoleName)
+        </td>
+        <td>
+            @Html.Encode(Model.ModuleName)
+        </td>
+    }
+</tr>

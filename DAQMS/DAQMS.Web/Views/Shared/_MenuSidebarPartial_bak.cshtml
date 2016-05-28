@@ -1,0 +1,61 @@
+﻿@*@Html.RenderSideMenu()*@
+<!-- sidebar menu: : style can be found in sidebar.less -->
+
+
+@*<ul class="sidebar-menu">
+    <li class="active treeview">
+        <a href="@Url.Action("Index", "Home")">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-dashboard"></i> <span>User Management</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-circle-o"></i> User</a></li>
+            <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-circle-o"></i> Role</a></li>
+        </ul>
+    </li>
+</ul>*@
+
+<!--#sidebar-shortcuts-->
+<ul class="nav nav-list">
+    <li class="active">
+        <a href="index-2.html">
+            <i class="icon-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="dropdown-toggle">
+            <i class="icon-desktop"></i>
+            <span>User Management</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+
+        <ul class="submenu">
+            <li>
+                <a href="@Url.Action("Index", "UserRegistration")">
+                    <i class="icon-double-angle-right"></i>
+                    User
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="icon-double-angle-right"></i>
+                    Roles
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+</ul>
+<!--/.nav-list-->
+
+<div id="sidebar-collapse">
+    <i class="icon-double-angle-left"></i>
+</div>

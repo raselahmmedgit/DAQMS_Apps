@@ -19,6 +19,10 @@ namespace DAQMS.DomainViewModel
 
         [Display(Name = "Company Name")]
         [DataMember, DataColumn(true)]
+        public int CompanyId { get; set; }
+
+        [Display(Name = "Company Name")]
+        [DataMember, DataColumn(true)]
         public string CompanyName { get; set; }
 
         [Display(Name = "Project Name")]

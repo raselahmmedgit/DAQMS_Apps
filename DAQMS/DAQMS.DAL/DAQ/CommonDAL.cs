@@ -1,90 +1,134 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using DAQMS.DAL.Base;
 using DAQMS.DAL.Models;
-using DAQMS.Domain.Models;
+using NpgsqlTypes;
 using Npgsql;
 using DAQMS.Domain;
+using DAQMS.DomainViewModel;
 
-
-namespace DAQMS.DAL.DAQ
+namespace DAQMS.DAL
 {
-   public class CommonDAL
+    public class CommonDAL
     {
-       public static CommonDAL GetInstance()
-       {
-           return new CommonDAL();
-       }
+        public static CommonDAL GetInstance()
+        {
+            return new CommonDAL();
+        }
 
-       public List<NameValue> GetObjList(string classType, int id, string name, string loginUserID, int startRowIndex, int maximumRows)
-       {
-           DataSet dsResult = new DataSet();
-           DataTable dt = new DataTable();
-           NpgsqlConnection conn = null;
-          
-           string sql = string.Empty;
+        public List<CommonViewModel> GetObjList(string TableType, int Id, string Name, int RefId=0)
+        {
+            DataSet dsResult = new DataSet();
+            DataTable dt = new DataTable();
+            NpgsqlConnection conn = null;
 
-           List<NameValue> results = null;
+            string sql = string.Empty;
 
-           try
-           {
-               conn = DataProvider.GetConnectionInstance() as NpgsqlConnection;
-               conn.Open();
+            List<CommonViewModel> results = null;
 
-               // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
-               NpgsqlTransaction tran = conn.BeginTransaction();
+            TableType = TableType.ToLower();
 
-               //Find SQL
-               if (classType == "alert_type")
-               {
-                   sql = "SELECT * FROM (SELECT id, alert_type as name  FROM alert_type) abc WHERE 0=0";
-               }
+            try
+            {
+                conn = DataProvider.GetConnectionInstance() as NpgsqlConnection;
+                conn.Open();
 
-               if (id>0)
-               {
-                   sql += " AND id=" + id;
-               }
+                // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
+                NpgsqlTransaction tran = conn.BeginTransaction();
 
-               if (!(System.String.IsNullOrEmpty(name)))
-               {
-                   sql += " AND name='" + name +"'";
-               }
+                //Find SQL
+                if (TableType == "alert_type")
+                {
+                    sql = "SELECT * FROM (SELECT id, alert_type as name  FROM alert_type) abc WHERE 0=0";
+                }
+                else if (TableType == "contact_type")
+                {
+                    sql = "SELECT * FROM (SELECT id, type_name as name  FROM contact_type) abc WHERE 0=0";
+                }
+                else if (TableType == "device_status")
+                {
+                    sql = "SELECT * FROM (SELECT id, status_name as name  FROM device_status) abc WHERE 0=0";
+                }
+                else if (TableType == "project_status")
+                {
+                    sql = "SELECT * FROM (SELECT id, status_name as name  FROM project_status) abc WHERE 0=0";
+                }
+                else if (TableType == "company")
+                {
+                    sql = "SELECT * FROM (SELECT id, company_name as name  FROM company) abc WHERE 0=0";
+                }
+                else if (TableType == "relay_state")
+                {
+                    sql = "SELECT * FROM (SELECT id, relay_state as name  FROM relay_state) abc WHERE 0=0";
+                }
+                else if (TableType == "modules")
+                {
+                    sql = "SELECT * FROM (SELECT id, module_name as name  FROM modules) abc WHERE 0=0";
+                }
+                else if (TableType == "project")
+                {
+                    sql = "SELECT * FROM (SELECT id, project_name as name  FROM project WHERE company_id="+ RefId +") abc WHERE 0=0";
+                }
+                else if (TableType == "devices")
+                {
+                    sql = "SELECT * FROM (SELECT id, strdevice_id as name  FROM devices WHERE project_id=" + RefId + ") abc WHERE 0=0";
+                }
+                else if (TableType == "contact")
+                {
+                    sql = "SELECT * FROM (SELECT id, contact_name as name  FROM contact WHERE company_id=" + RefId + ") abc WHERE 0=0";
+                }
 
-               // Define a command to call procedure
-               NpgsqlCommand command = new NpgsqlCommand("sql", conn);
-               command.CommandType = CommandType.Text;
+
+                if (Id > 0)
+                {
+                    sql += " AND id=" + Id;
+                }
+
+                if (!(System.String.IsNullOrEmpty(Name)))
+                {
+                    sql += " AND name='" + Name + "'";
+                }
+
+                // Define a command to call procedure
+                NpgsqlCommand command = new NpgsqlCommand(sql, conn);
+                command.CommandType = CommandType.Text;
 
 
-               //command.ExecuteNonQuery();
-               //command.CommandText = "fetch all in \"ref\"";
-               //command.CommandType = CommandType.Text;
+                //command.ExecuteNonQuery();
+                //command.CommandText = "fetch all in \"ref\"";
+                //command.CommandType = CommandType.Text;
 
-               //// Execute the procedure and obtain a result set
-               //  NpgsqlDataReader data = command.ExecuteReader();
+                //// Execute the procedure and obtain a result set
+                  NpgsqlDataReader data = command.ExecuteReader();
 
-               using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(command))
-               {
-                   Adpt.Fill(dsResult);
-               }
+                 
+                // Fetch rows 
+                results = new List<CommonViewModel>();
 
-               // Fetch rows 
-               results = new List<NameValue>();
-               foreach (DataRow dr in dsResult.Tables[0].Rows)
-               {
-                   NameValue obj = new NameValue();
-                   ModelMapperBase.GetInstance().MapItem(obj, dr);
-                   results.Add(obj);
-               }
-           }
-           catch (Exception ex)
-           {
-               throw (ex);
-           }
-           finally
-           {
-               if (conn != null) conn.Dispose();
-           }
-           return results;
-       }
+                CommonViewModel selectObj = new CommonViewModel();
+                results.Add(selectObj);
+
+                while (data.Read())
+                {
+                    CommonViewModel obj = new CommonViewModel();
+                    obj.Id = (int)data[0];
+                    obj.Name = data[1].ToString();
+                    results.Add(obj);
+  
+                }
+              
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                if (conn != null) conn.Dispose();
+            }
+            return results;
+        }
     }
 }

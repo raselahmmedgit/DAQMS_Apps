@@ -73,7 +73,7 @@ namespace DAQMS.Service
 
         public override List<MenuGroupViewModel> GetByItem(MenuGroupViewModel item)
         {
-            return MenuGroupDAL.GetInstance().GetObjList(item, 0, 10000000);
+            return MenuGroupDAL.GetInstance().GetObjList(item, 1, 10000000);
         }
 
         public override List<MenuGroupViewModel> GetItemByPaging(MenuGroupViewModel item, int startRowIndex, int maxRow)
@@ -89,7 +89,7 @@ namespace DAQMS.Service
         public override List<MenuGroupViewModel> GetAll()
         {
             MenuGroupDAL UserDal = new MenuGroupDAL();
-            return UserDal.GetObjList(new MenuGroupViewModel(), 0, 100000000);
+            return UserDal.GetObjList(new MenuGroupViewModel(), 1, 100000000);
         }
 
         #endregion

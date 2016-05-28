@@ -50,10 +50,20 @@
     <Compile Include="Base\EventLogMgr.cs" />
     <Compile Include="Base\IPrimaryBase.cs" />
     <Compile Include="Base\SharedEnum.cs" />
+    <Compile Include="DAQ\AlertHistoryDAL.cs" />
+    <Compile Include="DAQ\AlertSetupMasterDAL.cs" />
+    <Compile Include="DAQ\AlertSetupCtrDAL.cs" />
+    <Compile Include="DAQ\AlertSetupTempDAL.cs" />
     <Compile Include="DAQ\CommonDAL.cs" />
     <Compile Include="DAQ\CompanyDAL.cs" />
     <Compile Include="DAQ\ContactDAL.cs" />
     <Compile Include="DAQ\DeviceDAL.cs" />
+    <Compile Include="DAQ\TempSensorDAL.cs" />
+    <Compile Include="UM\ModuleDAL.cs" />
+    <Compile Include="DAQ\ProjectContactDAL.cs" />
+    <Compile Include="DAQ\ProjectDAL.cs" />
+    <Compile Include="DAQ\RelayDAL.cs" />
+    <Compile Include="DAQ\ReportDAL.cs" />
     <Compile Include="DBHelper\AppSettings.cs" />
     <Compile Include="DBHelper\CustomParameter.cs" />
     <Compile Include="DBHelper\CustomParameterList.cs" />
@@ -67,6 +77,7 @@
     <Compile Include="UM\RoleDAL.cs" />
     <Compile Include="UM\RoleMenuDAL.cs" />
     <Compile Include="UM\UserDAL.cs" />
+    <Compile Include="UM\UserRightDAL.cs" />
     <Compile Include="UM\UserRoleDAL.cs" />
   </ItemGroup>
   <ItemGroup>

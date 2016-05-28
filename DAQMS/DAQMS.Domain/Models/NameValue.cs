@@ -11,6 +11,11 @@ namespace DAQMS.Domain.Models
 {
     public class NameValue : BaseModel
     {
+        public NameValue()
+        {
+            this.Id = 0;
+            this.Name = "< Select >";
+        }
         [Key]
         [Required]
         [Display(AutoGenerateField = false)]

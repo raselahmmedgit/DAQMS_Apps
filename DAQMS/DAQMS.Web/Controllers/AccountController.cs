@@ -14,6 +14,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DAQMS.Web.Models;
 using DAQMS.DomainViewModel;
+using Code;
 
 namespace DAQMS.Web.Controllers
 {
@@ -21,13 +22,38 @@ namespace DAQMS.Web.Controllers
     public class AccountController : BaseController
     {
         #region Global Variable Declaration
-        private readonly UserService _userService = new UserService();
-        private readonly LoginHistoryService _loginHistoryService = new LoginHistoryService();
-        private readonly RoleService _roleService = new RoleService();
+        public bool IsChangePasswordFromLogin;
         #endregion
 
         #region Constructor
+        // This constructor is used by the MVC framework to instantiate the controller using
+        // the default forms authentication and membership providers.
 
+        public AccountController()
+            : this(null, null)
+        {
+        }
+
+        // This constructor is not used by the MVC framework but is instead provided for ease
+        // of unit testing this type. See the comments at the end of this file for more
+        // information.
+        public AccountController(IFormsAuthentication formsAuth, IMembershipService service)
+        {
+            FormsAuth = formsAuth ?? new FormsAuthenticationService();
+            MembershipService = service ?? new AccountMembershipService();
+            IsChangePasswordFromLogin = false;
+        }
+
+        public IFormsAuthentication FormsAuth
+        {
+            get;
+            private set;
+        }
+        public IMembershipService MembershipService
+        {
+            get;
+            private set;
+        }
         #endregion
 
         #region Action
@@ -42,14 +68,14 @@ namespace DAQMS.Web.Controllers
         // POST: /Account/LogIn
 
         [HttpPost]
-        public ActionResult LogIn(LogInViewModel model, string returnUrl)
+        public ActionResult LogIn(LogInViewModel model, string ReturnUrl)
         {
             if (ModelState.IsValid)
             {
-                
-                User user = _userService.LoadByLoginId(model.UserName);
+                UserService userService = new UserService();
+                User user = userService.LoadByLoginId(model.UserName);
 
-                if (user != null)
+                if (user != null && user.error_code==0)
                 {
                     if (IsValidateUser(model.UserName, model.Password, user))
                     {
@@ -57,24 +83,39 @@ namespace DAQMS.Web.Controllers
                         {
                             if (IsLockedUser(user))
                             {
-                                SetUserClaimsIdentity(user);
-                                
+                               // SetUserClaimsIdentity(user);
+
+                                FormsAuth.SignIn(model.UserName, false);
+
+                               
+
+                                #region save-login-history
+
+                                LoginHistoryService loginHistoryService = new LoginHistoryService();
                                 LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
                                 loginHistoryViewModel.UserId = user.Id;
                                 loginHistoryViewModel.LoginTimestamp = DateTime.Now;
                                 loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
-                                _loginHistoryService.InsertData(loginHistoryViewModel);
+                                var SessionId= loginHistoryService.InsertData(loginHistoryViewModel);
 
-                                if (user.IsChangePassword)
+                                #endregion save-login-history
+                                
+                                // Save session
+                                BuildUserSession(user.Id, SessionId);
+
+                                SetUserClaimsIdentity(user);
+
+                               if (user.IsChangePassword)
                                 {
-                                    return RedirectToAction("ChangePassword", "Account"); 
+                                    IsChangePasswordFromLogin = true;
+                                    return RedirectToAction("ChangePassword");                               
                                 }
                                 else
                                 {
-                                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                                     && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                                    if (Url.IsLocalUrl(ReturnUrl) && ReturnUrl.Length > 1 && ReturnUrl.StartsWith("/")
+                                     && !ReturnUrl.StartsWith("//") && !ReturnUrl.StartsWith("/\\"))
                                     {
-                                        return Redirect(returnUrl);
+                                        return Redirect(ReturnUrl);
                                     }
                                     else
                                     {
@@ -92,8 +133,6 @@ namespace DAQMS.Web.Controllers
                         {
                             ModelState.AddModelError("", "The user is inactive.");
                         }
-
-
                     }
                     else
                     {
@@ -104,17 +143,77 @@ namespace DAQMS.Web.Controllers
                 {
                     ModelState.AddModelError("", "The user not register, please register first.");
                 }
-
-
             }
 
             // If we got this far, something failed, redisplay form
             return View(model);
         }
 
+        private void BuildUserSession(int UserId, int SessionId)
+        {
+            try
+            {
+                UserService userService = new UserService();
+                var User = userService.GetIById(UserId);
+
+
+                /*   Session["User_Identity_Name"] = string.Format("{0}|{1}|{2}|{3}",
+                       User.UserId,         //0
+                       User.LoginId,         //1
+                       User.LastName,       //2
+                       User.Password         // 3
+                       );
+               */
+                Session["User_Identity_Name"] = User.UserName;
+                Session["LoginId"] = User.LoginID;
+                Session["SessionId"] = SessionId;
+
+                //FormsAuthentication.RedirectFromLoginPage(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}",
+                //    userList[0].NUMUSERID,         //0
+                //    userList[0].STRUSERID,         //1
+                //    userList[0].STRUSERNAME,       //2
+                //    STRPASSWORD,                   //3
+                //    userList[0].ISADMIN,           //4
+                //    userList[0].ISVIEWALLREPORT,   //5
+                //    userList[0].numRoleID,      //6
+                //    userList[0].STRDESIGNATION,    //7
+                //    userList[0].STRDEPARTMENTNAME, //8
+                //    userList[0].EMAILADDRESS,       //9
+                //     userList[0].STRROLENAME //10
+                //    ), true);
+
+                #region UserJob
+               // DAL.Tasks.UserJobDAL obj = new DAL.Tasks.UserJobDAL();
+             //   string userJob = obj.SaveObj(User.LoginId);
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        // GET: /Account/LogOff
+
+        public ActionResult LogOff()
+        {
+            int Id = (int)(Session["SessionId"]);
+
+                LoginHistoryService loginHistoryService = new LoginHistoryService();
+                LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
+                loginHistoryViewModel.Id = Id;
+                loginHistoryService.UpdateData(loginHistoryViewModel);
+
+            Session.Abandon();
+            Session.Clear();
+            HttpContext.Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
+            FormsAuth.SignOut();
+
+            return RedirectToAction("LogIn", "Account");
+        }
+
         private bool IsValidateUser(string userName, string password, User user)
         {
-            if (user.LoginID == userName && Password.verifyMd5Hash(user.UserPass, password))
+            if (user.LoginID.ToLower() == userName.ToLower() && Password.verifyMd5Hash(password,user.UserPass))
             {
                 return true;
             }
@@ -157,7 +256,7 @@ namespace DAQMS.Web.Controllers
         {
             SessionHelper.CurrentSession.Content.LoggedInUser = user;
 
-            
+            RoleService roleService = new RoleService();
 
             var ident = new ClaimsIdentity(
           new[] { 
@@ -182,21 +281,29 @@ namespace DAQMS.Web.Controllers
         [UserAuthorize]
         public ActionResult LogOut()
         {
+            int Id = (int)(Session["SessionId"]);
+
+            //Session["SessionId"] = SessionId;
             User loggedInUser = SessionHelper.CurrentSession.Content.LoggedInUser;
             if (loggedInUser == null)
             {
+                LoginHistoryService loginHistoryService = new LoginHistoryService();
                 LoginHistoryViewModel loginHistoryViewModel = new LoginHistoryViewModel();
+                loginHistoryViewModel.Id = Id;
                 loginHistoryViewModel.UserId = loggedInUser.Id;
                 loginHistoryViewModel.LoginTimestamp = DateTime.Now;
                 loginHistoryViewModel.LogoutTimestamp = DateTime.Now;
-                _loginHistoryService.InsertData(loginHistoryViewModel);
+                loginHistoryService.UpdateData(loginHistoryViewModel);
             }
 
             Session.RemoveAll();
             SessionHelper.CurrentSession.Remove("LoggedInUser");
             SessionHelper.CurrentSession.Clear();
 
-            return RedirectToAction("Index", "Home");
+            HttpContext.Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
+            FormsAuth.SignOut();
+
+            return RedirectToAction("LogIn", "Account");
         }
 
         //
@@ -240,7 +347,14 @@ namespace DAQMS.Web.Controllers
         [UserAuthorize]
         public ActionResult ChangePassword()
         {
-            return View();
+            UserService userService = new UserService();
+            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
+
+            var user = userService.LoadByLoginId(User.Identity.Name);
+            ViewBag.User = user;
+            ChangePasswordModel model = new ChangePasswordModel();
+            model.OldPassword = "";
+            return View(model);        
         }
 
         //
@@ -268,7 +382,14 @@ namespace DAQMS.Web.Controllers
 
                 if (changePasswordSucceeded)
                 {
-                    return RedirectToAction("ChangePasswordSuccess");
+                    if (IsChangePasswordFromLogin)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        return RedirectToAction("ChangePasswordSuccess");
+                    }
                 }
                 else
                 {
@@ -285,11 +406,11 @@ namespace DAQMS.Web.Controllers
             User user = SessionHelper.CurrentSession.Content.LoggedInUser;
             if (user != null)
             {
-                UserViewModel userViewModel = new UserViewModel();
-
-                userViewModel.Id = user.Id;
+                UserService userService = new UserService();
+                UserViewModel userViewModel = userService.GetIById(user.Id);
+      
                 userViewModel.IsChangePassword = false;
-                int update = _userService.UpdateData(userViewModel);
+                int update = userService.UpdateData(userViewModel);
             }
 
         }
@@ -346,4 +467,74 @@ namespace DAQMS.Web.Controllers
         #endregion
 
     }
+
+    public interface IFormsAuthentication
+    {
+        void SignIn(string userName, bool createPersistentCookie);
+        void SignOut();
+    }
+
+    public class FormsAuthenticationService : IFormsAuthentication
+    {
+        public void SignIn(string userName, bool createPersistentCookie)
+        {
+            FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
+        }
+        public void SignOut()
+        {
+            FormsAuthentication.SignOut();
+        }
+    }
+
+    public interface IMembershipService
+    {
+        int MinPasswordLength { get; }
+
+        bool ValidateUser(string userName, string password);
+        MembershipCreateStatus CreateUser(string userName, string password, string email);
+        bool ChangePassword(string userName, string oldPassword, string newPassword);
+    }
+
+    public class AccountMembershipService : IMembershipService
+    {
+        private CustomMembershipProvider _provider;
+
+        public AccountMembershipService()
+            : this(null)
+        {
+        }
+
+        public AccountMembershipService(CustomMembershipProvider provider)
+        {
+            _provider = provider ?? new CustomMembershipProvider();
+        }
+
+        public int MinPasswordLength
+        {
+            get
+            {
+                return _provider.MinRequiredPasswordLength;
+            }
+        }
+
+        public bool ValidateUser(string userName, string password)
+        {
+            return _provider.ValidateUser(userName, password);
+        }
+
+        public MembershipCreateStatus CreateUser(string userName, string password, string email)
+        {
+            MembershipCreateStatus status;
+            _provider.CreateUser(userName, password, email, null, null, true, null, out status);
+            return status;
+        }
+
+        public bool ChangePassword(string userName, string oldPassword, string newPassword)
+        {
+            return CustomMemberShip.Provider.ChangePassword(userName, oldPassword, newPassword);
+            //MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
+            //return currentUser.ChangePassword(oldPassword, newPassword);
+        }
+    }
+    
 }

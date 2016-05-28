@@ -73,7 +73,7 @@ namespace DAQMS.Service
 
         public override List<LoginHistoryViewModel> GetByItem(LoginHistoryViewModel item)
         {
-            return LoginHistoryDAL.GetInstance().GetObjList(item, 0, 10000000);
+            return LoginHistoryDAL.GetInstance().GetObjList(item, 1, 10000000);
         }
 
         public override List<LoginHistoryViewModel> GetItemByPaging(LoginHistoryViewModel item, int startRowIndex, int maxRow)
@@ -89,7 +89,7 @@ namespace DAQMS.Service
         public override List<LoginHistoryViewModel> GetAll()
         {
            LoginHistoryDAL obj = new LoginHistoryDAL();
-           return obj.GetObjList(new LoginHistoryViewModel(), 0, 100000000);
+           return obj.GetObjList(new LoginHistoryViewModel(), 1, 100000000);
         }
 
         #endregion

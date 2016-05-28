@@ -1,0 +1,83 @@
+@model  DAQMS.DomainViewModel.ContactViewModel
+
+<div class="row-fluid form-horizontal">
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ContactID, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.ContactID, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ContactName, new { @class = "control-label" })
+                <div class="controls">
+                   @Html.TextBoxFor(model => model.ContactName, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.CompanyId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.CompanyId, Model.CompanyList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ContactTypeId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.ContactTypeId, Model.ContactTypeList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.WorkPhone, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.WorkPhone, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.CellPhone, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.CellPhone, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.Notes, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Notes, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

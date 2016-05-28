@@ -13,18 +13,93 @@ C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMa
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\UpWork\DAQ\Code\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ-May-25-2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DAL.pdb
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.DomainViewModel.pdb
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\DAQMS.Domain.pdb
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\Npgsql.xml
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\System.Web.Mvc.xml
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\bin\Debug\AutoMapper.xml
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.dll
+D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.DAL\obj\Debug\DAQMS.DAL.pdb

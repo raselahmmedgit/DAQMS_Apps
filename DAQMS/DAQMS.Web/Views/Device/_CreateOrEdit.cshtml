@@ -1,0 +1,81 @@
+@model  DAQMS.DomainViewModel.DeviceViewModel
+
+<div class="row-fluid form-horizontal">
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.CompanyId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.CompanyId, Model.CompanyList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ProjectId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.ProjectId, Model.ProjectList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.DeviceID, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.DeviceID, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.DeviceStatusId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.DeviceStatusId, Model.DeviceStatusList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.SiteName, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.SiteName, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.DaqLocation, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.DaqLocation, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.FarmwareVersion, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.FarmwareVersion, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.Notes, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(model => model.Notes, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

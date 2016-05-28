@@ -219,7 +219,7 @@ namespace DAQMS.DAL
 
         public override UserRoleViewModel GetObjList(UserRoleViewModel item)
         {
-            return GetObjList(item.Id, item.UserId, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.UserId, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

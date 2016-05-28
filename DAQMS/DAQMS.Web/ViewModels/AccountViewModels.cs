@@ -14,10 +14,10 @@ namespace DAQMS.Web
     {
         [Required]
         [Display(Name = "UserName")]
-        [EmailAddress]
+        //[EmailAddress]
         public string UserName { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }

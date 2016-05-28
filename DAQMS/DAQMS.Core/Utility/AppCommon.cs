@@ -66,5 +66,27 @@ namespace DAQMS.Core
 
         }
 
+        //public static string GetModelStateErrorMessage(ModelStateDictionary modelStateDictionary)
+        //{
+        //    string message = @"<div id='ErrorMessage'>";
+
+        //    foreach (var modelStateValues in modelStateDictionary.Values)
+        //    {
+        //        if (modelStateValues.Errors.Any())
+        //        {
+        //            foreach (var modelError in modelStateValues.Errors)
+        //            {
+        //                message += @"<p>";
+        //                message += modelError.ErrorMessage;
+        //                message += "</p>";
+        //            }
+        //        }
+        //    }
+
+        //    message += "</div>";
+
+        //    return message;
+        //}
+
     }
 }

@@ -7,6 +7,7 @@ using DAQMS.DAL.Models;
 using NpgsqlTypes;
 using Npgsql;
 using DAQMS.DomainViewModel;
+using DAQMS.Domain;
 
 namespace DAQMS.DAL
 {
@@ -106,27 +107,115 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<LoginHistoryViewModel> GetObjList(int id, string loginUserId, int startRowIndex, int maximumRows)
+        public List<LoginHistoryViewModel> GetObjList(int id, string  loginID, string userName, string loginUserId, int startRowIndex, int maximumRows)
         {
+            DataSet dsResult = new DataSet();
+            DataTable dt = new DataTable();
+            NpgsqlConnection conn = null;
 
             List<LoginHistoryViewModel> results = null;
 
+            try
+            {
+                conn = DataProvider.GetConnectionInstance() as NpgsqlConnection;
+                conn.Open();
+
+                // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
+                NpgsqlTransaction tran = conn.BeginTransaction();
+
+                // Define a command to call procedure
+                NpgsqlCommand command = new NpgsqlCommand("get_login_history", conn);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add(new NpgsqlParameter("p_id", NpgsqlDbType.Integer));
+                command.Parameters[0].Value = id;
+                command.Parameters.Add(new NpgsqlParameter("p_login_id", NpgsqlDbType.Varchar));
+                command.Parameters[1].Value = loginID;
+                command.Parameters.Add(new NpgsqlParameter("p_user_name", NpgsqlDbType.Varchar));
+                command.Parameters[2].Value = userName;
+
+                command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
+                command.Parameters[3].Value = loginUserId;
+                command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
+                command.Parameters[4].Value = startRowIndex;
+                command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
+                command.Parameters[5].Value = maximumRows;
+
+                // reset parameter by default value
+                #region param reset
+                foreach (NpgsqlParameter param in command.Parameters)
+                {
+                    //Manage parameter value
+                    if (param.Value == null)
+                    {
+                        if (param.NpgsqlDbType == NpgsqlDbType.Varchar)
+                        {
+                            param.Value = "";
+                        }
+                        else if (param.NpgsqlDbType == NpgsqlDbType.Timestamp)
+                        {
+                            param.Value = DBNull.Value;
+                        }
+
+                    }
+                    else if (param.NpgsqlDbType == NpgsqlDbType.Timestamp)
+                    {
+                        if (Convert.ToDateTime(param.Value) == DateTime.MinValue || Convert.ToDateTime(param.Value) == DateTime.MaxValue)
+                        {
+                            param.Value = DBNull.Value;
+                        }
+                    }
+                }
+                #endregion  param reset
+
+                command.Parameters.Add(new NpgsqlParameter("ref", NpgsqlDbType.Refcursor));
+                command.Parameters[6].Value = "ref";
+
+                command.ExecuteNonQuery();
+                command.CommandText = "fetch all in \"ref\"";
+                command.CommandType = CommandType.Text;
+
+                // Execute the procedure and obtain a result set
+                //  NpgsqlDataReader data = command.ExecuteReader();
+
+                using (NpgsqlDataAdapter Adpt = new NpgsqlDataAdapter(command))
+                {
+                    Adpt.Fill(dsResult);
+                }
+
+                // Fetch rows 
+                results = new List<LoginHistoryViewModel>();
+                foreach (DataRow dr in dsResult.Tables[0].Rows)
+                {
+                    LoginHistoryViewModel obj = new LoginHistoryViewModel();
+                    ModelMapperBase.GetInstance().MapItem(obj, dr);
+                    results.Add(obj);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+            finally
+            {
+                if (conn != null) conn.Dispose();
+            }
             return results;
         }
 
         public override LoginHistoryViewModel GetObjById(int id)
         {
-            return GetObjList(id, "", 1, 1).FirstOrDefault();
+            return GetObjList(id,"","", "", 1, 1).FirstOrDefault();
         }
         
         public override List<LoginHistoryViewModel> GetObjList(LoginHistoryViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id,item.LoginID,item.UserName, item.LoginUserID, startRowIndex, maxRow);
         }
 
         public override LoginHistoryViewModel GetObjList(LoginHistoryViewModel item)
         {
-            return GetObjList(item.Id, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.LoginID, item.UserName, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }

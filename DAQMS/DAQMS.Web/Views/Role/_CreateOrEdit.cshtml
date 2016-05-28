@@ -1,0 +1,23 @@
+@model  DAQMS.DomainViewModel.RoleViewModel
+
+<div class="row-fluid form-horizontal">
+
+    <div class="row-fluid WrapperFluid">
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.ModuleId, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.DropDownListFor(model => model.ModuleId, Model.ModuleList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                @Html.LabelFor(model => model.RoleName, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.RoleName, new { @class = "form-control required" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

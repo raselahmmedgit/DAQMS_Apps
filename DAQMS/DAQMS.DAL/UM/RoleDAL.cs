@@ -110,7 +110,7 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<RoleViewModel> GetObjList(int id, int moduleId, string loginUserId, int startRowIndex, int maximumRows)
+        public List<RoleViewModel> GetObjList(int id, int moduleId, string loginUserId, string roleName, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
@@ -135,12 +135,15 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_module_id", NpgsqlDbType.Integer));
                 command.Parameters[1].Value = moduleId;
 
+                command.Parameters.Add(new NpgsqlParameter("p_role_name", NpgsqlDbType.Varchar));
+                command.Parameters[2].Value = roleName;
+
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
-                command.Parameters[2].Value = loginUserId;
+                command.Parameters[3].Value = loginUserId;
                 command.Parameters.Add(new NpgsqlParameter("p_index", NpgsqlDbType.Integer));
-                command.Parameters[3].Value = startRowIndex;
+                command.Parameters[4].Value = startRowIndex;
                 command.Parameters.Add(new NpgsqlParameter("p_maximumrows", NpgsqlDbType.Integer));
-                command.Parameters[4].Value = maximumRows;
+                command.Parameters[5].Value = maximumRows;
 
                 // reset parameter by default value
                 #region param reset
@@ -170,7 +173,7 @@ namespace DAQMS.DAL
                 #endregion  param reset
 
                 command.Parameters.Add(new NpgsqlParameter("ref", NpgsqlDbType.Refcursor));
-                command.Parameters[5].Value = "ref";
+                command.Parameters[6].Value = "ref";
 
                 command.ExecuteNonQuery();
                 command.CommandText = "fetch all in \"ref\"";
@@ -206,17 +209,17 @@ namespace DAQMS.DAL
 
         public override RoleViewModel GetObjById(int id)
         {
-            return GetObjList(id, 0, "", 1, 1).FirstOrDefault();
+            return GetObjList(id, 0, "","", 1, 1).FirstOrDefault();
         }
         
         public override List<RoleViewModel> GetObjList(RoleViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.ModuleId, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id, item.ModuleId,item.RoleName, item.LoginUserID, startRowIndex, maxRow);
         }
 
         public override RoleViewModel GetObjList(RoleViewModel item)
         {
-            return GetObjList(item.Id, item.ModuleId, item.LoginUserID, 0, 1).FirstOrDefault();
+            return GetObjList(item.Id, item.ModuleId,item.RoleName, item.LoginUserID, 1, 1).FirstOrDefault();
         }
     }
 }
