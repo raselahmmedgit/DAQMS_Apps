@@ -30,34 +30,89 @@ namespace DAQMS.Web.Controllers
             return View(model);
         }
 
-        public ActionResult GetTempLineList(DataTableParamModel param, int CompanyId, int ProjectId, int DeviceId, )
+        [OutputCache(Duration = 0)]
+        public ActionResult GetTempLineLineChartAjax(int? companyId, int? projectId, int? deviceId, string dateRangeFrom, string dateRangeTo, string valueType, string sensor)
         {
-            var tempSensorViewModelList = _TempSensorService.GetItemByPaging(new TempSensorViewModel(), param.iDisplayStart, param.iDisplayLength).ToList();
-
-            IEnumerable<TempSensorViewModel> filteredTempSensorViewModelList;
-
-            if (!string.IsNullOrEmpty(param.sSearch))
+            try
             {
-                filteredTempSensorViewModelList = tempSensorViewModelList.Where(cat => (cat.CompanyName ?? "").Contains(param.sSearch)).ToList();
+                var tempSensorViewModel = new TempSensorViewModel
+                {
+                    CompanyId = Convert.ToInt32(companyId),
+                    ProjectId = Convert.ToInt32(projectId),
+                    DeviceId = Convert.ToInt32(deviceId),
+                    DateRangeFrom = dateRangeFrom,
+                    DateRangeTo = dateRangeTo,
+                    ValueType = valueType,
+                    Sensor = sensor
+                };
+                List<object> data = new List<object> { new[] { "Time", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8" } };
+
+                var tempSensorViewModelList = _TempSensorService.GetByItem(tempSensorViewModel).ToList();
+                var dataList = tempSensorViewModelList.Select(item => new object[] { item.RecordDate.ToString(), item.T1, item.T2, item.T3, item.T4, item.T5, item.T6, item.T7, item.T8 });
+
+                data.AddRange(dataList);
+
+                return Json(data, JsonRequestBehavior.AllowGet);
             }
-            else
+            catch (Exception ex)
             {
-                filteredTempSensorViewModelList = tempSensorViewModelList;
+                return Json(null, JsonRequestBehavior.AllowGet);
             }
 
-            var viewOdjects = filteredTempSensorViewModelList.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+        }
 
-            var result = from tempSensor in viewOdjects
-                         select new[] { tempSensor.RecordDate, tempSensor.T1, tempSensor.T2, tempSensor.T3, tempSensor.T4, tempSensor.T5, tempSensor.T6, tempSensor.T7, tempSensor.T8 };
-
-            return Json(new
+        public ActionResult GetTempLineChartListAjax(DataTableParamModel param, int? companyId, int? projectId, int? deviceId, string dateRangeFrom, string dateRangeTo, string valueType, string sensor)
+        {
+            try
             {
-                sEcho = param.sEcho,
-                iTotalRecords = tempSensorViewModelList.Count(),
-                iTotalDisplayRecords = filteredTempSensorViewModelList.Count(),
-                aaData = result
-            },
-                            JsonRequestBehavior.AllowGet);
+                var tempSensorViewModel = new TempSensorViewModel
+                                                          {
+                                                              CompanyId = Convert.ToInt32(companyId),
+                                                              ProjectId = Convert.ToInt32(projectId),
+                                                              DeviceId = Convert.ToInt32(deviceId),
+                                                              DateRangeFrom = dateRangeFrom,
+                                                              DateRangeTo = dateRangeTo,
+                                                              ValueType = valueType,
+                                                              Sensor = sensor
+                                                          };
+                var tempSensorViewModelList = _TempSensorService.GetItemByPaging(tempSensorViewModel, param.iDisplayStart, param.iDisplayLength).ToList();
+
+                IEnumerable<TempSensorViewModel> filteredTempSensorViewModelList;
+
+                if (!string.IsNullOrEmpty(param.sSearch))
+                {
+                    filteredTempSensorViewModelList = tempSensorViewModelList.Where(cat => (cat.CompanyName ?? "").Contains(param.sSearch)).ToList();
+                }
+                else
+                {
+                    filteredTempSensorViewModelList = tempSensorViewModelList;
+                }
+
+                var viewOdjects = filteredTempSensorViewModelList.Skip(param.iDisplayStart).Take(param.iDisplayLength);
+
+                var result = from tempSensor in viewOdjects
+                             select new object[] { tempSensor.RecordDate.ToString("F"), tempSensor.T1, tempSensor.T2, tempSensor.T3, tempSensor.T4, tempSensor.T5, tempSensor.T6, tempSensor.T7, tempSensor.T8 };
+
+                return Json(new
+                {
+                    sEcho = param.sEcho,
+                    iTotalRecords = tempSensorViewModelList.Count(),
+                    iTotalDisplayRecords = filteredTempSensorViewModelList.Count(),
+                    aaData = result
+                },
+                                JsonRequestBehavior.AllowGet);
+
+            }
+            catch (Exception ex)
+            {
+                return Json(null, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public JsonResult LoadCompanyListAjax()
+        {
+            var companyList = PopulateDropdown.PopulateDropdownListByTable("Company");
+            return Json(companyList, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult LoadProjectListByCompanyIdAjax(int companyId)

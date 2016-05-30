@@ -80,20 +80,69 @@
         }
     };
 
-    var _actionHandler = function () {
-        $('#frmSearch').click(function () {
+    var _googleChartsHandler = function () {
+        function drawChartByClick(companyId, projectId, deviceId, dateRangeFrom, dateRangeTo, valueType, sensor) {
 
-        });
+            var options = {
+                title: 'Daily Average Temperature'
+            };
+
+            var url = '/Report/GetTempLineLineChartAjax?companyId=' + companyId + '&projectId=' + projectId + '&deviceId=' + deviceId + '&dateRangeFrom=' + dateRangeFrom + '&dateRangeTo=' + dateRangeTo + '&valueType=' + valueType + '&sensor=' + sensor;
+
+            $.get(url, {}, function (result) {
+                var data = google.visualization.arrayToDataTable(result);
+
+                var chart = new google.visualization.LineChart(document.getElementById('temp_linechart'));
+                chart.draw(data, options);
+            });
+        }
+
+        function initialize() {
+            $('#btnSearch').unbind('click').on('click', function () {
+                var companyId = $('#CompanyId').val();
+                var projectId = $('#ProjectId').val();
+                var deviceId = $('#DeviceId').val();
+                var dateRangeFrom = $('#DateRangeFrom').val();
+                var dateRangeTo = $('#DateRangeTo').val();
+                var valueType = $('#ValueType').val();
+                var sensor = $('#CompanyId').val();
+                drawChartByClick(companyId, projectId, deviceId, dateRangeFrom, dateRangeTo, valueType, sensor);
+            });
+        }
+        google.charts.setOnLoadCallback(initialize);
+        google.charts.load("visualization", "1", { packages: ["corechart"] });
     };
+
+    var _actionHandler = function () {
+
+    };
+    var linechartObjData;
 
     var _initializeForm = function () {
 
-        $('#table_report').dataTable({
+        $('#CompanyId').unbind('change').on('change', function () {
+            App.loadDropdown('ProjectId', '/Report/LoadProjectListByCompanyIdAjax', { companyId: $('#CompanyId').val() });
+        });
+
+        $('#ProjectId').unbind('change').on('change', function () {
+            App.loadDropdown('DeviceId', '/Report/LoadDeviceListByCompanyIdAjax', { projectId: $('#ProjectId').val() });
+        });
+
+        linechartObjData = $('#table_report').dataTable({
+            "bJQueryUI": true,
             "bAutoWidth": false,
+            "sPaginationType": "full_numbers",
             "bSort": false,
+            "oLanguage": {
+                "sLengthMenu": "Display _MENU_ records per page",
+                "sZeroRecords": "Nothing found - Sorry",
+                "sInfo": "Showing _START_ to _END_ of _TOTAL_ records",
+                "sInfoEmpty": "Showing 0 to 0 of 0 records",
+                "sInfoFiltered": "(filtered from _MAX_ total records)"
+            },
             "bProcessing": true,
             "bServerSide": true,
-            "sAjaxSource": "/Report/GetTempLineList",
+            "sAjaxSource": "/Optimize/GetCategories",
             "aoColumns": [{
                 "sName": "RecordDate",
                 "bSearchable": false,
@@ -116,6 +165,7 @@
         _validateForm();
         _initializeForm();
         _actionHandler();
+        _googleChartsHandler();
     };
 
     return {
