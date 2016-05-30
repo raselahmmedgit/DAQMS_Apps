@@ -160,26 +160,109 @@ var App = function () {
         return out;
     };
 
-    var loadDropdown = function (targetDropdown, dataSourceUrl, filterByValue) {
-        
+    var loadDropdown = function (targetDropdown, dataSourceUrl, filterByValue, isSelect2, isPlaceholder, isMultiple, isTreeSelect2, selectedValue, isHideSearch) {
+        var placeHolder = (typeof (isPlaceholder) == 'undefined' || (typeof (isPlaceholder) == 'boolean')) ? 'Select' : isPlaceholder;
+        isPlaceholder = (typeof (isPlaceholder) == 'undefined' || (typeof (isPlaceholder) != 'boolean')) ? true : isPlaceholder;
+        isSelect2 = (typeof (isSelect2) == 'undefined') ? true : isSelect2;
+        isMultiple = (typeof (isMultiple) == 'undefined') ? false : isMultiple;
+        isTreeSelect2 = (typeof (isTreeSelect2) == 'undefined') ? false : isTreeSelect2;
+        isHideSearch = (isHideSearch == true) ? -1 : 10;
+
         App.sendAjaxRequest(dataSourceUrl, filterByValue, true, function (options) {
             var optionHtml = '';
+            if (isSelect2) {
+                $('#' + targetDropdown).select2('destroy');
 
-            if ($.isArray(options) && (options.length > 0)) {
+                if ($.isArray(options) && (options.length > 0)) {
 
-                $(options).each(function (index, option) {
-                    optionHtml += '<option value="' + option.Value + '">' + option.Text + '</option>';
-                });
+                    if ($('#' + targetDropdown).is("select")) {
+                        optionHtml = (isPlaceholder) ? '<option></option>' : '';
+                        if ($.isArray(options) && (options.length > 0)) {
 
+                            $(options).each(function (index, option) {
+                                var dataParam = '';
+                                for (var pname in option) {
+                                    if (option.hasOwnProperty(pname)) {
+
+                                        if ($.inArray(pname, ['Value', 'Text']) == -1) {
+                                            dataParam = dataParam + 'data-' + pname.toLowerCase() + '="' + option[pname] + '" ';
+                                        }
+                                    }
+                                }
+                                optionHtml += '<option value="' + option.Value + '" ' + dataParam + ((option.Value == selectedValue) ? " selected='selected'" : "") + '>' + option.Text + '</option>';
+                            });
+                        }
+                        $('#' + targetDropdown).html(optionHtml);
+                        $('#' + targetDropdown).select2({
+                            placeholder: placeHolder,
+                            minimumResultsForSearch: isHideSearch,
+                            allowClear: true
+                        });
+                    } else {
+                        var select2Options = [];
+                        if (isTreeSelect2) {
+                            select2Options = arrayToTree(options, null);
+                        } else {
+                            $(options).each(function (index, option) {
+                                select2Options.push({ id: option.Value, text: option.Text + '' });
+                            });
+                        }
+                        if (isPlaceholder) {
+                            $('#' + targetDropdown).select2({
+                                placeholder: placeHolder,
+                                multiple: isMultiple,
+                                data: select2Options,
+                                minimumResultsForSearch: isHideSearch,
+                                allowClear: true
+                            });
+                        } else {
+                            $('#' + targetDropdown).select2({
+                                multiple: isMultiple,
+                                data: select2Options,
+                                minimumResultsForSearch: isHideSearch,
+                                allowClear: true
+                            });
+                        }
+                    }
+
+                } else {
+                    if ($('#' + targetDropdown).is("select")) {
+                        if (isPlaceholder) {
+                            $('#' + targetDropdown).html('<option></option>');
+                        } else {
+                            $('#' + targetDropdown).html('');
+                        }
+
+                        $('#' + targetDropdown).select2({
+                            placeholder: placeHolder,
+                            minimumResultsForSearch: isHideSearch,
+                            allowClear: true
+                        });
+                    } else {
+                        $('#' + targetDropdown).select2({
+                            placeholder: placeHolder,
+                            multiple: isMultiple,
+                            data: [],
+                            minimumResultsForSearch: isHideSearch,
+                            allowClear: true
+                        });
+                    }
+                }
+            } else {
+                optionHtml = (isPlaceholder) ? '<option></option>' : '';
+                if ($.isArray(options) && (options.length > 0)) {
+
+                    $(options).each(function (index, option) {
+                        optionHtml += '<option value="' + option.Value + '">' + option.Text + '</option>';
+                    });
+
+                }
+
+                $('#' + targetDropdown).html(optionHtml);
             }
-
-            $('#' + targetDropdown).html(optionHtml);
         }, true);
-        
-        $('#' + targetDropdown).val(0);
-
     };
-    
+
     var toastrNotifier = function (msg, isSuccess) {
         toastr.clear();
         toastr.options = {
@@ -223,9 +306,18 @@ var App = function () {
         toastr['info'](msg, "Info !");
     };
 
+    var iCheck = function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    };
+
     var actionHandler = function () {
         modalHandler();
         deleteHandler();
+        iCheck();
     };
 
     var initializeApp = function () {
