@@ -45,10 +45,10 @@ namespace DAQMS.Web.Controllers
                     ValueType = valueType,
                     Sensor = sensor
                 };
-                List<object> data = new List<object> { new[] { "Time", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8" } };
+                List<string> data = new List<string> { new string[] { "Time", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8" }.ToString() };
 
                 var tempSensorViewModelList = _TempSensorService.GetByItem(tempSensorViewModel).ToList();
-                var dataList = tempSensorViewModelList.Select(item => new object[] { item.RecordDate.ToString(), item.T1, item.T2, item.T3, item.T4, item.T5, item.T6, item.T7, item.T8 });
+                var dataList = tempSensorViewModelList.Select(item => new string[] { item.RecordDate.ToString(), item.T1.ToString(), item.T2.ToString(), item.T3.ToString(), item.T4.ToString(), item.T5.ToString(), item.T6.ToString(), item.T7.ToString(), item.T8.ToString() }.ToString());
 
                 data.AddRange(dataList);
 
@@ -91,7 +91,7 @@ namespace DAQMS.Web.Controllers
                 var viewOdjects = filteredTempSensorViewModelList.Skip(param.iDisplayStart).Take(param.iDisplayLength);
 
                 var result = from tempSensor in viewOdjects
-                             select new object[] { tempSensor.RecordDate.ToString("F"), tempSensor.T1, tempSensor.T2, tempSensor.T3, tempSensor.T4, tempSensor.T5, tempSensor.T6, tempSensor.T7, tempSensor.T8 };
+                             select new string[] { tempSensor.RecordDate.ToString("F"), tempSensor.T1.ToString(), tempSensor.T2.ToString(), tempSensor.T3.ToString(), tempSensor.T4.ToString(), tempSensor.T5.ToString(), tempSensor.T6.ToString(), tempSensor.T7.ToString(), tempSensor.T8.ToString() };
 
                 return Json(new
                 {

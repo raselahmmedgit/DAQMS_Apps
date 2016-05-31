@@ -108,7 +108,6 @@ C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Sec
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Mono.Security.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Npgsql.dll
 C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Owin.dll

@@ -153,36 +153,36 @@ var Report = function () {
             App.loadDropdown('DeviceId', '/Report/LoadDeviceListByCompanyIdAjax', { projectId: $('#ProjectId').val() });
         });
 
-        linechartObjData = $('#table_report').dataTable({
-            "bJQueryUI": true,
-            "bAutoWidth": false,
-            "sPaginationType": "full_numbers",
-            "bSort": false,
-            "oLanguage": {
-                "sLengthMenu": "Display _MENU_ records per page",
-                "sZeroRecords": "Nothing found - Sorry",
-                "sInfo": "Showing _START_ to _END_ of _TOTAL_ records",
-                "sInfoEmpty": "Showing 0 to 0 of 0 records",
-                "sInfoFiltered": "(filtered from _MAX_ total records)"
-            },
-            "bProcessing": true,
-            "bServerSide": true,
-            "sAjaxSource": GetUrl(),
-            "aoColumns": [{
-                "sName": "RecordDate",
-                "bSearchable": false,
-                "bSortable": false,
-            },
-            { "sName": "T1" },
-            { "sName": "T2" },
-            { "sName": "T3" },
-            { "sName": "T4" },
-            { "sName": "T5" },
-            { "sName": "T6" },
-            { "sName": "T7" },
-            { "sName": "T8" }
-            ]
-        });
+        //linechartObjData = $('#table_report').dataTable({
+        //    "bJQueryUI": true,
+        //    "bAutoWidth": false,
+        //    "sPaginationType": "full_numbers",
+        //    "bSort": false,
+        //    "oLanguage": {
+        //        "sLengthMenu": "Display _MENU_ records per page",
+        //        "sZeroRecords": "Nothing found - Sorry",
+        //        "sInfo": "Showing _START_ to _END_ of _TOTAL_ records",
+        //        "sInfoEmpty": "Showing 0 to 0 of 0 records",
+        //        "sInfoFiltered": "(filtered from _MAX_ total records)"
+        //    },
+        //    "bProcessing": true,
+        //    "bServerSide": true,
+        //    "sAjaxSource": GetUrl(),
+        //    "aoColumns": [{
+        //        "sName": "RecordDate",
+        //        "bSearchable": false,
+        //        "bSortable": false,
+        //    },
+        //    { "sName": "T1" },
+        //    { "sName": "T2" },
+        //    { "sName": "T3" },
+        //    { "sName": "T4" },
+        //    { "sName": "T5" },
+        //    { "sName": "T6" },
+        //    { "sName": "T7" },
+        //    { "sName": "T8" }
+        //    ]
+        //});
 
     };
 

@@ -487,3 +487,13 @@ D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web.Tests\bin\Debug\Npgsql.xml
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.csprojResolveAssemblyReference.cache
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.dll
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web.Tests\obj\Debug\DAQMS.Web.Tests.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
