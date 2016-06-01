@@ -17,6 +17,10 @@ namespace DAQMS.Domain.Models
         [DataMember, DataColumn(true)]
         public DateTime RecordDate { get; set; }
 
+        [Display(Name = "Chart Date")]
+        [DataMember, DataColumn(true)]
+        public string ChartDate { get; set; }
+
         [Display(Name = "Device ID")]
         [DataMember, DataColumn(true)]
         public string strDeviceID { get; set; }

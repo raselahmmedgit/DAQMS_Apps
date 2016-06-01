@@ -9,17 +9,6 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.C
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.Resource.resources
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.dll
@@ -86,3 +75,14 @@ D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.Resource.res
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Core.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\bin\Debug\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.Resource.resources
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Core\obj\Debug\DAQMS.Core.pdb

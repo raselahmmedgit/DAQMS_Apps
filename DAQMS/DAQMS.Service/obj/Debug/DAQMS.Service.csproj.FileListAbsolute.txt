@@ -35,28 +35,6 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Auto
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.dll
@@ -211,3 +189,25 @@ D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Service\bin\Debug\AutoMapper
 D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
 D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
 D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Service.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Core.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DAL.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.DomainViewModel.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Dapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\Npgsql.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\System.Web.Mvc.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\bin\Debug\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Service\obj\Debug\DAQMS.Service.pdb
