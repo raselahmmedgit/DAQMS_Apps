@@ -43,10 +43,10 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_alert_setup_id", NpgsqlDbType.Integer));
                 command.Parameters[1].Value = item.AlertSetupId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_sensor", NpgsqlDbType.Varchar));
-                command.Parameters[2].Value = item.Sensor;
+                command.Parameters.Add(new NpgsqlParameter("p_sensor_id", NpgsqlDbType.Integer));
+                command.Parameters[2].Value = item.SensorId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_active", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_active", NpgsqlDbType.Boolean));
                 command.Parameters[3].Value = item.IsActive;
 
                 command.Parameters.Add(new NpgsqlParameter("p_low_temp", NpgsqlDbType.Integer));

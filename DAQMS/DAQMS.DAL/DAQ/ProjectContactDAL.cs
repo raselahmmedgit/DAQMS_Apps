@@ -108,7 +108,7 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<ProjectContactViewModel> GetObjList(int id, int companyId, int projectId, int contactId, 
+        public List<ProjectContactViewModel> GetObjList(int id, int companyId, int projectId, int contactId,
             string loginUserId, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
@@ -175,7 +175,7 @@ namespace DAQMS.DAL
                 #endregion  param reset
 
                 command.Parameters.Add(new NpgsqlParameter("ref", NpgsqlDbType.Refcursor));
-                command.Parameters[8].Value = "ref";
+                command.Parameters[7].Value = "ref";
 
                 command.ExecuteNonQuery();
                 command.CommandText = "fetch all in \"ref\"";
@@ -208,12 +208,12 @@ namespace DAQMS.DAL
 
         public override ProjectContactViewModel GetObjById(int id)
         {
-            return GetObjList(id, 0,0,0,"", 1, 1).FirstOrDefault();
+            return GetObjList(id, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
 
         public override List<ProjectContactViewModel> GetObjList(ProjectContactViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.CompanyId,item.ProjectId,item.ContactId, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id, item.CompanyId, item.ProjectId, item.ContactId, item.LoginUserID, startRowIndex, maxRow);
         }
 
         public override ProjectContactViewModel GetObjList(ProjectContactViewModel item)

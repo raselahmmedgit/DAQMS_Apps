@@ -4,35 +4,39 @@
 }
 @using (Html.BeginForm("Create", "Contact", FormMethod.Post, new { @id = "frmSave" }))
 {
-    @Html.ValidationSummary(true)
-    @Html.Partial("_CreateOrEdit", Model)
+    <div class="table-header">
+        Create Contact
+    </div>
+    <div class="dataTables_wrapper">
+        @Html.ValidationSummary(true)
+        @Html.Partial("_CreateOrEdit", Model)
 
-    <div class="row-fluid form-horizontal">
-        <div class="control-group">
-            <div class="controls">
-                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
-                <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success" onclick="return fnValidate()">
-                    Save
-                </button>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <div id="ErrorMessage">
+        <div class="row-fluid form-horizontal">
+            <div class="control-group">
+                <div class="controls">
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
+                    <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success" onclick="return fnValidate()">
+                        Save
+                    </button>
                 </div>
-                <div id="lblMsg">
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div id="ErrorMessage">
+                    </div>
+                    <div id="lblMsg">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 }
 <script language="javascript" type="text/javascript">
     $(document).ready(function () {
         //required for Unit Info
         $("#frmSave").on('submit', function (e) {
             e.preventDefault();
-           
+
             $("#lblMsg").html(''); $("#ErrorMessage").html('');
             var data = $(this).serialize();
             $.ajax({
@@ -41,7 +45,7 @@
                 data: data,
                 success: (function (result) {
                     if (result == "True") {
-                       
+
                         $("#lblMsg").html('Information has been saved successfully').css("color", "green");
                         $("#lblMsg").show();
                         $("#MyDialog").dialog('close');

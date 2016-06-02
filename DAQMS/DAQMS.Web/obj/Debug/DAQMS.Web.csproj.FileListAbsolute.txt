@@ -83,6 +83,84 @@ D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.xml
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
 D:\UpWork\DAQ\Source Code\DAQ Code\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\log4net.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Mono.Security.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Npgsql.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Owin.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\WebGrease.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\log4net.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Npgsql.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
+C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
 C:\Users\raselbappi\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
@@ -545,157 +623,311 @@ D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web\bin\AutoMapper.xml
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
 D:\Obaidul Vi\DAQ\May 26 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\EntityFramework.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\log4net.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Npgsql.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Owin.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\WebGrease.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\AutoMapper.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\log4net.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Npgsql.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\EntityFramework.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\bin\AutoMapper.xml
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
-D:\RaselAhmmed\Project\2016-05-28\DAQMS\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\log4net.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Npgsql.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Owin.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\WebGrease.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\log4net.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Npgsql.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\bin\AutoMapper.xml
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
-C:\Users\user\Documents\GitHub\DAQMS_Apps\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\EntityFramework.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\log4net.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Npgsql.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Owin.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\WebGrease.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\log4net.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Npgsql.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\EntityFramework.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
+D:\Obaidul Vi\DAQ\DAQ May 28 2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\EntityFramework.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\log4net.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Npgsql.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Owin.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\WebGrease.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\log4net.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Npgsql.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\EntityFramework.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
+D:\UpWork\DAQ\Code\Backup Code\Aziz\DAQMS-May-28-2016-09PM\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\EntityFramework.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\log4net.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Npgsql.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Owin.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\WebGrease.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\log4net.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Npgsql.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\EntityFramework.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
+D:\Obaidul Vi\DAQ\DAQ-May-29-2016\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll.config
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Web.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Web.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Core.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.DAL.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Domain.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Service.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\EntityFramework.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\log4net.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Npgsql.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Owin.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Helpers.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Http.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Mvc.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Optimization.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Razor.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\WebGrease.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\AutoMapper.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Core.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.DAL.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.DomainViewModel.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Domain.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\DAQMS.Service.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\log4net.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Newtonsoft.Json.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Npgsql.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Helpers.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Mvc.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Optimization.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Razor.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Deployment.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.WebPages.Razor.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Antlr3.Runtime.pdb
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Net.Http.Formatting.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Http.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\System.Web.Http.WebHost.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\EntityFramework.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\EntityFramework.SqlServer.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\bin\AutoMapper.xml
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.csprojResolveAssemblyReference.cache
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.dll
+D:\RaselAhmmed\Project\2016-06-01\DAQMS-Ma-30-2016-0530PM-Azizur\DAQMS\DAQMS.Web\obj\Debug\DAQMS.Web.pdb

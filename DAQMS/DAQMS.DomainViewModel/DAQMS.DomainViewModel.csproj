@@ -58,6 +58,7 @@
     <Compile Include="DAQ\DomainViewModel.cs" />
     <Compile Include="DAQ\ProjectContactViewModel.cs" />
     <Compile Include="DAQ\RelayViewModel.cs" />
+    <Compile Include="DAQ\SensorViewModel.cs" />
     <Compile Include="DAQ\TempSensorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAQ\CompanyViewModel.cs" />

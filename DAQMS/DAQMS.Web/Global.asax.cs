@@ -91,6 +91,7 @@ namespace DAQMS.Web
         {
             SessionHelper.CurrentSession.Clear();
         }
+
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());

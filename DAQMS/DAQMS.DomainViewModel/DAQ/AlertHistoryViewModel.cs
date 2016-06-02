@@ -35,7 +35,7 @@ namespace DAQMS.DomainViewModel
 
         [Display(Name = "Device ID")]
         [DataMember, DataColumn(true)]
-        public string DeviceID { get; set; }
+        public string DeviceCode { get; set; }
 
         [Display(Name = "Contact Name")]
         [DataMember, DataColumn(true)]
@@ -44,6 +44,10 @@ namespace DAQMS.DomainViewModel
         [Display(Name = "Alert Type")]
         [DataMember, DataColumn(true)]
         public string AlertType { get; set; }
+
+        [Display(Name = "Alert Status")]
+        [DataMember, DataColumn(true)]
+        public string AlertStatus { get; set; }
 
         public IList<SelectListItem> CompanyList { get; set; }
         public IList<SelectListItem> ProjectList { get; set; }

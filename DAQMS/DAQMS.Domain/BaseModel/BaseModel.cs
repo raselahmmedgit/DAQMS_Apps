@@ -22,14 +22,14 @@ namespace DAQMS.Domain.Models
         }
 
         //public int Id { get; set; }
-         [DataMember, DataColumn(true)]
+        [DataMember, DataColumn(true)]
         public string InsertUser { get; set; }
-         [DataMember, DataColumn(true)]
+        [DataMember, DataColumn(true)]
         public DateTime InsertTimestamp { get; set; }
 
-         [DataMember, DataColumn(true)]
+        [DataMember, DataColumn(true)]
         public string UpdateUser { get; set; }
-         [DataMember, DataColumn(true)]
+        [DataMember, DataColumn(true)]
         public DateTime UpdateTimestamp { get; set; }
 
         public Boolean IsDelete { get; set; }
@@ -38,12 +38,12 @@ namespace DAQMS.Domain.Models
         public DateTime DeletedDate { get; set; }
         public string LoginUserID { get; set; }
 
-         [DataMember, DataColumn(true)]
+        [DataMember, DataColumn(true)]
         public Int32 error_code { get; set; }
-         
+
         [DataMember, DataColumn(true)]
         public Int32 rowsl { get; set; }
-        
+
         #region NotMapped
 
         [NotMapped]

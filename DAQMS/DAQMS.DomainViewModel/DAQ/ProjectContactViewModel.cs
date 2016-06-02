@@ -29,11 +29,12 @@ namespace DAQMS.DomainViewModel
 
         [Display(Name = "Device List")]
         [DataMember, DataColumn(true)]
-        public string DeviceIDList { get; set; }
+        public string DeviceList { get; set; }
 
         [Display(Name = "Select")]
         [DataMember, DataColumn(true)]
         public Boolean IsSelected { get; set; }
+
 
     }
 }

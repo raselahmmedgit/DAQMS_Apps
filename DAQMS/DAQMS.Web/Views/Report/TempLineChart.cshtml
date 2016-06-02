@@ -24,7 +24,7 @@
                 <div class="control-group">
                     @Html.LabelFor(model => model.ProjectId, new { @class = "control-label" })
                     <div class="controls">
-                        @Html.DropDownListFor(model => model.ProjectId, Model.ProjectList, new { @class = "form-control" })
+                        <select id="ProjectId" name="ProjectId" class="form-control"></select>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="control-group">
                     @Html.LabelFor(model => model.DeviceId, new { @class = "control-label" })
                     <div class="controls">
-                        @Html.DropDownListFor(model => model.DeviceId, Model.DeviceList, new { @class = "form-control" })
+                        <select id="DeviceId" name="DeviceId" class="form-control"></select>
                     </div>
                 </div>
             </div>
@@ -72,9 +72,9 @@
                     <div class="controls">
                         @foreach (var item in Model.SensorList)
                         {
-                        <label>
-                            <input style="opacity: 1; position: initial;" name="Sensor" value="@item.Value" type="checkbox">&nbsp;&nbsp;&nbsp;@item.Text&nbsp;&nbsp;&nbsp;
-                        </label>
+                            <label>
+                                <input style="position: inherit;" id="Sensor_@item.Value" name="Sensor" class="Sensor" value="@item.Value" type="checkbox">&nbsp;&nbsp;&nbsp;@item.Text&nbsp;&nbsp;&nbsp;
+                            </label>
                         }
                     </div>
                 </div>

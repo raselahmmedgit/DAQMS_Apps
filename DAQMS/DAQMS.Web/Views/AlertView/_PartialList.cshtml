@@ -1,0 +1,67 @@
+﻿@model IList<DAQMS.DomainViewModel.AlertHistoryViewModel>
+
+<div class="row-fluid">
+
+    <table id="table_report" class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="center">
+                    <label>
+                        <input type="checkbox" />
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th class="center"> SL# </th>
+                <th class="center">Alert Date</th>
+                <th class="center">Alert Type</th>
+                <th class="center">Device ID</th>
+                <th class="center">Alert Message</th>
+                <th class="center">Status</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="center">
+                        <label>
+                            <input type="checkbox" />
+                            @Html.CheckBox("IsNew", item.IsNew, new { @class = "checkBoxShow", id = string.Format("IsNew_{0}", item.Id) })
+                            <span class="lbl"></span>
+                        </label>
+                    </td>
+                    <td class="center">
+                        @item.rowsl
+                    </td>
+                    <td>
+                        <a href="#">
+                            @Html.Encode(item.GenerateTimestamp)
+                        </a>
+                    </td>
+                    <td>
+                        @item.AlertType
+                    </td>
+                    <td>
+                        @item.DeviceCode
+                    </td>
+                    <td>
+                        @Html.Encode(item.AlertMsg)
+                    </td>
+                    <td>
+                        @Html.Encode(item.IsNew == true ? "Read" : "Unread")
+                    </td>
+                    <td class="td-actions">
+                        <div class="center">
+                            @Html.ActionLink(" ", "View", new { id = item.Id }, new { @class = "btn btn-mini btn-info icon-edit bigger-120" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

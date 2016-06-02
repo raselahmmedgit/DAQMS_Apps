@@ -73,6 +73,7 @@
     <Compile Include="Models\Relay.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RoleMenu.cs" />
+    <Compile Include="Models\Sensor.cs" />
     <Compile Include="Models\TempSensor.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserRole.cs" />

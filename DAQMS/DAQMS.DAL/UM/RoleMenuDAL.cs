@@ -46,16 +46,16 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_menu_id", NpgsqlDbType.Integer));
                 command.Parameters[2].Value = item.MenuId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_optadd", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_optadd", NpgsqlDbType.Boolean));
                 command.Parameters[3].Value = item.OptAdd;
 
-                command.Parameters.Add(new NpgsqlParameter("p_optupdate", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_optupdate", NpgsqlDbType.Boolean));
                 command.Parameters[4].Value = item.OptUpdate;
 
-                command.Parameters.Add(new NpgsqlParameter("p_optdelete", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_optdelete", NpgsqlDbType.Boolean));
                 command.Parameters[5].Value = item.OptDelete;
 
-                command.Parameters.Add(new NpgsqlParameter("p_optview", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_optview", NpgsqlDbType.Boolean));
                 command.Parameters[6].Value = item.OptView;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));

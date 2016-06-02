@@ -18,7 +18,7 @@ namespace DAQMS.DAL
             return new CommonDAL();
         }
 
-        public List<CommonViewModel> GetObjList(string TableType, int Id, string Name, int RefId=0)
+        public List<CommonViewModel> GetObjList(string TableType, int Id, string Name, int RefId = 0)
         {
             DataSet dsResult = new DataSet();
             DataTable dt = new DataTable();
@@ -63,13 +63,17 @@ namespace DAQMS.DAL
                 {
                     sql = "SELECT * FROM (SELECT id, relay_state as name  FROM relay_state) abc WHERE 0=0";
                 }
+                else if (TableType == "relay_status")
+                {
+                    sql = "SELECT * FROM (SELECT id, relay_status as name  FROM relay_status) abc WHERE 0=0";
+                }
                 else if (TableType == "modules")
                 {
                     sql = "SELECT * FROM (SELECT id, module_name as name  FROM modules) abc WHERE 0=0";
                 }
                 else if (TableType == "project")
                 {
-                    sql = "SELECT * FROM (SELECT id, project_name as name  FROM project WHERE company_id="+ RefId +") abc WHERE 0=0";
+                    sql = "SELECT * FROM (SELECT id, project_name as name  FROM project WHERE company_id=" + RefId + ") abc WHERE 0=0";
                 }
                 else if (TableType == "devices")
                 {
@@ -101,13 +105,17 @@ namespace DAQMS.DAL
                 //command.CommandType = CommandType.Text;
 
                 //// Execute the procedure and obtain a result set
-                  NpgsqlDataReader data = command.ExecuteReader();
+                NpgsqlDataReader data = command.ExecuteReader();
 
-                 
+
                 // Fetch rows 
                 results = new List<CommonViewModel>();
 
                 CommonViewModel selectObj = new CommonViewModel();
+                if (TableType == "relay_state" || TableType == "relay_status")
+                {
+                    selectObj.Id = -1;
+                }
                 results.Add(selectObj);
 
                 while (data.Read())
@@ -116,9 +124,9 @@ namespace DAQMS.DAL
                     obj.Id = (int)data[0];
                     obj.Name = data[1].ToString();
                     results.Add(obj);
-  
+
                 }
-              
+
             }
             catch (Exception ex)
             {

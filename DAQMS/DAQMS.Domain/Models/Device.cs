@@ -25,7 +25,7 @@ namespace DAQMS.Domain.Models
 
         [Display(Name = "Device ID")]
         [MaxLength(10)]
-        [Required]
+        //[Required]
         [DataMember, DataColumn(true)]
         public string DeviceID { get; set; }
 

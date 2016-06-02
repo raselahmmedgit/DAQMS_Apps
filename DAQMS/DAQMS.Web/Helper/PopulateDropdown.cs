@@ -53,6 +53,7 @@ namespace DAQMS.Web.Helper
                 throw;
             }
         }
+        
         public static List<SelectListItem> PopulateDropdownValueTypeList()
         {
             List<SelectListItem> objectList = new List<SelectListItem>();
@@ -69,6 +70,7 @@ namespace DAQMS.Web.Helper
                 throw;
             }
         }
+        
         public static List<SelectListItem> PopulateDropdownSensorList()
         {
             List<SelectListItem> objectList = new List<SelectListItem>();

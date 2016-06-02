@@ -1,0 +1,168 @@
+﻿@model  DAQMS.DomainViewModel.AlertHistoryViewModel
+
+@{
+    ViewBag.Title = "List of Alert View";
+
+}
+
+<form id="frmSearch" method="post" action="">
+    <div class="table-header">
+        List of Alert View
+    </div>
+    <div class="dataTables_wrapper form-horizontal">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="control-group">
+                    @Html.LabelFor(model => model.CompanyId, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.DropDownListFor(model => model.CompanyId, Model.CompanyList, new { @class = "form-control", onchange = "GetCompanyWiseProject(this)" })
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="control-group">
+                    @Html.LabelFor(model => model.ProjectId, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.DropDownListFor(model => model.ProjectId, Model.ProjectList, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="control-group">
+                    @Html.LabelFor(model => model.AlertTypeId, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.DropDownListFor(model => model.AlertTypeId, Model.AlertTypeList, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                @Html.LabelFor(model => model.GenerateTimestamp, new { @class = "control-label" })
+                <div class="controls">
+                    @Html.TextBoxFor(model => model.GenerateTimestamp, new { @class = "form-control " })
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="control-group">
+                    @Html.LabelFor(model => model.AlertStatus, new { @class = "control-label" })
+                    <div class="controls">
+                        @Html.DropDownListFor(model => model.AlertStatus, Model.AlertStatusList, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+               
+            </div>
+        </div>
+        <div class="row-fluid BorderBottom">
+            <div class="span6">
+                <div class="control-group">
+                    <div class="controls">
+                        <input type="submit" class="btn btn-small btn-success" value="Search" name="btnSearch" style="margin-left:5px;" />
+                        @Html.ActionLink("  Refresh", "Index", null, new { @class = "icon-refresh btn btn-small btn-success" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DataList">
+        @{Html.RenderAction("List", "AlertView");}
+    </div>
+</form>
+
+<script language="javascript" type="text/javascript">
+    jQuery(document).ready(function () {
+        $("#frmSearch").submit(function (e) {
+            e.preventDefault();
+            var data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("List", "AlertView")',
+                data: data,
+                success: (function (result) {
+                    $("#DataList").html(result);
+                    LoadGrid();
+                })
+            })
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        var oTable1 = $('#table_report').dataTable({
+            "aoColumns": [
+              { "bSortable": false }, { "bSortable": false },
+                null, null, null, null, null,
+              { "bSortable": false }
+            ]
+        });
+
+        $('table th input:checkbox').on('click', function () {
+            var that = this;
+            $(this).closest('table').find('tr > td:first-child input:checkbox')
+            .each(function () {
+                this.checked = that.checked;
+                $(this).closest('tr').toggleClass('selected');
+            });
+
+        });
+
+        $('[data-rel=tooltip]').tooltip();
+    });
+
+    function LoadGrid() {
+        var oTable1 = $('#table_report').dataTable({
+            "aoColumns": [
+              { "bSortable": false }, { "bSortable": false },
+                null, null, null, null, null,
+              { "bSortable": false }
+            ]
+        });
+        $('[data-rel=tooltip]').tooltip();
+    }
+</script>
+
+<script type="text/javascript">
+
+    function GetCompanyWiseProject(selectedElement) {
+
+        var selectedcompanyId = $(selectedElement).val();
+
+        if (selectedcompanyId > 0) {
+
+            $("#ErrorMessage").show().html("");
+            $("#ProjectId").empty();
+            $("#ProjectId").append($('<option>', {
+                value: '0',
+                text: '< Select >'
+            }));
+
+            url = '@Url.Action("GetCompanyWiseProject", "Relay")';
+            $.post(url, { companyId: selectedcompanyId }, function (response) {
+                if (response.length > 0) {
+                    $.each(response, function (key, value) {
+                        $("#ProjectId").append('<option value="' + value.Value + '">' + value.Text + '</option>');
+                    });
+                }
+                else {
+                    $("#ErrorMessage").show().html("" + 'No data found. Please contact with admin.' + "").css("color", "red");
+                }
+            });
+        }
+        else {
+            $("#ProjectId").empty();
+            $("#ContactId").empty();
+            $("#ProjectId").append($('<option>', {
+                value: '0',
+                text: '< Select >'
+            }));
+        }
+    }
+
+</script>
+

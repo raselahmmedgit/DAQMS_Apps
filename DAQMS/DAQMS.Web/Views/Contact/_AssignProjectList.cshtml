@@ -1,0 +1,40 @@
+﻿@model DAQMS.DomainViewModel.ContactViewModel
+@using Helper
+@using System.Web.Mvc
+
+@if (Model != null && Model.ProjectContactList != null)
+{
+    foreach (var x in Model.ProjectContactList)
+    {
+        @Html.Partial("_AssignProject", x);
+    }
+}
+
+
+
+@*@foreach (var item in Model)
+{
+    <tr class="dynamicRow">
+        @using (Html.BeginCollectionItem("ProjectContactList"))
+        {
+            if (Model != null)
+            {
+                @Html.HiddenFor(model => item.Id)
+                @Html.HiddenFor(model => item.ContactId)
+                @Html.HiddenFor(model => item.ProjectId)
+            }
+            <td class="center">
+                <label class="pos-rel">
+                    @Html.CheckBoxFor(m => Model.IsSelected, new { @class = "checkBoxShow", id = string.Format("ProjectId_{0}", item.ProjectId) })
+                    <span class="lbl"></span>
+                </label>
+            </td>
+            <td>
+                @Html.Encode(item.ProjectName)
+            </td>
+            <td>
+                @Html.Encode(item.DeviceList)
+            </td>
+        }
+    </tr>
+}*@

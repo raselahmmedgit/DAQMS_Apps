@@ -46,23 +46,23 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_project_id", NpgsqlDbType.Integer));
                 command.Parameters[2].Value = item.ProjectId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_email_notification", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_email_notification", NpgsqlDbType.Boolean));
                 command.Parameters[3].Value = item.IsEmailNotification;
 
                 command.Parameters.Add(new NpgsqlParameter("p_additional_email", NpgsqlDbType.Varchar));
                 command.Parameters[4].Value = item.AdditionalEmail;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_active_temp", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_active_temp", NpgsqlDbType.Boolean));
                 command.Parameters[5].Value = item.IsActiveTemp;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_active_ctr", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_active_ctr", NpgsqlDbType.Boolean));
                 command.Parameters[6].Value = item.IsActiveCTR;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_active_nodatafound", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_active_nodatafound", NpgsqlDbType.Boolean));
                 command.Parameters[7].Value = item.IsActiveNoDataFound;
 
                 command.Parameters.Add(new NpgsqlParameter("p_nodatafound_duration", NpgsqlDbType.Integer));
-                command.Parameters[8].Value = item.NoDataFoundDuration;   
+                command.Parameters[8].Value = item.NoDataFoundDuration;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));
                 command.Parameters[9].Value = item.LoginUserID;
@@ -142,7 +142,7 @@ namespace DAQMS.DAL
 
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
-            
+
                 // Define a command to call procedure
                 NpgsqlCommand command = new NpgsqlCommand("get_alert_setup_master", conn);
                 command.CommandType = CommandType.StoredProcedure;
@@ -226,7 +226,7 @@ namespace DAQMS.DAL
 
         public override AlertSetupMasterViewModel GetObjById(int id)
         {
-            return GetObjList(id, 0,0,0,"", 1, 1).FirstOrDefault();
+            return GetObjList(id, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
 
         public override List<AlertSetupMasterViewModel> GetObjList(AlertSetupMasterViewModel item, int startRowIndex, int maxRow)

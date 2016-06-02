@@ -1,0 +1,122 @@
+﻿@*@Html.RenderSideMenu()*@
+<!-- sidebar menu: : style can be found in sidebar.less -->
+
+
+@*@model  DAQMS.DomainViewModel.UserRightViewModel*@
+@model IList<DAQMS.DomainViewModel.UserRightViewModel>
+@using DAQMS.DomainViewModel
+@*@using DAL.Models
+@using Code*@
+
+@{
+    //List<UserRightViewModel> list =new List<UserRightViewModel>();
+    <ul class="nav nav-list">
+        <li>
+            <a href="/Home/Index">
+                <i class="icon-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        @ShowMenu(Model)
+    </ul>
+}
+
+@helper ShowMenu(List<UserRightViewModel> list)
+{
+    var parentMenu = list.Where(e => e.ParentMenuId == -1).ToList();
+    foreach (var item in parentMenu)
+    {
+        var hasChild = list.Where(em => em.ParentMenuId == item.Id).ToList();
+        if (hasChild.Count == 0)
+        {
+            <li>
+                <a href="@Url.Content("~"+item.PageUrl)" class="dropdown-toggle">
+                    <i class="icon-desktop"></i>
+                    <span>@item.MenuCaption</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            @BuildMenu(hasChild, list, item.MenuCaption);
+        }
+    }
+}
+@helper BuildMenu(List<UserRightViewModel> ChildList, List<UserRightViewModel> List, string Caption)
+{
+    <li>
+        <a href='#' class="dropdown-toggle">
+            <i class="icon-desktop"></i>
+            <span>@Caption</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+
+        <ul class="submenu">
+            @{
+                foreach (var m in ChildList)
+                {
+                    var mch = List.Where(e => e.ParentMenuId == m.Id).ToList();
+                    if (mch.Count > 0)
+                    {
+                        @BuildMenu(mch, List, m.MenuCaption);
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="@Url.Content("~"+m.PageUrl.Trim())">
+                                <i class="icon-double-angle-right"></i>
+                                @m.MenuCaption
+                            </a>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+    </li>
+}
+
+
+
+
+
+
+<!--#sidebar-shortcuts-->
+<ul class="nav nav-list">
+    <li class="active">
+        <a href="index-2.html">
+            <i class="icon-dashboard"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="dropdown-toggle">
+            <i class="icon-desktop"></i>
+            <span>User Management</span>
+            <b class="arrow icon-angle-down"></b>
+        </a>
+
+        <ul class="submenu">
+            <li>
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="icon-double-angle-right"></i>
+                    User
+                </a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index", "Home")">
+                    <i class="icon-double-angle-right"></i>
+                    Roles
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+</ul>
+<!--/.nav-list-->
+
+<div id="sidebar-collapse">
+    <i class="icon-double-angle-left"></i>
+</div>

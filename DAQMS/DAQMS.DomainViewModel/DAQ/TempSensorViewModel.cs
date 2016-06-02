@@ -17,7 +17,7 @@ namespace DAQMS.DomainViewModel
             this.ProjectList = new List<SelectListItem>();
             this.DeviceList = new List<SelectListItem>();
             this.ValueTypeList = new List<SelectListItem>();
-            this.SensorList = new List<SelectListItem>(); 
+            this.SensorList = new List<SelectListItem>();
         }
 
         [Display(Name = "Company Name")]

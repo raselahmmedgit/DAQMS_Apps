@@ -117,7 +117,7 @@ namespace DAQMS.DAL
             return id;
         }
 
-        public List<RelayViewModel> GetObjList(int id, int companyId, int projectId, int deviceId, int relayStateId, 
+        public List<RelayViewModel> GetObjList(int id, int companyId, int projectId, int deviceId, int relayStateId,
             string loginUserId, int startRowIndex, int maximumRows)
         {
             DataSet dsResult = new DataSet();
@@ -133,7 +133,7 @@ namespace DAQMS.DAL
 
                 // Start a transaction as it is required to work with result sets (cursors) in PostgreSQL
                 NpgsqlTransaction tran = conn.BeginTransaction();
-            
+
                 // Define a command to call procedure
                 NpgsqlCommand command = new NpgsqlCommand("get_relay", conn);
                 command.CommandType = CommandType.StoredProcedure;
@@ -220,12 +220,12 @@ namespace DAQMS.DAL
 
         public override RelayViewModel GetObjById(int id)
         {
-            return GetObjList(id, 0,0,0,0,"", 1, 1).FirstOrDefault();
+            return GetObjList(id, 0, 0, 0, 0, "", 1, 1).FirstOrDefault();
         }
 
         public override List<RelayViewModel> GetObjList(RelayViewModel item, int startRowIndex, int maxRow)
         {
-            return GetObjList(item.Id, item.CompanyId, item.ProjectId, item.DeviceId,item.RelayStateId, item.LoginUserID, startRowIndex, maxRow);
+            return GetObjList(item.Id, item.CompanyId, item.ProjectId, item.DeviceId, item.RelayStateId, item.LoginUserID, startRowIndex, maxRow);
         }
 
         public override RelayViewModel GetObjList(RelayViewModel item)

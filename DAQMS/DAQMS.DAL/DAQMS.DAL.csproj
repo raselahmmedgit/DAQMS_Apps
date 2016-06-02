@@ -58,6 +58,7 @@
     <Compile Include="DAQ\CompanyDAL.cs" />
     <Compile Include="DAQ\ContactDAL.cs" />
     <Compile Include="DAQ\DeviceDAL.cs" />
+    <Compile Include="DAQ\SensorDAL.cs" />
     <Compile Include="DAQ\TempSensorDAL.cs" />
     <Compile Include="UM\ModuleDAL.cs" />
     <Compile Include="DAQ\ProjectContactDAL.cs" />

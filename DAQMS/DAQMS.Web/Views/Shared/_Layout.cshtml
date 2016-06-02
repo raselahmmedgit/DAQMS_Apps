@@ -14,23 +14,33 @@
     <link href="~/Assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
     <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />
 
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="~/Assets/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <!--page specific plugin styles-->
+    <!--fonts-->
+    @*<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />*@
+
     <!--ace styles-->
     <link href="~/Assets/css/ace.min.css" rel="stylesheet" />
     <link href="~/Assets/css/ace-responsive.min.css" rel="stylesheet" />
     <link href="~/Assets/css/ace-skins.min.css" rel="stylesheet" />
     <link href="~/Assets/css/Custom.css" rel="stylesheet" />
-    @*<link href="~/Assets/css/jquery-ui.css" rel="stylesheet" />*@
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
 
-    <script src="@Url.Content("~/Scripts/jquery-2.2.3.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jquery-ui-1.11.4.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/validation.js")" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/validation.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js" type="text/javascript"></script>
+    <script src="~/Scripts/toastr.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/App/App.js" type="text/javascript"></script>
     
-    <!--Theme-->
-    @*@Html.Partial("_ThemePartial")*@
-    <script src="@Url.Content("~/Scripts/App/App.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/modernizr-2.8.3.js")" type="text/javascript"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <script src="~/Assets/js/jquery.dataTables.min.js"></script>
+    <script src="~/Assets/js/jquery.dataTables.bootstrap.js"></script>
+
 </head>
 <body>
 
@@ -56,19 +66,19 @@
         </a>
         <div id="sidebar">
             @Html.Action("LeftMenu", "Home")
-        @*@if (HttpContext.Current.User.Identity.IsAuthenticated)
-        {
-             @Html.Action("LeftMenu", "Home")
-        }*@
+            @*@if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                     @Html.Action("LeftMenu", "Home")
+                }*@
         </div>
 
         <div id="main-content" class="clearfix">
             <div id="breadcrumbs">
                 @Html.Action("GettingSiteMap", "Home")
-            @*@if (HttpContext.Current.User.Identity.IsAuthenticated)
-            {
-                @Html.Action("GettingSiteMap", "Home")
-            }*@
+                @*@if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        @Html.Action("GettingSiteMap", "Home")
+                    }*@
             </div>
             <div id="page-content" class="clearfix">
                 @RenderBody()
@@ -81,39 +91,26 @@
     <a href="#" id="btn-scroll-up" class="btn btn-small btn-inverse">
         <i class="icon-double-angle-up icon-only bigger-110"></i>
     </a>
-        
-    <script src="~/Assets/js/bootstrap.min.js"></script>
-    
-    <script src="~/Assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="~/Assets/js/jquery.ui.touch-punch.min.js"></script>
-    <script src="~/Assets/js/jquery.slimscroll.min.js"></script>
-   
-    <script src="~/Assets/js/jquery.dataTables.min.js"></script>
-    <script src="~/Assets/js/jquery.dataTables.bootstrap.js"></script>
-
     <!--ace scripts-->
-
     <script src="~/Assets/js/ace-elements.min.js"></script>
     <script src="~/Assets/js/ace.min.js"></script>
 
-    <!--inline scripts related to this page-->
-
     <script type="text/javascript">
-        $(function () {
-            App.init();
-            $(".jqDatePicker").datepicker({
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel: true,
-                yearRange: "1900:2200",
-                dateFormat: 'dd-M-yy',
-                beforeShow: function () {
-                    setTimeout(function () {
-                        $('.ui-datepicker').css('z-index', 99999);
-                    }, 0);
-                }
-            });
-        })
+    $(function () {
+        App.init();
+        $(".jqDatePicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            yearRange: "1900:2200",
+            dateFormat: 'dd-M-yy',
+            beforeShow: function () {
+                setTimeout(function () {
+                    $('.ui-datepicker').css('z-index', 99999);
+                }, 0);
+            }
+        });
+    })
     </script>
 
 

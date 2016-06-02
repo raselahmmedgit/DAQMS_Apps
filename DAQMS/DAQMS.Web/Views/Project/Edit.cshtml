@@ -4,31 +4,34 @@
 }
 @using (Html.BeginForm("Edit", "Project", FormMethod.Post, new { @id = "frmEdit" }))
 {
-    @Html.ValidationSummary(true)
+    <div class="table-header">
+        Edit Project
+    </div>
+    <div class="dataTables_wrapper">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+        @Html.Partial("_CreateOrEdit", Model)
 
-    @Html.HiddenFor(model => model.Id)
-    @Html.Partial("_CreateOrEdit", Model)
-
-    <div class="row-fluid form-horizontal">
-        <div class="control-group">
-            <div class="controls">
-                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
-                <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success"
-                        onclick="return fnValidate()">
-                    Update
-                </button>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <div id="ErrorMessage">
+        <div class="row-fluid form-horizontal">
+            <div class="control-group">
+                <div class="controls">
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
+                    <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success"
+                            onclick="return fnValidate()">
+                        Update
+                    </button>
                 </div>
-                <div id="lblMsg">
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div id="ErrorMessage">
+                    </div>
+                    <div id="lblMsg">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 }
 <script language="javascript" type="text/javascript">
     $(document).ready(function () {

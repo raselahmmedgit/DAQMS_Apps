@@ -6,14 +6,14 @@
     var dateRangeTo = $('#DateRangeTo').val();
     var valueType = $('#ValueType').val();
     var sensor = "";
-    $("input[name='Sensor']").each(function () {
-        if ($(this).attr('checked') == "checked") {
-            if (sensor == "") {
-                sensor = $(this).val();
-            }
-            else {
-                sensor = sensor + "," + $(this).val();
-            }
+    $("input[name='Sensor']:checked").each(function () {
+        console.log(this.value);
+
+        if (sensor == "") {
+            sensor = this.value;
+        }
+        else {
+            sensor = sensor + "," + this.value;
         }
     });
 
@@ -130,8 +130,20 @@ var Report = function () {
                 var dateRangeFrom = $('#DateRangeFrom').val();
                 var dateRangeTo = $('#DateRangeTo').val();
                 var valueType = $('#ValueType').val();
-                var sensor = $('#CompanyId').val();
+                var sensor = "";
+                $("input[name='Sensor']:checked").each(function () {
+                    console.log(this.value);
+
+                    if (sensor == "") {
+                        sensor = this.value;
+                    }
+                    else {
+                        sensor = sensor + "," + this.value;
+                    }
+                });
+
                 drawChartByClick(companyId, projectId, deviceId, dateRangeFrom, dateRangeTo, valueType, sensor);
+                linechartObjData.fnDraw();
             });
         }
         google.charts.setOnLoadCallback(initialize);
@@ -141,6 +153,7 @@ var Report = function () {
     var _actionHandler = function () {
 
     };
+
     var linechartObjData;
 
     var _initializeForm = function () {
@@ -153,36 +166,45 @@ var Report = function () {
             App.loadDropdown('DeviceId', '/Report/LoadDeviceListByCompanyIdAjax', { projectId: $('#ProjectId').val() });
         });
 
-        //linechartObjData = $('#table_report').dataTable({
-        //    "bJQueryUI": true,
-        //    "bAutoWidth": false,
-        //    "sPaginationType": "full_numbers",
-        //    "bSort": false,
-        //    "oLanguage": {
-        //        "sLengthMenu": "Display _MENU_ records per page",
-        //        "sZeroRecords": "Nothing found - Sorry",
-        //        "sInfo": "Showing _START_ to _END_ of _TOTAL_ records",
-        //        "sInfoEmpty": "Showing 0 to 0 of 0 records",
-        //        "sInfoFiltered": "(filtered from _MAX_ total records)"
-        //    },
-        //    "bProcessing": true,
-        //    "bServerSide": true,
-        //    "sAjaxSource": GetUrl(),
-        //    "aoColumns": [{
-        //        "sName": "RecordDate",
-        //        "bSearchable": false,
-        //        "bSortable": false,
-        //    },
-        //    { "sName": "T1" },
-        //    { "sName": "T2" },
-        //    { "sName": "T3" },
-        //    { "sName": "T4" },
-        //    { "sName": "T5" },
-        //    { "sName": "T6" },
-        //    { "sName": "T7" },
-        //    { "sName": "T8" }
-        //    ]
-        //});
+        linechartObjData = $('#table_report').dataTable({
+            "bJQueryUI": true,
+            "bAutoWidth": false,
+            "sPaginationType": "full_numbers",
+            "bSort": false,
+            "oLanguage": {
+                "sLengthMenu": "Display _MENU_ records per page",
+                "sZeroRecords": "Nothing found - Sorry",
+                "sInfo": "Showing _START_ to _END_ of _TOTAL_ records",
+                "sInfoEmpty": "Showing 0 to 0 of 0 records",
+                "sInfoFiltered": "(filtered from _MAX_ total records)"
+            },
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": GetUrl(),
+            "fnServerData": function ( sSource, aoData, fnCallback ) {
+                $.ajax( {
+                    "dataType": 'json',
+                    "type": "POST",
+                    "url": GetUrl(),
+                    "data": aoData,
+                    "success": fnCallback
+                });
+            },
+            "aoColumns": [{
+                "sName": "RecordDate",
+                "bSearchable": false,
+                "bSortable": false,
+            },
+            { "sName": "T1" },
+            { "sName": "T2" },
+            { "sName": "T3" },
+            { "sName": "T4" },
+            { "sName": "T5" },
+            { "sName": "T6" },
+            { "sName": "T7" },
+            { "sName": "T8" }
+            ]
+        });
 
     };
 

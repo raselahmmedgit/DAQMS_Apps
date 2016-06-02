@@ -48,10 +48,18 @@ namespace DAQMS.DomainViewModel
 
     public class AlertSetupTempViewModel : AlertSetupTemp
     {
+        [Display(Name = "Sensor")]
+        [MaxLength(20)]
+        [DataMember, DataColumn(true)]
+        public string SensorName { get; set; }
     }
 
     public class AlertSetupCTRViewModel : AlertSetupCTR
     {
+        [Display(Name = "CTR")]
+        [MaxLength(20)]
+        [DataMember, DataColumn(true)]
+        public string SensorName { get; set; }
     }
 }
 

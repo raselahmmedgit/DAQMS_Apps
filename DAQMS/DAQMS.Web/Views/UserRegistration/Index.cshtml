@@ -8,7 +8,7 @@
         User Registration
         @Html.ActionLink("  Add New", "Create", null, new { @class = " icon-plus btn btn-small btn-success pull-right" })
     </div>
-    <div class="dataTables_wrapper row-fluid:first-child form-horizontal">
+    <div class="dataTables_wrapper form-horizontal">
         <div class="row-fluid">
             <div class="span6">
                 <div class="control-group">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="row-fluid">
+        <div class="row-fluid BorderBottom">
             <div class="span6">
                 <div class="control-group">
                     <div class="controls">
@@ -83,7 +83,7 @@
         var oTable1 = $('#table_report').dataTable({
             "aoColumns": [
               { "bSortable": false },
-              null, null, null, null, null,
+              null, null, null, null, null, null, null,
               { "bSortable": false }
             ]
         });

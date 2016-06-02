@@ -13,18 +13,22 @@ namespace DAQMS.Web.Controllers
 {
     public class ContactController : Controller
     {
-       private readonly ContactService _ContactService;
+        private readonly ContactService _ContactService;
+        private readonly ProjectService _ProjectService;
+        private readonly ProjectContactService _ProjectContactService;
 
-       public ContactController()
+        public ContactController()
         {
             this._ContactService = new ContactService();
+            this._ProjectService = new ProjectService();
+            this._ProjectContactService = new ProjectContactService();
         }
 
         public ActionResult Index()
         {
             ContactViewModel model = new ContactViewModel();
             model.CompanyList = PopulateDropdown.PopulateDropdownListByTable("company");
-            model.ContactTypeList = PopulateDropdown.PopulateDropdownListByTable("contact_type");
+            model.ProjectList = PopulateDropdown.PopulateDropdownListByTable("project");
             return View(model);
         }
 
@@ -54,8 +58,10 @@ namespace DAQMS.Web.Controllers
         public ActionResult Create(ContactViewModel model)
         {
             int returnId = -1;
+            string strMessage = string.Empty;
             model.LoginUserID = HttpContext.User.Identity.Name;
-            var strMessage = string.Empty;
+            strMessage = ValidateBusinessLogic(model);
+
             try
             {
                 if (ModelState.IsValid)
@@ -71,37 +77,59 @@ namespace DAQMS.Web.Controllers
                         }
                         else
                         {
+
+                            #region Project Contact
+
+                            List<ProjectContactViewModel> projectContactList = model.ProjectContactList.Where(x => x.IsSelected == true).ToList();
+
+                            if (projectContactList.Count() > 0)
+                            {
+                                foreach (var item in projectContactList)
+                                {
+                                    item.ContactId = returnId;
+                                    item.LoginUserID = HttpContext.User.Identity.Name;
+                                    _ProjectContactService.InsertData(item);
+                                }
+                            }
+
+
+                            #endregion
+
+
+
                             #region Save-User
-                                 UserService usrService =new UserService();
-                                 UserViewModel usr = new UserViewModel();
-                                 usr.LoginID = model.Email;
-                                 usr.ContactID = model.ContactID;                               
-                                 usr.UserName = model.ContactName;
-                                 usr.UserEmail = model.Email;
-                                 usr.UserPass = Password.getMd5Hash("Password@#123");
-                                 usr.IsAdmin = false;
-                                 usr.IsLocked = false;
-                                 usr.IsChangePassword = true;
-                                 usr.IsActive = true;
-                                 usr.LoginUserID = model.LoginUserID;
+                            UserService usrService = new UserService();
+                            UserViewModel usr = new UserViewModel();
+                            usr.LoginID = model.Email;
+                            usr.ContactID = model.ContactID;
+                            usr.UserName = model.ContactName;
+                            usr.UserEmail = model.Email;
+                            //usr.UserPass = Password.getMd5Hash("Password@#123");
+                            string password = Password.GetRandomAlphanumericString(8);
+                            usr.UserPass = Password.getMd5Hash(password);
+                            usr.IsAdmin = false;
+                            usr.IsLocked = false;
+                            usr.IsChangePassword = true;
+                            usr.IsActive = true;
+                            usr.LoginUserID = model.LoginUserID;
 
-                                 int _userId = usrService.InsertData(usr);
+                            int _userId = usrService.InsertData(usr);
 
-                                 if (_userId > 0) // if user save successfully
-                                 {
-                                     // get Role                                    
-                                     RoleService roleService = new RoleService();
-                                     RoleViewModel userRole = roleService.GetByItem(new RoleViewModel { RoleName = "Contact", ModuleId=2 }).FirstOrDefault();
+                            if (_userId > 0) // if user save successfully
+                            {
+                                // get Role                                    
+                                RoleService roleService = new RoleService();
+                                RoleViewModel userRole = roleService.GetByItem(new RoleViewModel { RoleName = "Contact", ModuleId = 2 }).FirstOrDefault();
 
-                                     if (userRole.Id > 0) //Contact Role is found
-                                     {
-                                         UserRoleService userRoleService = new UserRoleService();
-                                         int userRoleId = userRoleService.InsertData(new UserRoleViewModel { UserId = _userId, RoleId = userRole.Id });
-                                     }
-                                 }
-                             
-                               // Email Service -- Send Login ID, Password and URL to contact emial
-  
+                                if (userRole.Id > 0) //Contact Role is found
+                                {
+                                    UserRoleService userRoleService = new UserRoleService();
+                                    int userRoleId = userRoleService.InsertData(new UserRoleViewModel { UserId = _userId, RoleId = userRole.Id });
+                                }
+                            }
+
+                            // Email Service -- Send Login ID, Password and URL to contact emial
+
                             #endregion
 
                             return Content(Boolean.TrueString);
@@ -131,6 +159,31 @@ namespace DAQMS.Web.Controllers
             ContactViewModel model = _ContactService.GetIById(id);
             model.CompanyList = PopulateDropdown.PopulateDropdownListByTable("company");
             model.ContactTypeList = PopulateDropdown.PopulateDropdownListByTable("contact_type");
+            ProjectContactInitilize(model.CompanyId, model);
+
+
+            if (model.ProjectContactList.Count > 0)
+            {
+                ProjectContactViewModel childModel = new ProjectContactViewModel();
+                childModel.ContactId = model.Id;
+                var projectContactList = _ProjectContactService.GetByItem(childModel);
+
+                foreach (var item in model.ProjectContactList)
+                {
+                    var isAssigned = (from tr in projectContactList
+                                      where tr.ProjectId == item.ProjectId
+                                      select tr).ToList();
+                    if (isAssigned.Count > 0)
+                    {
+                        item.IsSelected = true;
+                    }
+                    else
+                    {
+                        item.IsSelected = false;
+                    }
+                }
+            }
+
             return View(model);
         }
 
@@ -138,8 +191,10 @@ namespace DAQMS.Web.Controllers
         public ActionResult Edit(ContactViewModel model)
         {
             int returnId = -1;
+            string strMessage = string.Empty;
             model.LoginUserID = HttpContext.User.Identity.Name;
-            var strMessage = string.Empty;
+            strMessage = ValidateBusinessLogic(model);
+
             try
             {
                 if (ModelState.IsValid)
@@ -155,6 +210,19 @@ namespace DAQMS.Web.Controllers
                         }
                         else
                         {
+                            #region Project Contact
+
+                            if (model.ProjectContactList.Count() > 0)
+                            {
+                                foreach (var item in model.ProjectContactList)
+                                {
+                                    item.ContactId = returnId;
+                                    item.LoginUserID = HttpContext.User.Identity.Name;
+                                    _ProjectContactService.InsertData(item);
+                                }
+                            }
+                            #endregion
+
                             return Content(Boolean.TrueString);
                         }
                     }
@@ -208,6 +276,45 @@ namespace DAQMS.Web.Controllers
                 Success = result,
                 Message = errMsg
             }, JsonRequestBehavior.AllowGet);
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public PartialViewResult GettingAssignProjectList(int CompanyId)
+        {
+            ContactViewModel model = new ContactViewModel();
+            ProjectContactInitilize(CompanyId, model);
+
+            return PartialView("_AssignProjectList", model);
+        }
+
+        private void ProjectContactInitilize(int CompanyId, ContactViewModel model)
+        {
+            model.ProjectContactList = new List<ProjectContactViewModel>();
+            ProjectViewModel projectModel = new ProjectViewModel();
+            projectModel.CompanyId = CompanyId;
+
+            List<ProjectViewModel> projectList = _ProjectService.GetByItem(projectModel);
+            foreach (var item in projectList)
+            {
+                ProjectContactViewModel childModel = new ProjectContactViewModel();
+                childModel.Id = 0;
+                childModel.ContactId = 0;
+                childModel.ProjectId = item.Id;
+                childModel.ProjectName = item.ProjectName;
+                childModel.DeviceList = item.DeviceList;
+                model.ProjectContactList.Add(childModel);
+            }
+        }
+
+        private string ValidateBusinessLogic(ContactViewModel model)
+        {
+            string msg = string.Empty;
+            List<ProjectContactViewModel> projectContactList = model.ProjectContactList.Where(x => x.IsSelected == true).ToList();
+            if (projectContactList.Count == 0)
+            {
+                msg = "You must select at least one project.";
+            }
+            return msg;
         }
     }
 }

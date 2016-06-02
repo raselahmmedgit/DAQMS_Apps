@@ -1,0 +1,30 @@
+﻿@model DAQMS.DomainViewModel.AlertSetupCTRViewModel
+@using Helper
+@using System.Web.Mvc
+
+<tr class="dynamicRow">
+    @using (Html.BeginCollectionItem("AlertSetupCTRList"))
+    {
+        if (Model != null)
+        {
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.AlertSetupId)
+            @Html.HiddenFor(model => model.SensorId)
+        }
+        <td>
+            <label class="pos-rel">
+                @Html.CheckBoxFor(m => Model.IsActive, new { @class = "checkBoxShow", id = string.Format("IsActive_{0}", Model.IsActive) })
+                <span class="lbl"></span>
+            </label>
+        </td>
+        <td>
+            @Html.Encode(Model.SensorName)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.MaxVal, new { @class = "form-control required" })
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.LengthOfTime, new { @class = "form-control required" })
+        </td>
+    }
+</tr>

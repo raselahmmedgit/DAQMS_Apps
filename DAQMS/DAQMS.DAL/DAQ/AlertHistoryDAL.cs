@@ -49,7 +49,7 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_alert_msg", NpgsqlDbType.Varchar));
                 command.Parameters[3].Value = item.AlertMsg;
 
-                command.Parameters.Add(new NpgsqlParameter("p_isnew", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_isnew", NpgsqlDbType.Boolean));
                 command.Parameters[4].Value = item.IsNew;
 
                 command.Parameters.Add(new NpgsqlParameter("p_generate_timestamp", NpgsqlDbType.Timestamp));
@@ -156,7 +156,7 @@ namespace DAQMS.DAL
                 command.Parameters.Add(new NpgsqlParameter("p_alert_type_id", NpgsqlDbType.Integer));
                 command.Parameters[4].Value = alertTypeId;
 
-                command.Parameters.Add(new NpgsqlParameter("p_is_new", NpgsqlDbType.Bit));
+                command.Parameters.Add(new NpgsqlParameter("p_is_new", NpgsqlDbType.Boolean));
                 command.Parameters[5].Value = isNew;
 
                 command.Parameters.Add(new NpgsqlParameter("p_user_id", NpgsqlDbType.Varchar));

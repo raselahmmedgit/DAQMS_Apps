@@ -7,8 +7,7 @@
 
 <form id="frmSearch" method="post" action="">
     <div class="table-header">
-        List of Role
-        @Html.ActionLink("  Add New", "Create", null, new { @class = " icon-plus btn btn-small btn-success pull-right" })
+        List of Login History
     </div>
 
     <div class="dataTables_wrapper row-fluid:first-child form-horizontal">
@@ -16,7 +15,7 @@
         <div class="row-fluid ">
             <div class="span6">
                 <div class="control-group">
-                        @Html.LabelFor(model => model.LoginID, new { @class = "control-label" })
+                    @Html.LabelFor(model => model.LoginID, new { @class = "control-label" })
                     <div class="controls">
                         @Html.TextBoxFor(model => model.LoginID, new { @class = "form-control required" })
                     </div>
@@ -31,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="row-fluid">
+        <div class="row-fluid BorderBottom">
             <div class="span6">
                 <div class="control-group">
                     <div class="controls">
@@ -60,6 +59,7 @@
                 data: data,
                 success: (function (result) {
                     $("#DataList").html(result);
+                    LoadGrid();
                 })
             })
         });
@@ -70,10 +70,21 @@
         var oTable1 = $('#table_report').dataTable({
             "aoColumns": [
               { "bSortable": false },
-                null,null,null,null,
+                null, null, null, null,
               { "bSortable": false }
             ]
         });
         $('[data-rel=tooltip]').tooltip();
-    })
+    });
+
+    function LoadGrid() {
+        var oTable1 = $('#table_report').dataTable({
+            "aoColumns": [
+              { "bSortable": false },
+                null, null, null, null,
+              { "bSortable": false }
+            ]
+        });
+        $('[data-rel=tooltip]').tooltip();
+    }
 </script>

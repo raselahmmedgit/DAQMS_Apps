@@ -14,24 +14,24 @@ namespace DAQMS.Web.Controllers
     {
         public ActionResult Index()
         {
-            #region test SP
+            //#region test SP
 
-            // user service
-            TempSensorService Service = new TempSensorService();
+            ////  service
+            //TempSensorServcie Service = new TempSensorServcie();
 
-            // save model
-            TempSensorViewModel model = new TempSensorViewModel();
-            model.CompanyId = 1;
-            model.ProjectId = 1;
-            model.DeviceId = 2;
-            model.DateRangeFrom = "2016-05-01";
-            model.DateRangeTo = "2016-05-25";
-            model.ValueType = "max";
+            //// model
+            //TempSensorViewModel model = new TempSensorViewModel();
+            //model.CompanyId = 1;
+            //model.ProjectId = 1;
+            //model.DeviceId = 2;
+            //model.DateRangeFrom = "2016-05-01";
+            //model.DateRangeTo = "2016-05-25";
+            //model.ValueType = "max";
 
-            // get all  model
-            var lst = Service.GetByItem(model);
+            //// get data
+            //var lst = Service.GetByItem(model);
 
-            #endregion test SP
+            //#endregion test SP
             
             return View();
         }

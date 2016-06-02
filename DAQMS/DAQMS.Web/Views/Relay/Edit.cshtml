@@ -1,0 +1,66 @@
+@model DAQMS.DomainViewModel.RelayViewModel
+@{
+    ViewBag.Title = "DAQ - Edit Relay Device";
+}
+@using (Html.BeginForm("Edit", "Relay", FormMethod.Post, new { @id = "frmEdit" }))
+{
+    <div class="table-header">
+        Edit Relay Device
+    </div>
+    <div class="dataTables_wrapper">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+        @Html.Partial("_CreateOrEdit", Model)
+
+        <div class="row-fluid form-horizontal">
+            <div class="control-group">
+                <div class="controls">
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-small btn-success" })
+                    <button id="btnSave" name="btnSave" type="submit" class="btn btn-small btn-success"
+                            onclick="return fnValidate()">
+                        Update
+                    </button>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div id="ErrorMessage">
+                    </div>
+                    <div id="lblMsg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //required for Unit Info
+        $("#frmEdit").on('submit', function (e) {
+            //Clear message
+            $("#lblMsg").html(''); $("#ErrorMessage").html('');
+            e.preventDefault();
+            var data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("Edit", "Relay")',
+                data: data,
+                success: (function (result) {
+                    if (result == "True") {
+                        //show message in popup
+                        $("#lblMsg").html('');
+                        $("#lblMsg").html('Information has been updated successfully').css("color", "green");
+                        $("#lblMsg").show();
+                        $("#MyDialog").dialog('close');
+                    }
+                    else {
+                        $("#ErrorMessage").html(result).css("color", "red");;
+                    }
+
+                    var msg = $("#lblMsg").text();
+                    $("#MyDialog").dialog('close');
+                })
+            })
+        });
+    });
+</script>

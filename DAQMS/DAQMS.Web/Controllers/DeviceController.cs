@@ -12,16 +12,19 @@ namespace DAQMS.Web.Controllers
     public class DeviceController : Controller
     {
         private readonly DeviceService _DeviceService;
+        private readonly ProjectService _ProjectService;
 
         public DeviceController()
         {
             this._DeviceService = new DeviceService();
+            this._ProjectService = new ProjectService();
         }
 
         public ActionResult Index()
         {
             DeviceViewModel model = new DeviceViewModel();
             model.CompanyList = PopulateDropdown.PopulateDropdownListByTable("Company");
+            model.ProjectList = PopulateDropdown.PopulateDropdownListByTable("Project");
 
             return View(model);
         }
@@ -96,7 +99,7 @@ namespace DAQMS.Web.Controllers
         {
             DeviceViewModel model = _DeviceService.GetIById(id);
             model.CompanyList = PopulateDropdown.PopulateDropdownListByTable("Company");
-            model.ProjectList = PopulateDropdown.PopulateDropdownListByTable("Project");
+            model.ProjectList = PopulateDropdown.PopulateDropdownListByTable("Project", model.CompanyId);
             model.DeviceStatusList = PopulateDropdown.PopulateDropdownListByTable("DeviceStatus");
             return View(model);
         }
@@ -175,6 +178,27 @@ namespace DAQMS.Web.Controllers
                 Success = result,
                 Message = errMsg
             }, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        public JsonResult GettingCompanyWiseProject(int companyId)
+        {
+            IList<SelectListItem> list = new List<SelectListItem>();
+
+            ProjectViewModel projectModel = new ProjectViewModel();
+            projectModel.CompanyId = companyId;
+
+            List<ProjectViewModel> projectList = _ProjectService.GetByItem(projectModel);
+
+            if (projectList.Count > 0)
+            {
+                foreach (var item in projectList)
+                {
+                    list.Add(new SelectListItem { Text = item.ProjectName, Value = item.Id.ToString() });
+                }
+            }
+            return Json(list, JsonRequestBehavior.AllowGet);
         }
     }
 }

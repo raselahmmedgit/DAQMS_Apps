@@ -28,6 +28,10 @@ namespace DAQMS.DomainViewModel
         [DataMember, DataColumn(true)]
         public string ProjectDevices { get; set; }
 
+        [Display(Name = "Device List")]
+        [DataMember, DataColumn(true)]
+        public string DeviceList { get; set; }
+
         public IList<SelectListItem> CompanyList { get; set; }
         public IList<SelectListItem> ProjectStatusList { get; set; }
 

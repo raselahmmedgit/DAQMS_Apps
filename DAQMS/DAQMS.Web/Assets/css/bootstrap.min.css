@@ -854,19 +854,20 @@ form {
 }
 fieldset {
     padding: 0;
-    margin: 0;
-    border: 0
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius:4px;
 }
 legend {
     display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 20px;
-    font-size: 21px;
+    /*width: 100%;*/
+    padding: 5px;
+    /*margin-bottom: 20px;*/
+    font-size: 14px;
     line-height: 40px;
     color: #333;
-    border: 0;
-    border-bottom: 1px solid #e5e5e5
+    /*border: 0;*/
+    /*border-bottom: 1px solid #e5e5e5*/
 }
 legend small {
     font-size: 15px;

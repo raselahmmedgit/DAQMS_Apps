@@ -5,6 +5,7 @@ using DAQMS.Domain;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using System.Collections.Generic;
+using System;
 
 namespace DAQMS.DomainViewModel
 {
@@ -16,12 +17,13 @@ namespace DAQMS.DomainViewModel
             this.ProjectList = new List<SelectListItem>();
             this.DeviceStateList = new List<SelectListItem>();
             this.DeviceIDList = new List<SelectListItem>();
-            this.RelayStateList = new List<SelectListItem>(); 
+            this.RelayStateList = new List<SelectListItem>();
+            this.RelayStatusList = new List<SelectListItem>();
         }
 
         [Display(Name = "Company Name")]
         [DataMember, DataColumn(true)]
-        public int CompanyId { get; set; }
+        public Int32 CompanyId { get; set; }
 
         [Display(Name = "Company Name")]
         [DataMember, DataColumn(true)]
@@ -29,7 +31,7 @@ namespace DAQMS.DomainViewModel
 
         [Display(Name = "Project Name")]
         [DataMember, DataColumn(true)]
-        public int ProjectId { get; set; }
+        public Int32 ProjectId { get; set; }
 
         [Display(Name = "Project Name")]
         [DataMember, DataColumn(true)]
@@ -37,7 +39,7 @@ namespace DAQMS.DomainViewModel
 
         [Display(Name = "Device ID")]
         [DataMember, DataColumn(true)]
-        public string DeviceID { get; set; }
+        public string DeviceCode { get; set; }
 
         [Display(Name = "Device Status")]
         [DataMember, DataColumn(true)]
@@ -47,11 +49,16 @@ namespace DAQMS.DomainViewModel
         [DataMember, DataColumn(true)]
         public string RelayState { get; set; }
 
+        [Display(Name = "Status")]
+        [DataMember, DataColumn(true)]
+        public string Status { get; set; }
+
         public IList<SelectListItem> CompanyList { get; set; }
         public IList<SelectListItem> ProjectList { get; set; }
         public IList<SelectListItem> DeviceStateList { get; set; }
         public IList<SelectListItem> DeviceIDList { get; set; }
         public IList<SelectListItem> RelayStateList { get; set; }
+        public IList<SelectListItem> RelayStatusList { get; set; }
     }
 }
 

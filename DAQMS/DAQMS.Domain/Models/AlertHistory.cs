@@ -45,9 +45,9 @@ namespace DAQMS.Domain.Models
         public Boolean IsNew { get; set; }
 
         [Display(Name = "Alert Time")]
-        [Required]
+        //[Required]
         [DataMember, DataColumn(true)]
-        public DateTime GenerateTimestamp { get; set; }
+        public DateTime? GenerateTimestamp { get; set; }
 
         [Display(Name = "Alert Time")]
         [Required]

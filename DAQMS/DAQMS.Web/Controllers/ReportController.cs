@@ -45,11 +45,11 @@ namespace DAQMS.Web.Controllers
                     ValueType = valueType,
                     Sensor = sensor
                 };
-                List<string> data = new List<string> { new string[] { "Time", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8" }.ToString() };
-
+                List<object> data = new List<object> { new[] { "Time", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8" } };
+ 
                 var tempSensorViewModelList = _TempSensorService.GetByItem(tempSensorViewModel).ToList();
-                var dataList = tempSensorViewModelList.Select(item => new string[] { item.ChartDate.ToString(), item.T1.ToString(), item.T2.ToString(), item.T3.ToString(), item.T4.ToString(), item.T5.ToString(), item.T6.ToString(), item.T7.ToString(), item.T8.ToString() }.ToString());
-
+                var dataList = tempSensorViewModelList.Select(item => new object[] { item.RecordDate.ToString(), item.T1, item.T2, item.T3, item.T4, item.T5, item.T6, item.T7, item.T8 });
+ 
                 data.AddRange(dataList);
 
                 return Json(data, JsonRequestBehavior.AllowGet);
@@ -66,15 +66,15 @@ namespace DAQMS.Web.Controllers
             try
             {
                 var tempSensorViewModel = new TempSensorViewModel
-                                                          {
-                                                              CompanyId = Convert.ToInt32(companyId),
-                                                              ProjectId = Convert.ToInt32(projectId),
-                                                              DeviceId = Convert.ToInt32(deviceId),
-                                                              DateRangeFrom = dateRangeFrom,
-                                                              DateRangeTo = dateRangeTo,
-                                                              ValueType = valueType,
-                                                              Sensor = sensor
-                                                          };
+                {
+                    CompanyId = Convert.ToInt32(companyId),
+                    ProjectId = Convert.ToInt32(projectId),
+                    DeviceId = Convert.ToInt32(deviceId),
+                    DateRangeFrom = dateRangeFrom,
+                    DateRangeTo = dateRangeTo,
+                    ValueType = valueType,
+                    Sensor = sensor
+                };
                 var tempSensorViewModelList = _TempSensorService.GetItemByPaging(tempSensorViewModel, param.iDisplayStart, param.iDisplayLength).ToList();
 
                 IEnumerable<TempSensorViewModel> filteredTempSensorViewModelList;
@@ -91,7 +91,7 @@ namespace DAQMS.Web.Controllers
                 var viewOdjects = filteredTempSensorViewModelList.Skip(param.iDisplayStart).Take(param.iDisplayLength);
 
                 var result = from tempSensor in viewOdjects
-                             select new string[] { tempSensor.ChartDate, tempSensor.T1.ToString(), tempSensor.T2.ToString(), tempSensor.T3.ToString(), tempSensor.T4.ToString(), tempSensor.T5.ToString(), tempSensor.T6.ToString(), tempSensor.T7.ToString(), tempSensor.T8.ToString() };
+                             select new string[] { tempSensor.RecordDate.ToString(), tempSensor.T1.ToString(), tempSensor.T2.ToString(), tempSensor.T3.ToString(), tempSensor.T4.ToString(), tempSensor.T5.ToString(), tempSensor.T6.ToString(), tempSensor.T7.ToString(), tempSensor.T8.ToString() };
 
                 return Json(new
                 {

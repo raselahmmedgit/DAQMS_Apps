@@ -121,7 +121,7 @@ namespace DAQMS.Web.Controllers
         public ActionResult Edit(UserViewModel model)
         {
             int userId = -1, roleId = -1;
-            model.LoginID = HttpContext.User.Identity.Name;
+            model.LoginUserID = HttpContext.User.Identity.Name;
             var strMessage = string.Empty;
             try
             {
@@ -147,9 +147,13 @@ namespace DAQMS.Web.Controllers
                                     {
                                         try
                                         {
-                                            item.UserId = userId;
-                                            item.LoginUserID = HttpContext.User.Identity.Name;
-                                            roleId = _UserRoleService.UpdateData(item);
+                                            if (item.IsAssignRole == true) // select role
+                                            {
+                                                item.Id = 0;
+                                                item.UserId = userId;
+                                                item.LoginUserID = HttpContext.User.Identity.Name;
+                                                roleId = _UserRoleService.InsertData(item);
+                                            }
                                         }
                                         catch (Exception ex)
                                         {
@@ -216,22 +220,42 @@ namespace DAQMS.Web.Controllers
 
         private void ModelInitializer(UserViewModel model)
         {
-            model.UserRoleList = model.UserRoleList = new List<UserRoleViewModel>();
-            model.UserRoleList = _UserRoleService.GetAll();
-            List<UserRoleViewModel> roleList = (from tr in model.UserRoleList
-                                                where tr.UserId == model.Id
-                                                select tr).ToList();
-            if (model.UserRoleList.Count > 0)
+            // Get All role
+            //List<RoleViewModel> RoleLst = new List<RoleViewModel>();
+            RoleService roleService=new RoleService();
+            List<RoleViewModel>  RoleLst = roleService.GetAll();
+
+            // intialize list
+            model.UserRoleList =  new List<UserRoleViewModel>();
+           
+            List<UserRoleViewModel> usrRoleLst= _UserRoleService.GetByItem(new UserRoleViewModel { UserId = model.Id });
+
+            if (RoleLst.Count>0)
             {
-                foreach (var item in model.UserRoleList)
+                foreach (var item in RoleLst)
                 {
-                    if (item.UserId > 0)
+                    UserRoleViewModel usrRole = new UserRoleViewModel();
+                    usrRole.Id = item.Id;
+                    usrRole.UserId = model.Id;
+                    usrRole.RoleId = item.Id;
+                    usrRole.RoleName = item.RoleName;
+                    usrRole.ModuleName = item.ModuleName;
+                 
+                    usrRole.LoginUserID = model.LoginUserID;
+
+                    var assigned=(from tr in usrRoleLst where tr.RoleId==item.Id
+                                      select tr).ToList();
+                    if (assigned.Count>0)
                     {
-                        foreach (var itemRole in roleList)
-                        {
-                            if (itemRole.UserId == item.UserId) item.IsAssignRole = true;
-                        }
+                        usrRole.IsAssignRole = true;
                     }
+                    else
+                    {
+                        usrRole.IsAssignRole = false;
+                    }
+
+                    model.UserRoleList.Add(usrRole);
+
                 }
             }
         }

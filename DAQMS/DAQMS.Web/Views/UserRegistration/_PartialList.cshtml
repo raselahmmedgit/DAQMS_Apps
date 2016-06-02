@@ -1,80 +1,88 @@
-﻿@model IList<DAQMS.DomainViewModel.UserViewModel>
+﻿@model IList< DAQMS.DomainViewModel.UserViewModel>
 
-<div class="row-fluid">
+    <div class="row-fluid">
 
-    <table id="table_report" class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th class="center"> SL# </th>
-                <th class="center">Login ID</th>
-                <th class="center">User Name</th>
-                <th class="center">Email</th>
-                <th class="center">Is Admin</th>
-                <th class="center">Is Locked</th>
-                <th></th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var item in Model)
-            {
+        <table id="table_report" class="table table-striped table-bordered table-hover">
+            <thead>
                 <tr>
-                    <td class="center">
-                        @item.rowsl
-                    </td>
-                    <td>
-                        <a href="#">
-                            @item.LoginID
-                        </a>
-                    </td>
-                    <td>
-                        @item.UserName
-                    </td>
-                    <td class="hidden-480">
-                        @item.UserEmail
-                    </td>
-                    <td class="hidden-phone">
-                        @Html.Encode(item.IsAdmin == true ? "Yes" : "No")
-                    </td>
-                    <td class="hidden-480">
-                        @Html.Encode(item.IsLocked == true ? "Yes" : "No")
-                    </td>
-                    <td class="td-actions">
-                        <div class="center">
-                            @Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "btn btn-mini btn-info icon-edit bigger-120" })
-                            @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "gridDelete btn btn-mini btn-danger icon-trash bigger-120" })
-                        </div>
-                    </td>
+                    <th class="center"> SL# </th>
+                    <th class="center">Login ID</th>
+                    <th class="center">User Name</th>
+                    <th class="center">Email</th>
+                    <th class="center">Contact ID</th>
+                    <th class="center">Company</th>
+                    <th class="center">Is Admin</th>
+                    <th class="center">Is Locked</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
 
-<script type="text/javascript">
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="center">
+                            @item.rowsl
+                        </td>
+                        <td>
+                            <a href="#">
+                                @item.LoginID
+                            </a>
+                        </td>
+                        <td>
+                            @item.UserName
+                        </td>
+                        <td class="hidden-480">
+                            @item.UserEmail
+                        </td>
+                        <td class="hidden-480">
+                            @item.ContactID
+                        </td>
+                        <td class="hidden-480">
+                            @item.CompanyName
+                        </td>
+                        <td class="hidden-phone">
+                            @Html.Encode(item.IsAdmin == true ? "Yes" : "No")
+                        </td>
+                        <td class="hidden-480">
+                            @Html.Encode(item.IsLocked == true ? "Yes" : "No")
+                        </td>
+                        <td class="td-actions">
+                            <div class="center">
+                                @Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "btn btn-mini btn-info icon-edit bigger-120" })
+                                @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "gridDelete btn btn-mini btn-danger icon-trash bigger-120" })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-    $(function () {
+    <script type="text/javascript">
 
-        $("a.gridDelete").on("click", function () {
-            deleteLinkObj = $(this);
+        $(function () {
 
-            var confirmMessage = 'Are you sure? Do you want to delete this record?';
-            var con = confirm(confirmMessage);
-            if (con == true) {
-                $.post(deleteLinkObj[0].href, function (obj) {
-                    if (obj.Success) {
-                        alert(obj.Message);
-                        window.document.location = document.location.href;
-                        //$("#message").show().html("<b>" + obj.Message + "</b>").css("color", "green");
-                    }
-                    else {
-                        //$("#message").show().html("<b>" + obj.Message + "</b>").css("color", "red");
-                        alert(obj.Message);
-                    }
-                });
-            }
-            return false;
+            $("a.gridDelete").on("click", function () {
+                deleteLinkObj = $(this);
+
+                var confirmMessage = 'Are you sure? Do you want to delete this record?';
+                var con = confirm(confirmMessage);
+                if (con == true) {
+                    $.post(deleteLinkObj[0].href, function (obj) {
+                        if (obj.Success) {
+                            alert(obj.Message);
+                            window.document.location = document.location.href;
+                            //$("#message").show().html("<b>" + obj.Message + "</b>").css("color", "green");
+                        }
+                        else {
+                            //$("#message").show().html("<b>" + obj.Message + "</b>").css("color", "red");
+                            alert(obj.Message);
+                        }
+                    });
+                }
+                return false;
+            });
         });
-    });
 
-</script>
+    </script>

@@ -91,10 +91,9 @@ namespace DAQMS.Domain.Models
         public Int32 AlertSetupId { get; set; }
 
         [Display(Name = "Sensor")]
-        [MaxLength(10)]
         [Required]
         [DataMember, DataColumn(true)]
-        public string Sensor { get; set; }
+        public Int32 SensorId { get; set; }
 
         [Display(Name = "Is Active?")]
         [Required]
@@ -128,11 +127,10 @@ namespace DAQMS.Domain.Models
         [DataMember, DataColumn(true)]
         public Int32 AlertSetupId { get; set; }
 
-        [Display(Name = "CTR Sensor")]
-        [MaxLength(10)]
+        [Display(Name = "Sensor")]
         [Required]
         [DataMember, DataColumn(true)]
-        public string CTR { get; set; }
+        public Int32 SensorId { get; set; }
 
         [Display(Name = "Is Active?")]
         [Required]
